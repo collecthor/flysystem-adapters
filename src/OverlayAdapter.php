@@ -1,0 +1,136 @@
+<?php
+declare(strict_types=1);
+
+namespace Collecthor\FlySystem;
+
+use League\Flysystem\Config;
+use League\Flysystem\DirectoryAttributes;
+use League\Flysystem\FilesystemAdapter;
+use League\Flysystem\PathPrefixer;
+use League\Flysystem\StorageAttributes;
+use League\Flysystem\UnableToDeleteFile;
+use League\Flysystem\UnableToMoveFile;
+
+/**
+ * This adapter mounts one adapter as an overlay on top of another based on a prefix
+ */
+class OverlayAdapter extends IndirectAdapter
+{
+    private PathPrefixer $pathPrefixer;
+
+    private FilesystemAdapter $overlay;
+
+    private readonly array $virtualDirectories;
+
+    public function __construct(private FilesystemAdapter $base, FilesystemAdapter $overlay, private string $prefix)
+    {
+        // This is required because if we don't enforce it directory listings won't work as expected.
+        if (!str_ends_with($this->prefix, '/')) {
+            throw new \InvalidArgumentException('Prefix must end with /');
+        }
+
+        // The overlay is prefixed with the prefix.
+        $this->overlay = new StripPrefixAdapter($overlay, $this->prefix);
+
+        $this->pathPrefixer = new PathPrefixer($this->prefix);
+
+        $virtualPath = "";
+        $virtualDirectories = [];
+        foreach(explode('/', trim($this->prefix, '/')) as $node) {
+            $virtualPath = "$virtualPath/$node";
+            $virtualDirectories[ltrim($virtualPath, '/')] = true;
+        };
+        $this->virtualDirectories = $virtualDirectories;
+    }
+
+
+    protected function getAdapter(string $rawPath, string $preparedPath): FilesystemAdapter
+    {
+        if (str_starts_with($rawPath, rtrim($this->prefix, '/'))) {
+//            fwrite(STDERR, "Using overlay for path $rawPath, $preparedPath\n");
+            $result = $this->overlay;
+        } else {
+//            fwrite(STDERR, "Using base for path $rawPath, $preparedPath\n");
+            $result = $this->base;
+        }
+        return $result;
+    }
+    public function listContents(string $path, bool $deep): iterable
+    {
+        // In case a deep listing is requested we should check if the base path is a parent of the overlay directory.
+        // If this is the case we need to put in the overlay.
+        $preparedPath = $this->preparePath($path);
+        $primary = $this->getAdapter($path, $preparedPath);
+        if ($primary === $this->overlay) {
+            yield from $primary->listContents($path, $deep);
+            return;
+        }
+
+        $overlayParent = dirname("/{$this->prefix}");
+
+        $virtualDirectories = $this->virtualDirectories;
+
+        // The primary adapter is the base adapter.
+        /** @var StorageAttributes $entry */
+        foreach($primary->listContents($path, $deep) as $entry) {
+            yield $entry;
+            if ($entry->isDir()) {
+                unset($virtualDirectories[$entry->path()]);
+            }
+        }
+
+        if (($deep && str_starts_with($overlayParent, $path))) {
+            foreach($this->overlay->listContents($this->prefix, true) as $entry) {
+                yield $entry;
+            }
+
+        }
+
+
+        foreach($virtualDirectories as $virtualDirectory => $dummy) {
+//            fwrite(STDERR, "/$virtualDirectory, $path\n");
+            if (($deep && str_starts_with("/$virtualDirectory", $path))
+                || dirname("/$virtualDirectory") === $path
+            ) {
+                yield new DirectoryAttributes($virtualDirectory);
+            }
+        }
+    }
+
+
+    private function checkSourceAdapterMatchesDestination(string $source, string $destination): FilesystemAdapter
+    {
+        $preparedSource = $this->preparePath($source);
+        $preparedDestination = $this->preparePath($destination);
+        $sourceAdapter = $this->getAdapter($source, $preparedSource);
+        $destinationAdapter = $this->getAdapter($destination, $preparedDestination);
+        if ($sourceAdapter !== $destinationAdapter) {
+            throw UnableToMoveFile::fromLocationTo($source, $destination);
+        }
+        return $sourceAdapter;
+    }
+
+    public function move(string $source, string $destination, Config $config): void
+    {
+        $this->checkSourceAdapterMatchesDestination($source, $destination)->move($source, $destination, $config);
+    }
+
+    public function deleteDirectory(string $path): void
+    {
+        if (isset($this->virtualDirectories[rtrim($path, '/')])) {
+            throw UnableToDeleteFile::atLocation($path, "This path leads to the overlay");
+        }
+        parent::deleteDirectory($path);
+    }
+
+    public function directoryExists(string $path): bool
+    {
+        return isset($this->virtualDirectories[rtrim($path, '/')]) || parent::directoryExists($path);
+    }
+
+
+    public function copy(string $source, string $destination, Config $config): void
+    {
+        $this->checkSourceAdapterMatchesDestination($source, $destination)->copy($source, $destination, $config);
+    }
+}
