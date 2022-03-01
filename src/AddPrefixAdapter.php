@@ -27,7 +27,6 @@ class AddPrefixAdapter extends IndirectAdapter implements FilesystemAdapter
         return $this->pathPrefixer->prefixPath($path);
     }
 
-
     public function listContents(string $path, bool $deep): iterable
     {
         foreach($this->base->listContents($this->pathPrefixer->prefixDirectoryPath($path), $deep) as $key => $entry) {
