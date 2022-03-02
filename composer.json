@@ -1,4 +1,6 @@
 {
+    "name": "collecthor/flysystem-adapters",
+    "description": "Meta adapters for FlySystem v3",
     "require": {
         "php": ">8.1",
         "league/flysystem": "^3.0"
