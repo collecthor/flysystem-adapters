@@ -6,10 +6,11 @@ namespace Collecthor\FlySystem;
 
 use League\Flysystem\Config;
 use League\Flysystem\FilesystemAdapter;
-use League\Flysystem\StorageAttributes;
 
 /**
- *
+ * Implements directory support for any adapter utilizing a placeholder file.
+ * On iteration of directory contents the placeholder file is skipped, it is assumed any adapter not supporting directories
+ * will still correctly emit a directory node for any path prefix that contains a file.
  */
 class DirectoryViaPlaceholderFileAdapter extends IndirectAdapter implements FilesystemAdapter
 {

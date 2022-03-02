@@ -10,7 +10,7 @@
     </paths>
     <version number="3.0.0">
         <api>
-            <default-package-name>Data Interfaces</default-package-name>
+            <default-package-name>Flysystem Adapters</default-package-name>
             <source dsn=".">
                 <path>src</path>
             </source>

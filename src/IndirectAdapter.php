@@ -8,6 +8,10 @@ use League\Flysystem\Config;
 use League\Flysystem\FileAttributes;
 use League\Flysystem\FilesystemAdapter;
 
+/**
+ * Indirect adapter implements a simple pattern that allows extending classes to provide a concrete adapter for any call
+ * as well as rewrite the path passed to such calls.
+ */
 abstract class IndirectAdapter implements FilesystemAdapter
 {
     protected function preparePath(string $path): string
