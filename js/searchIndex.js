@@ -38,7 +38,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Collecthor\\FlySystem\\DirectoryViaPlaceholderFileAdapter",
             "name": "DirectoryViaPlaceholderFileAdapter",
-            "summary": "",
+            "summary": "Implements\u0020directory\u0020support\u0020for\u0020any\u0020adapter\u0020utilizing\u0020a\u0020placeholder\u0020file.",
             "url": "classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html"
         },                {
             "fqsen": "\\Collecthor\\FlySystem\\DirectoryViaPlaceholderFileAdapter\u003A\u003A__construct\u0028\u0029",
@@ -78,7 +78,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter",
             "name": "IndirectAdapter",
-            "summary": "",
+            "summary": "Indirect\u0020adapter\u0020implements\u0020a\u0020simple\u0020pattern\u0020that\u0020allows\u0020extending\u0020classes\u0020to\u0020provide\u0020a\u0020concrete\u0020adapter\u0020for\u0020any\u0020call\nas\u0020well\u0020as\u0020rewrite\u0020the\u0020path\u0020passed\u0020to\u0020such\u0020calls.",
             "url": "classes/Collecthor-FlySystem-IndirectAdapter.html"
         },                {
             "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter\u003A\u003ApreparePath\u0028\u0029",
