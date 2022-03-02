@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Collecthor\FlySystem;
@@ -9,7 +10,6 @@ use League\Flysystem\FilesystemAdapter;
 
 abstract class IndirectAdapter implements FilesystemAdapter
 {
-
     protected function preparePath(string $path): string
     {
         return $path;

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Collecthor\FlySystem\Tests;
@@ -97,7 +98,7 @@ class OverlayAdapterTest extends FilesystemAdapterTestCase
 
         $combined = new OverlayAdapter($base, $overlay, $path);
 
-        while($path !== ".") {
+        while ($path !== ".") {
             self::assertTrue($combined->directoryExists($path), "Failed asserting directory $path exists");
             $path = dirname($path);
         }
@@ -120,7 +121,7 @@ class OverlayAdapterTest extends FilesystemAdapterTestCase
         self::assertCount($directoryCount, $listing);
 
         $testPath = '';
-        foreach(explode('/', rtrim($path, '/')) as $i => $part) {
+        foreach (explode('/', rtrim($path, '/')) as $i => $part) {
             $testPath = ltrim("{$testPath}/{$part}", '/');
             self::assertSame($testPath, $listing[$i]->path());
         }
@@ -153,7 +154,6 @@ class OverlayAdapterTest extends FilesystemAdapterTestCase
     {
         yield "second level directory" => ["some/overlay/"];
         yield "top level directory" => ["overlay/"];
-
     }
 
     /**
@@ -171,7 +171,6 @@ class OverlayAdapterTest extends FilesystemAdapterTestCase
         $overlay->write("testfile", 'abc', new Config());
 
         self::assertCount(1, $combined->listContents('/', false), print_r(iterator_to_array($combined->listContents('/', false)), true));
-
     }
 
     public function filenameProvider(): Generator

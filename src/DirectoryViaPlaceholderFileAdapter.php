@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Collecthor\FlySystem;
@@ -12,10 +13,8 @@ use League\Flysystem\StorageAttributes;
  */
 class DirectoryViaPlaceholderFileAdapter extends IndirectAdapter implements FilesystemAdapter
 {
-
     public function __construct(private readonly FilesystemAdapter $base, private readonly string $placeHolderName = '.directory')
     {
-
     }
 
     protected function getAdapter(string $rawPath, string $preparedPath): FilesystemAdapter
@@ -44,7 +43,7 @@ class DirectoryViaPlaceholderFileAdapter extends IndirectAdapter implements File
     public function listContents(string $path, bool $deep): iterable
     {
         /** @var StorageAttributes $entry */
-        foreach(parent::listContents($path, $deep) as $entry) {
+        foreach (parent::listContents($path, $deep) as $entry) {
             if ($entry->isFile() && str_ends_with($entry->path(), $this->placeHolderName)) {
                 // This is the placeholder file, we skip it.
             } else {
@@ -52,6 +51,4 @@ class DirectoryViaPlaceholderFileAdapter extends IndirectAdapter implements File
             }
         }
     }
-
-
 }

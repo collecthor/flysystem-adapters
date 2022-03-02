@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Collecthor\FlySystem\Tests;
@@ -14,10 +15,9 @@ use League\Flysystem\InMemory\InMemoryFilesystemAdapter;
  */
 class IndirectAdapterTest extends FilesystemAdapterTestCase
 {
-
     protected static function createFilesystemAdapter(): FilesystemAdapter
     {
-        return new class extends IndirectAdapter {
+        return new class() extends IndirectAdapter {
             private FilesystemAdapter $adapter;
 
             public function __construct()

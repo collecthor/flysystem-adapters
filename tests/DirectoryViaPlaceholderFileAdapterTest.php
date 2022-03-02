@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Collecthor\FlySystem\Tests;
@@ -24,8 +25,7 @@ class DirectoryViaPlaceholderFileAdapterTest extends FilesystemAdapterTestCase
 
     protected static function createFilesystemAdapter(): FilesystemAdapter
     {
-
-        $adapterWithoutCreateDirectory = new class extends InMemoryFilesystemAdapter {
+        $adapterWithoutCreateDirectory = new class() extends InMemoryFilesystemAdapter {
             public function createDirectory(string $path, Config $config): void
             {
                 // Do nothing.

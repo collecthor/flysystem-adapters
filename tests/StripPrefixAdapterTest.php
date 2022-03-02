@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Collecthor\FlySystem\Tests;
@@ -16,7 +17,6 @@ use League\Flysystem\InMemory\InMemoryFilesystemAdapter;
  */
 class StripPrefixAdapterTest extends FilesystemAdapterTestCase
 {
-
     protected static function createFilesystemAdapter(): FilesystemAdapter
     {
         $prefix = 'abcdef/';

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Collecthor\FlySystem;
@@ -36,7 +37,7 @@ class OverlayAdapter extends IndirectAdapter
 
         $virtualPath = "";
         $virtualDirectories = [];
-        foreach(explode('/', trim($this->prefix, '/')) as $node) {
+        foreach (explode('/', trim($this->prefix, '/')) as $node) {
             $virtualPath = "$virtualPath/$node";
             $virtualDirectories[ltrim($virtualPath, '/')] = true;
         };
@@ -72,7 +73,7 @@ class OverlayAdapter extends IndirectAdapter
 
         // The primary adapter is the base adapter.
         /** @var StorageAttributes $entry */
-        foreach($primary->listContents($path, $deep) as $entry) {
+        foreach ($primary->listContents($path, $deep) as $entry) {
             yield $entry;
             if ($entry->isDir()) {
                 unset($virtualDirectories[$entry->path()]);
@@ -80,14 +81,13 @@ class OverlayAdapter extends IndirectAdapter
         }
 
         if (($deep && str_starts_with($overlayParent, $path))) {
-            foreach($this->overlay->listContents($this->prefix, true) as $entry) {
+            foreach ($this->overlay->listContents($this->prefix, true) as $entry) {
                 yield $entry;
             }
-
         }
 
 
-        foreach($virtualDirectories as $virtualDirectory => $dummy) {
+        foreach ($virtualDirectories as $virtualDirectory => $dummy) {
 //            fwrite(STDERR, "/$virtualDirectory, $path\n");
             if (($deep && str_starts_with("/$virtualDirectory", $path))
                 || dirname("/$virtualDirectory") === $path
