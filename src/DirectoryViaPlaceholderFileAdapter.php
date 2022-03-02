@@ -35,14 +35,9 @@ class DirectoryViaPlaceholderFileAdapter extends IndirectAdapter implements File
     /**
      * Iteration will usually support directories even on adapters that don't have that concept.
      * They'll show a prefix for a filename as a directory automatically.
-     * @param string $path
-     * @param bool $deep
-     * @return iterable
-     * @throws \League\Flysystem\FilesystemException
      */
     public function listContents(string $path, bool $deep): iterable
     {
-        /** @var StorageAttributes $entry */
         foreach (parent::listContents($path, $deep) as $entry) {
             if ($entry->isFile() && str_ends_with($entry->path(), $this->placeHolderName)) {
                 // This is the placeholder file, we skip it.

@@ -37,8 +37,8 @@ class StripPrefixAdapter extends IndirectAdapter implements FilesystemAdapter
 
     public function listContents(string $path, bool $deep): iterable
     {
-        foreach (parent::listContents($path, $deep) as $key => $entry) {
-            yield $key => $entry->withPath($this->pathPrefixer->prefixPath($entry->path()));
+        foreach (parent::listContents($path, $deep) as $entry) {
+            yield $entry->withPath($this->pathPrefixer->prefixPath($entry->path()));
         };
     }
 

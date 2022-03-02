@@ -21,6 +21,9 @@ class OverlayAdapter extends IndirectAdapter
 
     private FilesystemAdapter $overlay;
 
+    /**
+     * @psalm-var array<string, bool>
+     */
     private readonly array $virtualDirectories;
 
     public function __construct(private FilesystemAdapter $base, FilesystemAdapter $overlay, private string $prefix)
@@ -72,7 +75,6 @@ class OverlayAdapter extends IndirectAdapter
         $virtualDirectories = $this->virtualDirectories;
 
         // The primary adapter is the base adapter.
-        /** @var StorageAttributes $entry */
         foreach ($primary->listContents($path, $deep) as $entry) {
             yield $entry;
             if ($entry->isDir()) {
@@ -87,8 +89,7 @@ class OverlayAdapter extends IndirectAdapter
         }
 
 
-        foreach ($virtualDirectories as $virtualDirectory => $dummy) {
-//            fwrite(STDERR, "/$virtualDirectory, $path\n");
+        foreach ($virtualDirectories as $virtualDirectory => $_) {
             if (($deep && str_starts_with("/$virtualDirectory", $path))
                 || dirname("/$virtualDirectory") === $path
             ) {
