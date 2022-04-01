@@ -6,8 +6,8 @@ namespace Collecthor\FlySystem\Tests;
 
 use Collecthor\FlySystem\OverlayAdapter;
 use Generator;
-use League\Flysystem\AdapterTestUtilities\FilesystemAdapterTestCase;
 use League\Flysystem\Config;
+use League\Flysystem\DirectoryAttributes;
 use League\Flysystem\FilesystemAdapter;
 use League\Flysystem\InMemory\InMemoryFilesystemAdapter;
 use League\Flysystem\StorageAttributes;
@@ -17,7 +17,7 @@ use League\Flysystem\StorageAttributes;
  * @uses \Collecthor\FlySystem\IndirectAdapter
  * @uses \Collecthor\FlySystem\StripPrefixAdapter
  */
-class OverlayAdapterTest extends FilesystemAdapterTestCase
+class OverlayAdapterTest extends IndirectAdapterTestCase
 {
     protected static function createFilesystemAdapter(): FilesystemAdapter
     {
@@ -96,7 +96,7 @@ class OverlayAdapterTest extends FilesystemAdapterTestCase
         $base = new InMemoryFilesystemAdapter();
         $overlay = new InMemoryFilesystemAdapter();
 
-        $combined = new OverlayAdapter($base, $overlay, $path);
+        $combined = new OverlayAdapter($base, $overlay, $path . '/');
 
         while ($path !== ".") {
             self::assertTrue($combined->directoryExists($path), "Failed asserting directory $path exists");
@@ -112,19 +112,19 @@ class OverlayAdapterTest extends FilesystemAdapterTestCase
         $base = new InMemoryFilesystemAdapter();
         $overlay = new InMemoryFilesystemAdapter();
 
-        $combined = new OverlayAdapter($base, $overlay, $path);
+        $combined = new OverlayAdapter($base, $overlay, $path . '/');
 
-        $directoryCount = substr_count($path, '/');
-        /** @var list<StorageAttributes> $listing */
-        $listing = iterator_to_array($combined->listContents('', true));
+        $directoryCount = count(explode('/', $path));
 
-        self::assertCount($directoryCount, $listing);
+        $this->assertListingLength($directoryCount, $combined, '', true);
 
+        $expected = [];
         $testPath = '';
         foreach (explode('/', rtrim($path, '/')) as $i => $part) {
             $testPath = ltrim("{$testPath}/{$part}", '/');
-            self::assertSame($testPath, $listing[$i]->path());
+            $expected[] = new DirectoryAttributes($testPath);
         }
+        $this->assertListingsAreTheSame($expected, $combined->listContents('', true));
     }
 
     /**
@@ -135,25 +135,54 @@ class OverlayAdapterTest extends FilesystemAdapterTestCase
         $base = new InMemoryFilesystemAdapter();
         $overlay = new InMemoryFilesystemAdapter();
 
-        $combined = new OverlayAdapter($base, $overlay, $path);
+        $combined = new OverlayAdapter($base, $overlay, $path . '/');
 
-        $directoryCount = substr_count($path, '/');
+        $directoryCount = count(explode('/', $path));
 
-        self::assertCount(0, $overlay->listContents('/', true));
-        self::assertCount($directoryCount, $combined->listContents('/', true));
+        $this->assertListingLength(0, $overlay, '/');
+        $this->assertListingLength($directoryCount, $combined, '/', true);
         $overlay->write("testfile", 'abc', new Config());
 
-        self::assertCount(1, $overlay->listContents('/', true));
-        self::assertCount(1 + $directoryCount, iterator_to_array($combined->listContents('/', true)), print_r(iterator_to_array($combined->listContents('/', true)), true));
+        $this->assertListingLength(1, $overlay, '/', true);
+        $this->assertListingLength(1 + $directoryCount, $combined, '/', true);
 
+        $this->assertListingLength(1, $combined, $path, true);
+    }
 
-        self::assertCount(1, $combined->listContents($path, true));
+    /**
+     * @dataProvider prefixProvider
+     */
+    public function testDeepListingIncludesBothStub(string $path): void
+    {
+        $base = new InMemoryFilesystemAdapter();
+
+        $overlay = $this->getMockBuilder(FilesystemAdapter::class)->getMock();
+        $overlay->expects($this->once())->method('listContents')->with('')->willReturn([]);
+
+        $combined = new OverlayAdapter($base, $overlay, $path . '/');
+
+        $this->assertSameSize(explode('/', $path), iterator_to_array($combined->listContents('', true)));
+    }
+
+    /**
+     * @dataProvider prefixProvider
+     */
+    public function testDeepListingIncludesBothStub2(string $path): void
+    {
+        $base = new InMemoryFilesystemAdapter();
+
+        $overlay = $this->getMockBuilder(FilesystemAdapter::class)->getMock();
+        $overlay->expects($this->once())->method('listContents')->with('')->willReturn([]);
+
+        $combined = new OverlayAdapter($base, $overlay, $path . '/');
+
+        $this->assertSameSize(explode('/', $path), iterator_to_array($combined->listContents('/', true)));
     }
 
     public function prefixProvider(): iterable
     {
-        yield "second level directory" => ["some/overlay/"];
-        yield "top level directory" => ["overlay/"];
+        yield "second level directory" => ["some/overlay"];
+        yield "top level directory" => ["overlay"];
     }
 
     /**
@@ -164,13 +193,17 @@ class OverlayAdapterTest extends FilesystemAdapterTestCase
         $base = new InMemoryFilesystemAdapter();
         $overlay = new InMemoryFilesystemAdapter();
 
-        $combined = new OverlayAdapter($base, $overlay, $path);
+        $combined = new OverlayAdapter($base, $overlay, $path . '/');
 
-        self::assertCount(1, $combined->listContents('/', false), print_r(iterator_to_array($combined->listContents('/', false)), true));
+        $this->assertListingLength(1, $combined, '/');
 
         $overlay->write("testfile", 'abc', new Config());
 
-        self::assertCount(1, $combined->listContents('/', false), print_r(iterator_to_array($combined->listContents('/', false)), true));
+        $this->assertListingLength(1, $combined, '/');
+
+        // Get path components.
+        $components = explode('/', $path);
+        $this->assertListingLength(count($components) + 1, $combined, '/', true);
     }
 
     public function filenameProvider(): Generator
@@ -185,6 +218,9 @@ class OverlayAdapterTest extends FilesystemAdapterTestCase
     }
 
 
+    /**
+     * @test
+     */
     public function checking_if_a_directory_exists_after_creating_it(): void
     {
         $this->runScenario(function () {
@@ -198,6 +234,20 @@ class OverlayAdapterTest extends FilesystemAdapterTestCase
         });
     }
 
+    public function testListingEmptyPath(): void
+    {
+        $base = new InMemoryFilesystemAdapter();
+        $overlay = new InMemoryFilesystemAdapter();
+
+        $combined = new OverlayAdapter($base, $overlay, 'mount/');
+
+        $this->assertListingLength(1, $combined, '/');
+        $this->assertListingLength(1, $combined, '');
+    }
+
+    /**
+     * @test
+     */
     public function listing_contents_recursive(): void
     {
         $this->runScenario(function () {
@@ -214,6 +264,9 @@ class OverlayAdapterTest extends FilesystemAdapterTestCase
         });
     }
 
+    /**
+     * @test
+     */
     public function listing_a_toplevel_directory(): void
     {
         $initialCount = iterator_count($this->adapter()->listContents('', true));
