@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Collecthor\FlySystem\Tests;
 
 use Collecthor\FlySystem\IndirectAdapter;
-use League\Flysystem\AdapterTestUtilities\FilesystemAdapterTestCase;
 use League\Flysystem\FilesystemAdapter;
 use League\Flysystem\InMemory\InMemoryFilesystemAdapter;
 
@@ -13,7 +12,7 @@ use League\Flysystem\InMemory\InMemoryFilesystemAdapter;
  * @covers \Collecthor\FlySystem\IndirectAdapter
  * @uses \League\Flysystem\InMemory\InMemoryFilesystemAdapter
  */
-class IndirectAdapterTest extends FilesystemAdapterTestCase
+class IndirectAdapterTest extends IndirectAdapterTestCase
 {
     protected static function createFilesystemAdapter(): FilesystemAdapter
     {
