@@ -22,4 +22,13 @@ class StripPrefixAdapterTest extends IndirectAdapterTestCase
         $prefix = 'abcdef/';
         return new AddPrefixAdapter(new StripPrefixAdapter(new InMemoryFilesystemAdapter(), $prefix), $prefix);
     }
+
+    public function testListWithoutTrailingSlash(): void
+    {
+        $adapter = new StripPrefixAdapter(new InMemoryFilesystemAdapter(), 'test/');
+        $adapter->write('test/abc', 'test', new Config());
+        $adapter->write('test/def', 'test', new Config());
+
+        $this->assertListingsAreTheSame($adapter->listContents('test', false), $adapter->listContents('test/', false));
+    }
 }

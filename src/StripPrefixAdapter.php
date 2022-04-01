@@ -6,8 +6,6 @@ namespace Collecthor\FlySystem;
 
 use League\Flysystem\FilesystemAdapter;
 use League\Flysystem\PathPrefixer;
-use League\Flysystem\UnableToMountFilesystem;
-use League\Flysystem\UnableToResolveFilesystemMount;
 
 /**
  * Strips a prefix from all paths given to the adapter.
@@ -28,8 +26,11 @@ class StripPrefixAdapter extends IndirectAdapter implements FilesystemAdapter
 
     protected function preparePath(string $path): string
     {
+        if ("$path/" === $this->prefix) {
+            return '';
+        }
         if (!str_starts_with($path, $this->prefix)) {
-            throw new \Exception("Invalid path");
+            throw new \Exception("Invalid path; {$path} MUST start with {$this->prefix}");
         }
         return $this->pathPrefixer->stripPrefix($path);
     }
