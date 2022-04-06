@@ -6,8 +6,6 @@ namespace Collecthor\FlySystem;
 
 use League\Flysystem\FilesystemAdapter;
 use League\Flysystem\PathPrefixer;
-use League\Flysystem\UnableToMountFilesystem;
-use League\Flysystem\UnableToResolveFilesystemMount;
 
 /**
  * Strips a prefix from all paths given to the adapter.

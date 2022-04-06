@@ -8,7 +8,6 @@ use League\Flysystem\Config;
 use League\Flysystem\DirectoryAttributes;
 use League\Flysystem\FilesystemAdapter;
 use League\Flysystem\PathPrefixer;
-use League\Flysystem\StorageAttributes;
 use League\Flysystem\UnableToDeleteFile;
 use League\Flysystem\UnableToMoveFile;
 
@@ -61,8 +60,10 @@ class OverlayAdapter extends IndirectAdapter
     }
     public function listContents(string $path, bool $deep): iterable
     {
-        // In case a deep listing is requested we should check if the base path is a parent of the overlay directory.
-        // If this is the case we need to put in the overlay.
+        /**
+         * In case a deep listing is requested we should check if the base path is a parent of the overlay directory.
+         * If this is the case we need to put in the overlay.
+         */
         $preparedPath = $this->preparePath($path);
         $primary = $this->getAdapter($path, $preparedPath);
         if ($primary === $this->overlay) {
@@ -82,16 +83,20 @@ class OverlayAdapter extends IndirectAdapter
             }
         }
 
+        /**
+         * We're doing a deep listing of an ancestor of the overlay.
+         * This means we can fully include all entries from the overlay,
+         * so we list it from its prefix, which will be stripped.
+         */
         if (($deep && str_starts_with($overlayParent, $path))) {
-            foreach ($this->overlay->listContents($this->prefix, true) as $entry) {
-                yield $entry;
-            }
+            yield from $this->overlay->listContents($this->prefix, true);
         }
 
 
         foreach ($virtualDirectories as $virtualDirectory => $_) {
             if (($deep && str_starts_with("/$virtualDirectory", $path))
                 || dirname("/$virtualDirectory") === $path
+                || dirname("/$virtualDirectory") === "$path/"
             ) {
                 yield new DirectoryAttributes($virtualDirectory);
             }

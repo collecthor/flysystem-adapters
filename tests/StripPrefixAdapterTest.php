@@ -6,7 +6,6 @@ namespace Collecthor\FlySystem\Tests;
 
 use Collecthor\FlySystem\AddPrefixAdapter;
 use Collecthor\FlySystem\StripPrefixAdapter;
-use League\Flysystem\AdapterTestUtilities\FilesystemAdapterTestCase;
 use League\Flysystem\Config;
 use League\Flysystem\FilesystemAdapter;
 use League\Flysystem\InMemory\InMemoryFilesystemAdapter;
