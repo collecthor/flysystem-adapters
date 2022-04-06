@@ -13,7 +13,7 @@ use League\Flysystem\InMemory\InMemoryFilesystemAdapter;
  * @covers \Collecthor\FlySystem\IndirectAdapter
  * @uses \League\Flysystem\InMemory\InMemoryFilesystemAdapter
  */
-class IndirectAdapterTest extends FilesystemAdapterTestCase
+class IndirectAdapterTest extends IndirectAdapterTestCase
 {
     protected static function createFilesystemAdapter(): FilesystemAdapter
     {
