@@ -160,23 +160,23 @@ class OverlayAdapterTest extends IndirectAdapterTestCase
         $overlay->expects($this->once())->method('listContents')->with('')->willReturn([]);
 
         $combined = new OverlayAdapter($base, $overlay, $path . '/');
-
         $this->assertSameSize(explode('/', $path), iterator_to_array($combined->listContents('', true)));
     }
 
-    /**
+   /**
      * @dataProvider prefixProvider
      */
     public function testDeepListingIncludesBothStub2(string $path): void
     {
         $base = new InMemoryFilesystemAdapter();
 
+
         $overlay = $this->getMockBuilder(FilesystemAdapter::class)->getMock();
         $overlay->expects($this->once())->method('listContents')->with('')->willReturn([]);
 
         $combined = new OverlayAdapter($base, $overlay, $path . '/');
 
-        $this->assertSameSize(explode('/', $path), iterator_to_array($combined->listContents('/', true)));
+        $this->assertListingLength(count(explode('/', $path)), $combined, '/', true);
     }
 
     public function prefixProvider(): iterable
@@ -206,6 +206,16 @@ class OverlayAdapterTest extends IndirectAdapterTestCase
         $this->assertListingLength(count($components) + 1, $combined, '/', true);
     }
 
+    public function testListingEmptyPath(): void
+    {
+        $base = new InMemoryFilesystemAdapter();
+        $overlay = new InMemoryFilesystemAdapter();
+
+        $combined = new OverlayAdapter($base, $overlay, 'mount/');
+
+        $this->assertListingLength(1, $combined, '/');
+        $this->assertListingLength(1, $combined, '');
+    }
     public function filenameProvider(): Generator
     {
         yield from parent::filenameProvider();
@@ -234,16 +244,6 @@ class OverlayAdapterTest extends IndirectAdapterTestCase
         });
     }
 
-    public function testListingEmptyPath(): void
-    {
-        $base = new InMemoryFilesystemAdapter();
-        $overlay = new InMemoryFilesystemAdapter();
-
-        $combined = new OverlayAdapter($base, $overlay, 'mount/');
-
-        $this->assertListingLength(1, $combined, '/');
-        $this->assertListingLength(1, $combined, '');
-    }
 
     /**
      * @test
