@@ -56,6 +56,21 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_createDirectory"
         },                {
+            "fqsen": "\\Collecthor\\FlySystem\\DirectoryViaPlaceholderFileAdapter\u003A\u003AlastModified\u0028\u0029",
+            "name": "lastModified",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_lastModified"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\DirectoryViaPlaceholderFileAdapter\u003A\u003AmimeType\u0028\u0029",
+            "name": "mimeType",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_mimeType"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\DirectoryViaPlaceholderFileAdapter\u003A\u003AfileSize\u0028\u0029",
+            "name": "fileSize",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_fileSize"
+        },                {
             "fqsen": "\\Collecthor\\FlySystem\\DirectoryViaPlaceholderFileAdapter\u003A\u003AdirectoryExists\u0028\u0029",
             "name": "directoryExists",
             "summary": "",
@@ -195,6 +210,16 @@ Search.appendIndex(
             "name": "listContents",
             "summary": "",
             "url": "classes/Collecthor-FlySystem-OverlayAdapter.html#method_listContents"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\OverlayAdapter\u003A\u003ApathIsAncestorOf\u0028\u0029",
+            "name": "pathIsAncestorOf",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-OverlayAdapter.html#method_pathIsAncestorOf"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\OverlayAdapter\u003A\u003ApathIsParentOf\u0028\u0029",
+            "name": "pathIsParentOf",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-OverlayAdapter.html#method_pathIsParentOf"
         },                {
             "fqsen": "\\Collecthor\\FlySystem\\OverlayAdapter\u003A\u003AcheckSourceAdapterMatchesDestination\u0028\u0029",
             "name": "checkSourceAdapterMatchesDestination",
