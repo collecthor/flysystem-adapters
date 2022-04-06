@@ -163,9 +163,9 @@ class OverlayAdapterTest extends IndirectAdapterTestCase
         $this->assertSameSize(explode('/', $path), iterator_to_array($combined->listContents('', true)));
     }
 
-   /**
-     * @dataProvider prefixProvider
-     */
+    /**
+      * @dataProvider prefixProvider
+      */
     public function testDeepListingIncludesBothStub2(string $path): void
     {
         $base = new InMemoryFilesystemAdapter();
