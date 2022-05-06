@@ -311,6 +311,46 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Collecthor-FlySystem-StripPrefixAdapter.html#property_prefix"
         },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryListAdapter",
+            "name": "VirtualDirectoryListAdapter",
+            "summary": "This\u0020adapter\u0020allows\u0020you\u0020to\u0020add\u0020virtual\u0020directories\u0020to\u0020a\u0020specific\u0020path\u0020on\u0020an\u0020underlying\u0020adapter.",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryListAdapter.html"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryListAdapter\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryListAdapter.html#method___construct"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryListAdapter\u003A\u003AgetAdapter\u0028\u0029",
+            "name": "getAdapter",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryListAdapter.html#method_getAdapter"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryListAdapter\u003A\u003AdirectoryExists\u0028\u0029",
+            "name": "directoryExists",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryListAdapter.html#method_directoryExists"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryListAdapter\u003A\u003AlistContents\u0028\u0029",
+            "name": "listContents",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryListAdapter.html#method_listContents"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryListAdapter\u003A\u003A\u0024directoryNames",
+            "name": "directoryNames",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryListAdapter.html#property_directoryNames"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryListAdapter\u003A\u003A\u0024path",
+            "name": "path",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryListAdapter.html#property_path"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryListAdapter\u003A\u003A\u0024adapter",
+            "name": "adapter",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryListAdapter.html#property_adapter"
+        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
