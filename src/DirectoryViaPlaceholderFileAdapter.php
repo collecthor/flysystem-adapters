@@ -35,7 +35,7 @@ class DirectoryViaPlaceholderFileAdapter extends IndirectAdapter implements File
     public function lastModified(string $path): FileAttributes
     {
         if ($this->fileExists("$path/{$this->placeHolderName}")) {
-            return parent::lastModified("$path/{$this->placeHolderName}");
+            throw UnableToRetrieveMetadata::mimeType($path, "This adapter does not support directory modification times");
         } else {
             return parent::lastModified($path);
         }
@@ -52,7 +52,7 @@ class DirectoryViaPlaceholderFileAdapter extends IndirectAdapter implements File
     public function fileSize(string $path): FileAttributes
     {
         if ($this->fileExists("$path/{$this->placeHolderName}")) {
-            return parent::fileSize("$path/{$this->placeHolderName}");
+            throw UnableToRetrieveMetadata::fileSize($path, "Directories don't have file sizes");
         } else {
             return parent::fileSize($path);
         }
