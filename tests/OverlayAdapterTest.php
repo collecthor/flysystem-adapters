@@ -244,39 +244,4 @@ class OverlayAdapterTest extends IndirectAdapterTestCase
         $this->assertListingLength(1, $combined, '/');
         $this->assertListingLength(1, $combined, '');
     }
-
-    /**
-     * @test
-     */
-    public function listing_contents_recursive(): void
-    {
-        $this->runScenario(function () {
-            $adapter = $this->adapter();
-            $initialCount = iterator_count($adapter->listContents('', true));
-
-            $adapter->createDirectory('path', new Config());
-            $adapter->write('path/file.txt', 'string', new Config());
-
-            $listing = $adapter->listContents('', true);
-            /** @var StorageAttributes[] $items */
-            $items = iterator_to_array($listing);
-            $this->assertCount($initialCount + 2, $items, $this->formatIncorrectListingCount($items));
-        });
-    }
-
-    /**
-     * @test
-     */
-    public function listing_a_toplevel_directory(): void
-    {
-        $initialCount = iterator_count($this->adapter()->listContents('', true));
-        $this->givenWeHaveAnExistingFile('path1.txt');
-        $this->givenWeHaveAnExistingFile('path2.txt');
-
-        $this->runScenario(function () use ($initialCount) {
-            $contents = iterator_to_array($this->adapter()->listContents('', true));
-
-            $this->assertCount($initialCount + 2, $contents);
-        });
-    }
 }
