@@ -92,16 +92,38 @@ class OverlayAdapter extends IndirectAdapter
             yield from $this->overlay->listContents($this->prefix, true);
         }
 
-
         foreach ($virtualDirectories as $virtualDirectory => $_) {
-            if (($deep && str_starts_with("/$virtualDirectory", $path))
-                || dirname("/$virtualDirectory") === $path
-                || dirname("/$virtualDirectory") === "$path/"
-            ) {
+            if (
+                ($deep && $this->pathIsAncestorOf($path, $virtualDirectory))
+                || $this->pathIsParentOf($path, $virtualDirectory)) {
                 yield new DirectoryAttributes($virtualDirectory);
             }
         }
     }
+
+    private function pathIsAncestorOf(string $possibleAncestor, string $path): bool
+    {
+        // Root
+        if (in_array($possibleAncestor, ["/", ""])) {
+            return true;
+        }
+        return str_starts_with($path, $possibleAncestor);
+    }
+
+    private function pathIsParentOf(string $possibleParent, string $path): bool
+    {
+        if (in_array($possibleParent, ["/", ""]) && !str_contains($path, '/')) {
+            return true;
+        }
+        if (dirname($path) === $possibleParent) {
+            return true;
+        }
+
+        return false;
+    }
+
+
+
 
 
     private function checkSourceAdapterMatchesDestination(string $source, string $destination): FilesystemAdapter
