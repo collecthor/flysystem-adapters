@@ -226,16 +226,4 @@ class OverlayAdapterTest extends IndirectAdapterTestCase
     {
         parent::clearFilesystemAdapterCache();
     }
-
-    public function testListingEmptyPath(): void
-    {
-        $base = new InMemoryFilesystemAdapter();
-        $overlay = new InMemoryFilesystemAdapter();
-
-        $combined = new OverlayAdapter($base, $overlay, 'mount/');
-
-        $this->assertListingLength(1, $combined, '/');
-        $this->assertListingLength(1, $combined, '');
-    }
-
 }

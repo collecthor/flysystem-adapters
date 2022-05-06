@@ -76,4 +76,20 @@ abstract class IndirectAdapterTestCase extends FilesystemAdapterTestCase
             $this->assertCount($initialCount + 2, $items, $this->formatIncorrectListingCount($items));
         });
     }
+
+    /**
+     * @test
+     */
+    public function checking_if_a_directory_exists_after_creating_it(): void
+    {
+        $this->runScenario(function () {
+            $adapter = $this->adapter();
+            $initialCount = iterator_count($adapter->listContents('/', false));
+            $adapter->createDirectory('explicitly-created-directory', new Config());
+            self::assertTrue($adapter->directoryExists('explicitly-created-directory'));
+            $adapter->deleteDirectory('explicitly-created-directory');
+            self::assertCount($initialCount, iterator_to_array($adapter->listContents('/', false), false));
+            self::assertFalse($adapter->directoryExists('explicitly-created-directory'));
+        });
+    }
 }
