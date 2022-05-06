@@ -191,6 +191,51 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_copy"
         },                {
+            "fqsen": "\\Collecthor\\FlySystem\\MetadataCachingAdapter",
+            "name": "MetadataCachingAdapter",
+            "summary": "This\u0020adapter\u0020will\u0020cache\u0020the\u0020results\u0020of\u0020any\u0020of\u0020the\u0020metadata\u0020retrievers\u0020and\u0020reuse\u0020them.",
+            "url": "classes/Collecthor-FlySystem-MetadataCachingAdapter.html"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\MetadataCachingAdapter\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-MetadataCachingAdapter.html#method___construct"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\MetadataCachingAdapter\u003A\u003AgetAdapter\u0028\u0029",
+            "name": "getAdapter",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-MetadataCachingAdapter.html#method_getAdapter"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\MetadataCachingAdapter\u003A\u003AlastModified\u0028\u0029",
+            "name": "lastModified",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-MetadataCachingAdapter.html#method_lastModified"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\MetadataCachingAdapter\u003A\u003Avisibility\u0028\u0029",
+            "name": "visibility",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-MetadataCachingAdapter.html#method_visibility"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\MetadataCachingAdapter\u003A\u003AmimeType\u0028\u0029",
+            "name": "mimeType",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-MetadataCachingAdapter.html#method_mimeType"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\MetadataCachingAdapter\u003A\u003AfileSize\u0028\u0029",
+            "name": "fileSize",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-MetadataCachingAdapter.html#method_fileSize"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\MetadataCachingAdapter\u003A\u003A\u0024fileAttributeCache",
+            "name": "fileAttributeCache",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-MetadataCachingAdapter.html#property_fileAttributeCache"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\MetadataCachingAdapter\u003A\u003A\u0024base",
+            "name": "base",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-MetadataCachingAdapter.html#property_base"
+        },                {
             "fqsen": "\\Collecthor\\FlySystem\\OverlayAdapter",
             "name": "OverlayAdapter",
             "summary": "This\u0020adapter\u0020mounts\u0020one\u0020adapter\u0020as\u0020an\u0020overlay\u0020on\u0020top\u0020of\u0020another\u0020based\u0020on\u0020a\u0020prefix",
