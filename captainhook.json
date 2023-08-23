@@ -33,6 +33,11 @@
                 "action": "vendor/bin/psalm",
                 "options": [],
                 "conditions": []
+            },
+            {
+                "action": "vendor/bin/phpstan",
+                "options": [],
+                "conditions": []
             }
         ]
     },
