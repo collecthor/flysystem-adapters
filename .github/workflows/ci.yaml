@@ -35,6 +35,7 @@ jobs:
           name: codecov-umbrella
   release:
     name: Automated release
+    if: github.event_name != 'pull_request'
     needs: [code_checks]
     runs-on: ubuntu-latest
     steps:
