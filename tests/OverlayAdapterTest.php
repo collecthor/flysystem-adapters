@@ -179,7 +179,7 @@ class OverlayAdapterTest extends IndirectAdapterTestCase
         $this->assertListingLength(count(explode('/', $path)), $combined, '/', true);
     }
 
-    public function prefixProvider(): iterable
+    public static function prefixProvider(): iterable
     {
         yield "second level directory" => ["some/overlay"];
         yield "top level directory" => ["overlay"];

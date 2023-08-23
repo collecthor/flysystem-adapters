@@ -15,7 +15,7 @@ use PHPUnit\Framework\TestCase;
  */
 final class MetadataCachingAdapterTest extends TestCase
 {
-    public function metadataTypes(): array
+    public static function metadataTypes(): array
     {
         return [
             ['lastModified'],
@@ -26,10 +26,10 @@ final class MetadataCachingAdapterTest extends TestCase
         ];
     }
 
-    public function multipleMetadataTypes(): iterable
+    public static function multipleMetadataTypes(): iterable
     {
-        foreach ($this->metadataTypes() as [$type1]) {
-            foreach ($this->metadataTypes() as [$type2]) {
+        foreach (self::metadataTypes() as [$type1]) {
+            foreach (self::metadataTypes() as [$type2]) {
                 if ($type1 !== $type2) {
                     yield [$type1, $type2];
                 }
