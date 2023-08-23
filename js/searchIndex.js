@@ -191,6 +191,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_copy"
         },                {
+            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter\u003A\u003ApublicUrl\u0028\u0029",
+            "name": "publicUrl",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_publicUrl"
+        },                {
             "fqsen": "\\Collecthor\\FlySystem\\MetadataCachingAdapter",
             "name": "MetadataCachingAdapter",
             "summary": "This\u0020adapter\u0020will\u0020cache\u0020the\u0020results\u0020of\u0020any\u0020of\u0020the\u0020metadata\u0020retrievers\u0020and\u0020reuse\u0020them.",
@@ -291,11 +296,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Collecthor-FlySystem-OverlayAdapter.html#method_copy"
         },                {
-            "fqsen": "\\Collecthor\\FlySystem\\OverlayAdapter\u003A\u003A\u0024pathPrefixer",
-            "name": "pathPrefixer",
-            "summary": "",
-            "url": "classes/Collecthor-FlySystem-OverlayAdapter.html#property_pathPrefixer"
-        },                {
             "fqsen": "\\Collecthor\\FlySystem\\OverlayAdapter\u003A\u003A\u0024overlay",
             "name": "overlay",
             "summary": "",
@@ -395,6 +395,46 @@ Search.appendIndex(
             "name": "adapter",
             "summary": "",
             "url": "classes/Collecthor-FlySystem-VirtualDirectoryListAdapter.html#property_adapter"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryListWithMetaDataAdapter",
+            "name": "VirtualDirectoryListWithMetaDataAdapter",
+            "summary": "This\u0020adapter\u0020allows\u0020you\u0020to\u0020add\u0020virtual\u0020directories\u0020to\u0020a\u0020specific\u0020path\u0020on\u0020an\u0020underlying\u0020adapter.",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryListWithMetaDataAdapter.html"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryListWithMetaDataAdapter\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryListWithMetaDataAdapter.html#method___construct"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryListWithMetaDataAdapter\u003A\u003AgetAdapter\u0028\u0029",
+            "name": "getAdapter",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryListWithMetaDataAdapter.html#method_getAdapter"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryListWithMetaDataAdapter\u003A\u003AdirectoryExists\u0028\u0029",
+            "name": "directoryExists",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryListWithMetaDataAdapter.html#method_directoryExists"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryListWithMetaDataAdapter\u003A\u003AlistContents\u0028\u0029",
+            "name": "listContents",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryListWithMetaDataAdapter.html#method_listContents"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryListWithMetaDataAdapter\u003A\u003A\u0024directories",
+            "name": "directories",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryListWithMetaDataAdapter.html#property_directories"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryListWithMetaDataAdapter\u003A\u003A\u0024path",
+            "name": "path",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryListWithMetaDataAdapter.html#property_path"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryListWithMetaDataAdapter\u003A\u003A\u0024adapter",
+            "name": "adapter",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryListWithMetaDataAdapter.html#property_adapter"
         },                {
             "fqsen": "\\",
             "name": "\\",
