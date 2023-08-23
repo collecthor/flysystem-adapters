@@ -5,26 +5,20 @@ jobs:
     name: Check code
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.1'
-          tools: symplify/easy-coding-standard, phpstan, phpunit, phpDocumentor
+      - uses: ramsey/composer-install@v2
       - name: Test code style
-        run: ecs
-      - name: Install dependencies
-        run: composer install --no-dev
+        run: vendor/bin/ecs
       - name: Static analysis
-        run: phpstan analyse src
-      - name: Install dependencies including dev
-        run: composer install
+        run: vendor/bin/phpstan
       - name: Tests
-        run: phpunit --coverage-clover coverage.xml
-      - name: Static analysis of tests
-        run: phpstan analyse tests
+        run: vendor/bin/phpunit --coverage-clover coverage.xml
       - name: Generate docs
-        run: phpdoc run
+        run: docker run --rm -v ${PWD}:/data phpdoc/phpdoc:3
       - name: Deploy docs to pages
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -35,22 +29,13 @@ jobs:
           files: ./coverage.xml
           flags: unittests
           name: codecov-umbrella
-  commitlint:
-    name: commit-lint
-    runs-on: ubuntu-latest
-    steps:
-      - uses: ahmadnassri/action-commit-lint@v1
-        with:
-         config: conventional
   release:
     name: Automated release
     needs: [code_checks]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v1
-        with:
-          node-version: '16.x'
       - run: >
           npx
           -p "@semantic-release/commit-analyzer"
