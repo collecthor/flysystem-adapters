@@ -50,10 +50,10 @@ class OverlayAdapter extends IndirectAdapter
     protected function getAdapter(string $rawPath, string $preparedPath): FilesystemAdapter
     {
         if (str_starts_with($rawPath, rtrim($this->prefix, '/'))) {
-//            fwrite(STDERR, "Using overlay for path $rawPath, $preparedPath\n");
+            //            fwrite(STDERR, "Using overlay for path $rawPath, $preparedPath\n");
             $result = $this->overlay;
         } else {
-//            fwrite(STDERR, "Using base for path $rawPath, $preparedPath\n");
+            //            fwrite(STDERR, "Using base for path $rawPath, $preparedPath\n");
             $result = $this->base;
         }
         return $result;

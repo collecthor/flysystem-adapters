@@ -8,26 +8,18 @@ use Symplify\EasyCodingStandard\Config\ECSConfig;
 use Symplify\EasyCodingStandard\ValueObject\Option;
 use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
-return static function (ECSConfig $ECSConfig): void {
-    $parameters = $ECSConfig->parameters();
+return static function (ECSConfig $config): void {
     // Parallel
-    $parameters->set(Option::PARALLEL, true);
+    $config->parallel();
 
     // Paths
-    $parameters->set(Option::PATHS, [
-        __DIR__ . '/src', __DIR__ . '/tests', __DIR__ . '/ecs.php'
+    $config->paths([__DIR__ . '/src', __DIR__ . '/tests', __DIR__ . '/ecs.php']);
 
-
-
-    ]);
     // A. full sets
-    $ECSConfig->import(SetList::PSR_12);
-
+    $config->import(SetList::PSR_12);
 
     // B. standalone rule
-    $services = $ECSConfig->services();
-    $services->set(ArraySyntaxFixer::class)
-        ->call('configure', [[
-            'syntax' => 'short',
-        ]]);
+    $config->ruleWithConfiguration(ArraySyntaxFixer::class, [
+        'syntax' => 'short',
+    ]);
 };
