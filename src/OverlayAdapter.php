@@ -16,12 +16,10 @@ use League\Flysystem\UnableToMoveFile;
  */
 class OverlayAdapter extends IndirectAdapter
 {
-    private PathPrefixer $pathPrefixer;
-
     private FilesystemAdapter $overlay;
 
     /**
-     * @psalm-var array<string, bool>
+     * @var array<string, bool>
      */
     private readonly array $virtualDirectories;
 
@@ -34,8 +32,6 @@ class OverlayAdapter extends IndirectAdapter
 
         // The overlay is prefixed with the prefix.
         $this->overlay = new StripPrefixAdapter($overlay, $this->prefix);
-
-        $this->pathPrefixer = new PathPrefixer($this->prefix);
 
         $virtualPath = "";
         $virtualDirectories = [];
@@ -50,10 +46,8 @@ class OverlayAdapter extends IndirectAdapter
     protected function getAdapter(string $rawPath, string $preparedPath): FilesystemAdapter
     {
         if (str_starts_with($rawPath, rtrim($this->prefix, '/'))) {
-//            fwrite(STDERR, "Using overlay for path $rawPath, $preparedPath\n");
             $result = $this->overlay;
         } else {
-//            fwrite(STDERR, "Using base for path $rawPath, $preparedPath\n");
             $result = $this->base;
         }
         return $result;

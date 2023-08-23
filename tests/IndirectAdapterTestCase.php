@@ -8,6 +8,7 @@ use League\Flysystem\AdapterTestUtilities\FilesystemAdapterTestCase;
 use League\Flysystem\Config;
 use League\Flysystem\FilesystemAdapter;
 use League\Flysystem\StorageAttributes;
+use League\Flysystem\UnableToGeneratePublicUrl;
 
 abstract class IndirectAdapterTestCase extends FilesystemAdapterTestCase
 {
@@ -91,5 +92,15 @@ abstract class IndirectAdapterTestCase extends FilesystemAdapterTestCase
             self::assertCount($initialCount, iterator_to_array($adapter->listContents('/', false), false));
             self::assertFalse($adapter->directoryExists('explicitly-created-directory'));
         });
+    }
+
+    public function generating_a_temporary_url(): void
+    {
+        $this->markTestSkipped('Indirect adapters forward this to their underlying adapter');
+    }
+
+    public function generating_a_public_url(): void
+    {
+        $this->markTestSkipped('Indirect adapters forward this to their underlying adapter');
     }
 }

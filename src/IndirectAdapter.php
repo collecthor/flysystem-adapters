@@ -7,12 +7,14 @@ namespace Collecthor\FlySystem;
 use League\Flysystem\Config;
 use League\Flysystem\FileAttributes;
 use League\Flysystem\FilesystemAdapter;
+use League\Flysystem\UnableToGeneratePublicUrl;
+use League\Flysystem\UrlGeneration\PublicUrlGenerator;
 
 /**
  * Indirect adapter implements a simple pattern that allows extending classes to provide a concrete adapter for any call
  * as well as rewrite the path passed to such calls.
  */
-abstract class IndirectAdapter implements FilesystemAdapter
+abstract class IndirectAdapter implements FilesystemAdapter, PublicUrlGenerator
 {
     protected function preparePath(string $path): string
     {
@@ -124,5 +126,15 @@ abstract class IndirectAdapter implements FilesystemAdapter
         $preparedSource = $this->preparePath($source);
         $preparedDestination = $this->preparePath($destination);
         $this->getAdapter($source, $preparedSource)->copy($preparedSource, $preparedDestination, $config);
+    }
+
+    public function publicUrl(string $path, Config $config): string
+    {
+        $preparedPath = $this->preparePath($path);
+        $adapter = $this->getAdapter($path, $preparedPath);
+        if ($adapter instanceof PublicUrlGenerator) {
+            return $adapter->publicUrl($preparedPath, $config);
+        }
+        throw UnableToGeneratePublicUrl::noGeneratorConfigured($path, "Underlying adapter does not support public URL generation");
     }
 }

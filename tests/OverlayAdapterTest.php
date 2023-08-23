@@ -179,7 +179,7 @@ class OverlayAdapterTest extends IndirectAdapterTestCase
         $this->assertListingLength(count(explode('/', $path)), $combined, '/', true);
     }
 
-    public function prefixProvider(): iterable
+    public static function prefixProvider(): iterable
     {
         yield "second level directory" => ["some/overlay"];
         yield "top level directory" => ["overlay"];
@@ -206,6 +206,14 @@ class OverlayAdapterTest extends IndirectAdapterTestCase
         $this->assertListingLength(count($components) + 1, $combined, '/', true);
     }
 
+    public function testPrefixMustBeTerminated(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $base = new InMemoryFilesystemAdapter();
+        $overlay = new InMemoryFilesystemAdapter();
+
+        new OverlayAdapter($base, $overlay, 'test');
+    }
     public function testListingEmptyPath(): void
     {
         $base = new InMemoryFilesystemAdapter();
