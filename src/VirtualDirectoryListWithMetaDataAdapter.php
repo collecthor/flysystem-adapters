@@ -17,7 +17,7 @@ use League\Flysystem\Visibility;
 class VirtualDirectoryListWithMetaDataAdapter extends IndirectAdapter
 {
     /**
-     * @var array<string, array<mixed>>
+     * @var array<array-key, array<mixed>>
      */
     private readonly array $directories;
 
@@ -26,7 +26,7 @@ class VirtualDirectoryListWithMetaDataAdapter extends IndirectAdapter
     /**
      * @param FilesystemAdapter $adapter
      * @param string $path
-     * @param array<string, array<mixed>> $directories
+     * @param array<array-key, array<mixed>> $directories
      */
     public function __construct(private readonly FilesystemAdapter $adapter, string $path, array $directories)
     {
@@ -36,7 +36,7 @@ class VirtualDirectoryListWithMetaDataAdapter extends IndirectAdapter
         $this->path = rtrim($path, '/');
         $paths = [];
         foreach ($directories as $directoryPath => $meta) {
-            if (str_contains($directoryPath, '/')) {
+            if (str_contains((string) $directoryPath, '/')) {
                 throw new \InvalidArgumentException('Directories must not contain /');
             }
             $paths[$directoryPath] = $meta;
