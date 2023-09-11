@@ -224,7 +224,7 @@ class OverlayAdapterTest extends IndirectAdapterTestCase
         $this->assertListingLength(1, $combined, '/');
         $this->assertListingLength(1, $combined, '');
     }
-    public function filenameProvider(): Generator
+    public static function filenameProvider(): Generator
     {
         yield from parent::filenameProvider();
         yield "a nested path inside the overlay" => ["overlay/test/abc"];
