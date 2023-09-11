@@ -47,7 +47,7 @@ jobs:
           npx
           -p "@semantic-release/commit-analyzer"
           -p "@semantic-release/release-notes-generator"
-          -p conventional-changelog-conventionalcommits
+          -p conventional-changelog-conventionalcommits@6
           -p semantic-release
           -- semantic-release
         env:
