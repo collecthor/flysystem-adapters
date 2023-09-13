@@ -196,6 +196,51 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_publicUrl"
         },                {
+            "fqsen": "\\Collecthor\\FlySystem\\interfaces\\DirectoryProvider",
+            "name": "DirectoryProvider",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-interfaces-DirectoryProvider.html"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\interfaces\\DirectoryProvider\u003A\u003AhasTopLevelDirectory\u0028\u0029",
+            "name": "hasTopLevelDirectory",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-interfaces-DirectoryProvider.html#method_hasTopLevelDirectory"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\LazyDirectoryProvider",
+            "name": "LazyDirectoryProvider",
+            "summary": "Allows\u0020you\u0020to\u0020lazily\u0020provide\u0020directories\u0020for\u0020use\u0020with\u0020VirtualDirectoryListAdapter",
+            "url": "classes/Collecthor-FlySystem-LazyDirectoryProvider.html"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\LazyDirectoryProvider\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-LazyDirectoryProvider.html#method___construct"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\LazyDirectoryProvider\u003A\u003AgetDirectories\u0028\u0029",
+            "name": "getDirectories",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-LazyDirectoryProvider.html#method_getDirectories"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\LazyDirectoryProvider\u003A\u003AgetIterator\u0028\u0029",
+            "name": "getIterator",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-LazyDirectoryProvider.html#method_getIterator"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\LazyDirectoryProvider\u003A\u003AhasTopLevelDirectory\u0028\u0029",
+            "name": "hasTopLevelDirectory",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-LazyDirectoryProvider.html#method_hasTopLevelDirectory"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\LazyDirectoryProvider\u003A\u003A\u0024directories",
+            "name": "directories",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-LazyDirectoryProvider.html#property_directories"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\LazyDirectoryProvider\u003A\u003A\u0024loader",
+            "name": "loader",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-LazyDirectoryProvider.html#property_loader"
+        },                {
             "fqsen": "\\Collecthor\\FlySystem\\MetadataCachingAdapter",
             "name": "MetadataCachingAdapter",
             "summary": "This\u0020adapter\u0020will\u0020cache\u0020the\u0020results\u0020of\u0020any\u0020of\u0020the\u0020metadata\u0020retrievers\u0020and\u0020reuse\u0020them.",
@@ -436,6 +481,46 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Collecthor-FlySystem-VirtualDirectoryListWithMetaDataAdapter.html#property_adapter"
         },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryProviderAdapter",
+            "name": "VirtualDirectoryProviderAdapter",
+            "summary": "This\u0020adapter\u0020allows\u0020you\u0020to\u0020add\u0020virtual\u0020directories\u0020to\u0020a\u0020specific\u0020path\u0020on\u0020an\u0020underlying\u0020adapter.",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryProviderAdapter.html"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryProviderAdapter\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryProviderAdapter.html#method___construct"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryProviderAdapter\u003A\u003AgetAdapter\u0028\u0029",
+            "name": "getAdapter",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryProviderAdapter.html#method_getAdapter"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryProviderAdapter\u003A\u003AdirectoryExists\u0028\u0029",
+            "name": "directoryExists",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryProviderAdapter.html#method_directoryExists"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryProviderAdapter\u003A\u003AlistContents\u0028\u0029",
+            "name": "listContents",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryProviderAdapter.html#method_listContents"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryProviderAdapter\u003A\u003A\u0024path",
+            "name": "path",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryProviderAdapter.html#property_path"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryProviderAdapter\u003A\u003A\u0024adapter",
+            "name": "adapter",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryProviderAdapter.html#property_adapter"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryProviderAdapter\u003A\u003A\u0024directories",
+            "name": "directories",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryProviderAdapter.html#property_directories"
+        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
@@ -450,5 +535,10 @@ Search.appendIndex(
             "name": "Collecthor",
             "summary": "",
             "url": "namespaces/collecthor.html"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\interfaces",
+            "name": "interfaces",
+            "summary": "",
+            "url": "namespaces/collecthor-flysystem-interfaces.html"
         }            ]
 );
