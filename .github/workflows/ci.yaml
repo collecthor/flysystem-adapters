@@ -9,12 +9,12 @@ jobs:
     name: Check code
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.3'
-      - uses: ramsey/composer-install@v2
+      - uses: ramsey/composer-install@v3
       - name: Test code style
         run: vendor/bin/ecs
       - name: Static analysis
@@ -24,11 +24,11 @@ jobs:
       - name: Generate docs
         run: docker run --rm -v ${PWD}:/data phpdoc/phpdoc:3
       - name: Deploy docs to pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
@@ -41,8 +41,8 @@ jobs:
     needs: [code_checks]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
       - run: >
           npx
           -p "@semantic-release/commit-analyzer"
