@@ -3,8 +3,9 @@
     "description": "Meta adapters for FlySystem v3",
     "license": "MIT",
     "require": {
-        "php": ">= 8.1",
-        "league/flysystem": "^3.0"
+        "php": ">=8.3",
+        "league/flysystem": "^3.0",
+        "psr/event-dispatcher": "^1.0"
     },
     "require-dev": {
         "league/flysystem-adapter-test-utilities": "^3.0",
