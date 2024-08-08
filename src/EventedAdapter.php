@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Collecthor\FlySystem;
 
-use Collecthor\FlySystem\events\AdapterEvent;
 use Collecthor\FlySystem\events\CopyEvent;
 use Collecthor\FlySystem\events\DeleteDirectoryEvent;
 use Collecthor\FlySystem\events\DeleteEvent;
@@ -32,7 +31,6 @@ final readonly class EventedAdapter implements FilesystemAdapter, PublicUrlGener
 
     public function fileExists(string $path): bool
     {
-        $this->dispatcher->dispatch(new AdapterEvent($this->adapter));
         return $this->adapter->fileExists($path);
     }
 
