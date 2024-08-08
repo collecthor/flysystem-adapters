@@ -31,4 +31,18 @@ class StripPrefixAdapterTest extends IndirectAdapterTestCase
 
         $this->assertListingsAreTheSame($adapter->listContents('test', false), $adapter->listContents('test/', false));
     }
+
+    public function testPrefixWithoutSlash(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        new StripPrefixAdapter(new InMemoryFilesystemAdapter(), 'test');
+    }
+
+    public function testThatPreparePathThrowsAnException(): void
+    {
+        $adapter = new StripPrefixAdapter(new InMemoryFilesystemAdapter(), 'test/');
+        $this->assertFalse($adapter->fileExists('test/abc'));
+        $this->expectException(\Exception::class);
+        $this->assertFalse($adapter->fileExists('abc'));
+    }
 }

@@ -6,7 +6,11 @@ namespace Collecthor\FlySystem\events;
 
 use League\Flysystem\Config;
 use League\Flysystem\FilesystemAdapter;
+use PHPUnit\Framework\Attributes\CodeCoverageIgnore;
 
+/**
+ * @codeCoverageIgnore
+ */
 final readonly class CopyEvent
 {
     public function __construct(
