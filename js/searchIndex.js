@@ -91,110 +91,435 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#property_placeHolderName"
         },                {
+            "fqsen": "\\Collecthor\\FlySystem\\EventedAdapter",
+            "name": "EventedAdapter",
+            "summary": "Indirect\u0020adapter\u0020implements\u0020a\u0020simple\u0020pattern\u0020that\u0020allows\u0020extending\u0020classes\u0020to\u0020provide\u0020a\u0020concrete\u0020adapter\u0020for\u0020any\u0020call\nas\u0020well\u0020as\u0020rewrite\u0020the\u0020path\u0020passed\u0020to\u0020such\u0020calls.",
+            "url": "classes/Collecthor-FlySystem-EventedAdapter.html"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\EventedAdapter\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-EventedAdapter.html#method___construct"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\EventedAdapter\u003A\u003AfileExists\u0028\u0029",
+            "name": "fileExists",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-EventedAdapter.html#method_fileExists"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\EventedAdapter\u003A\u003AdirectoryExists\u0028\u0029",
+            "name": "directoryExists",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-EventedAdapter.html#method_directoryExists"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\EventedAdapter\u003A\u003Awrite\u0028\u0029",
+            "name": "write",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-EventedAdapter.html#method_write"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\EventedAdapter\u003A\u003AwriteStream\u0028\u0029",
+            "name": "writeStream",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-EventedAdapter.html#method_writeStream"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\EventedAdapter\u003A\u003Aread\u0028\u0029",
+            "name": "read",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-EventedAdapter.html#method_read"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\EventedAdapter\u003A\u003AreadStream\u0028\u0029",
+            "name": "readStream",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-EventedAdapter.html#method_readStream"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\EventedAdapter\u003A\u003Adelete\u0028\u0029",
+            "name": "delete",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-EventedAdapter.html#method_delete"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\EventedAdapter\u003A\u003AdeleteDirectory\u0028\u0029",
+            "name": "deleteDirectory",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-EventedAdapter.html#method_deleteDirectory"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\EventedAdapter\u003A\u003AcreateDirectory\u0028\u0029",
+            "name": "createDirectory",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-EventedAdapter.html#method_createDirectory"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\EventedAdapter\u003A\u003AsetVisibility\u0028\u0029",
+            "name": "setVisibility",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-EventedAdapter.html#method_setVisibility"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\EventedAdapter\u003A\u003Avisibility\u0028\u0029",
+            "name": "visibility",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-EventedAdapter.html#method_visibility"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\EventedAdapter\u003A\u003AmimeType\u0028\u0029",
+            "name": "mimeType",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-EventedAdapter.html#method_mimeType"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\EventedAdapter\u003A\u003AlastModified\u0028\u0029",
+            "name": "lastModified",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-EventedAdapter.html#method_lastModified"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\EventedAdapter\u003A\u003AfileSize\u0028\u0029",
+            "name": "fileSize",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-EventedAdapter.html#method_fileSize"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\EventedAdapter\u003A\u003AlistContents\u0028\u0029",
+            "name": "listContents",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-EventedAdapter.html#method_listContents"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\EventedAdapter\u003A\u003Amove\u0028\u0029",
+            "name": "move",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-EventedAdapter.html#method_move"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\EventedAdapter\u003A\u003Acopy\u0028\u0029",
+            "name": "copy",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-EventedAdapter.html#method_copy"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\EventedAdapter\u003A\u003ApublicUrl\u0028\u0029",
+            "name": "publicUrl",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-EventedAdapter.html#method_publicUrl"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\EventedAdapter\u003A\u003A\u0024adapter",
+            "name": "adapter",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-EventedAdapter.html#property_adapter"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\EventedAdapter\u003A\u003A\u0024dispatcher",
+            "name": "dispatcher",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-EventedAdapter.html#property_dispatcher"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\AdapterEvent",
+            "name": "AdapterEvent",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-AdapterEvent.html"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\AdapterEvent\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-AdapterEvent.html#method___construct"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\AdapterEvent\u003A\u003A\u0024adapter",
+            "name": "adapter",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-AdapterEvent.html#property_adapter"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\AdapterEvent\u003A\u003A\u0024before",
+            "name": "before",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-AdapterEvent.html#property_before"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\CopyEvent",
+            "name": "CopyEvent",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-CopyEvent.html"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\CopyEvent\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-CopyEvent.html#method___construct"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\CopyEvent\u003A\u003A\u0024adapter",
+            "name": "adapter",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-CopyEvent.html#property_adapter"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\CopyEvent\u003A\u003A\u0024before",
+            "name": "before",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-CopyEvent.html#property_before"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\CopyEvent\u003A\u003A\u0024source",
+            "name": "source",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-CopyEvent.html#property_source"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\CopyEvent\u003A\u003A\u0024destination",
+            "name": "destination",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-CopyEvent.html#property_destination"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\CopyEvent\u003A\u003A\u0024config",
+            "name": "config",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-CopyEvent.html#property_config"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\DeleteDirectoryEvent",
+            "name": "DeleteDirectoryEvent",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-DeleteDirectoryEvent.html"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\DeleteDirectoryEvent\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-DeleteDirectoryEvent.html#method___construct"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\DeleteDirectoryEvent\u003A\u003A\u0024adapter",
+            "name": "adapter",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-DeleteDirectoryEvent.html#property_adapter"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\DeleteDirectoryEvent\u003A\u003A\u0024before",
+            "name": "before",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-DeleteDirectoryEvent.html#property_before"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\DeleteDirectoryEvent\u003A\u003A\u0024path",
+            "name": "path",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-DeleteDirectoryEvent.html#property_path"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\DeleteEvent",
+            "name": "DeleteEvent",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-DeleteEvent.html"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\DeleteEvent\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-DeleteEvent.html#method___construct"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\DeleteEvent\u003A\u003A\u0024adapter",
+            "name": "adapter",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-DeleteEvent.html#property_adapter"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\DeleteEvent\u003A\u003A\u0024before",
+            "name": "before",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-DeleteEvent.html#property_before"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\DeleteEvent\u003A\u003A\u0024path",
+            "name": "path",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-DeleteEvent.html#property_path"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\MoveEvent",
+            "name": "MoveEvent",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-MoveEvent.html"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\MoveEvent\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-MoveEvent.html#method___construct"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\MoveEvent\u003A\u003A\u0024adapter",
+            "name": "adapter",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-MoveEvent.html#property_adapter"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\MoveEvent\u003A\u003A\u0024before",
+            "name": "before",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-MoveEvent.html#property_before"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\MoveEvent\u003A\u003A\u0024source",
+            "name": "source",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-MoveEvent.html#property_source"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\MoveEvent\u003A\u003A\u0024destination",
+            "name": "destination",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-MoveEvent.html#property_destination"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\MoveEvent\u003A\u003A\u0024config",
+            "name": "config",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-MoveEvent.html#property_config"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\WriteEvent",
+            "name": "WriteEvent",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-WriteEvent.html"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\WriteEvent\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-WriteEvent.html#method___construct"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\WriteEvent\u003A\u003A\u0024adapter",
+            "name": "adapter",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-WriteEvent.html#property_adapter"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\WriteEvent\u003A\u003A\u0024before",
+            "name": "before",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-WriteEvent.html#property_before"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\WriteEvent\u003A\u003A\u0024path",
+            "name": "path",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-WriteEvent.html#property_path"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\WriteEvent\u003A\u003A\u0024contents",
+            "name": "contents",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-WriteEvent.html#property_contents"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\WriteEvent\u003A\u003A\u0024config",
+            "name": "config",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-WriteEvent.html#property_config"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\WriteStreamEvent",
+            "name": "WriteStreamEvent",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-WriteStreamEvent.html"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\WriteStreamEvent\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-WriteStreamEvent.html#method___construct"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\WriteStreamEvent\u003A\u003A\u0024adapter",
+            "name": "adapter",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-WriteStreamEvent.html#property_adapter"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\WriteStreamEvent\u003A\u003A\u0024before",
+            "name": "before",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-WriteStreamEvent.html#property_before"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\WriteStreamEvent\u003A\u003A\u0024path",
+            "name": "path",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-WriteStreamEvent.html#property_path"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\WriteStreamEvent\u003A\u003A\u0024contents",
+            "name": "contents",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-WriteStreamEvent.html#property_contents"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events\\WriteStreamEvent\u003A\u003A\u0024config",
+            "name": "config",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-events-WriteStreamEvent.html#property_config"
+        },                {
             "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter",
             "name": "IndirectAdapter",
             "summary": "Indirect\u0020adapter\u0020implements\u0020a\u0020simple\u0020pattern\u0020that\u0020allows\u0020extending\u0020classes\u0020to\u0020provide\u0020a\u0020concrete\u0020adapter\u0020for\u0020any\u0020call\nas\u0020well\u0020as\u0020rewrite\u0020the\u0020path\u0020passed\u0020to\u0020such\u0020calls.",
             "url": "classes/Collecthor-FlySystem-IndirectAdapter.html"
         },                {
-            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter\u003A\u003ApreparePath\u0028\u0029",
+            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapterTrait",
+            "name": "IndirectAdapterTrait",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-IndirectAdapterTrait.html"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapterTrait\u003A\u003ApreparePath\u0028\u0029",
             "name": "preparePath",
             "summary": "",
-            "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_preparePath"
+            "url": "classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_preparePath"
         },                {
-            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter\u003A\u003AgetAdapter\u0028\u0029",
+            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapterTrait\u003A\u003AgetAdapter\u0028\u0029",
             "name": "getAdapter",
             "summary": "",
-            "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_getAdapter"
+            "url": "classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_getAdapter"
         },                {
-            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter\u003A\u003AfileExists\u0028\u0029",
+            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapterTrait\u003A\u003AfileExists\u0028\u0029",
             "name": "fileExists",
             "summary": "",
-            "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_fileExists"
+            "url": "classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_fileExists"
         },                {
-            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter\u003A\u003AdirectoryExists\u0028\u0029",
+            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapterTrait\u003A\u003AdirectoryExists\u0028\u0029",
             "name": "directoryExists",
             "summary": "",
-            "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_directoryExists"
+            "url": "classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_directoryExists"
         },                {
-            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter\u003A\u003Awrite\u0028\u0029",
+            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapterTrait\u003A\u003Awrite\u0028\u0029",
             "name": "write",
             "summary": "",
-            "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_write"
+            "url": "classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_write"
         },                {
-            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter\u003A\u003AwriteStream\u0028\u0029",
+            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapterTrait\u003A\u003AwriteStream\u0028\u0029",
             "name": "writeStream",
             "summary": "",
-            "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_writeStream"
+            "url": "classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_writeStream"
         },                {
-            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter\u003A\u003Aread\u0028\u0029",
+            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapterTrait\u003A\u003Aread\u0028\u0029",
             "name": "read",
             "summary": "",
-            "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_read"
+            "url": "classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_read"
         },                {
-            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter\u003A\u003AreadStream\u0028\u0029",
+            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapterTrait\u003A\u003AreadStream\u0028\u0029",
             "name": "readStream",
             "summary": "",
-            "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_readStream"
+            "url": "classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_readStream"
         },                {
-            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter\u003A\u003Adelete\u0028\u0029",
+            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapterTrait\u003A\u003Adelete\u0028\u0029",
             "name": "delete",
             "summary": "",
-            "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_delete"
+            "url": "classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_delete"
         },                {
-            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter\u003A\u003AdeleteDirectory\u0028\u0029",
+            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapterTrait\u003A\u003AdeleteDirectory\u0028\u0029",
             "name": "deleteDirectory",
             "summary": "",
-            "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_deleteDirectory"
+            "url": "classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_deleteDirectory"
         },                {
-            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter\u003A\u003AcreateDirectory\u0028\u0029",
+            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapterTrait\u003A\u003AcreateDirectory\u0028\u0029",
             "name": "createDirectory",
             "summary": "",
-            "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_createDirectory"
+            "url": "classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_createDirectory"
         },                {
-            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter\u003A\u003AsetVisibility\u0028\u0029",
+            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapterTrait\u003A\u003AsetVisibility\u0028\u0029",
             "name": "setVisibility",
             "summary": "",
-            "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_setVisibility"
+            "url": "classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_setVisibility"
         },                {
-            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter\u003A\u003Avisibility\u0028\u0029",
+            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapterTrait\u003A\u003Avisibility\u0028\u0029",
             "name": "visibility",
             "summary": "",
-            "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_visibility"
+            "url": "classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_visibility"
         },                {
-            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter\u003A\u003AmimeType\u0028\u0029",
+            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapterTrait\u003A\u003AmimeType\u0028\u0029",
             "name": "mimeType",
             "summary": "",
-            "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_mimeType"
+            "url": "classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_mimeType"
         },                {
-            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter\u003A\u003AlastModified\u0028\u0029",
+            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapterTrait\u003A\u003AlastModified\u0028\u0029",
             "name": "lastModified",
             "summary": "",
-            "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_lastModified"
+            "url": "classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_lastModified"
         },                {
-            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter\u003A\u003AfileSize\u0028\u0029",
+            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapterTrait\u003A\u003AfileSize\u0028\u0029",
             "name": "fileSize",
             "summary": "",
-            "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_fileSize"
+            "url": "classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_fileSize"
         },                {
-            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter\u003A\u003AlistContents\u0028\u0029",
+            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapterTrait\u003A\u003AlistContents\u0028\u0029",
             "name": "listContents",
             "summary": "",
-            "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_listContents"
+            "url": "classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_listContents"
         },                {
-            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter\u003A\u003Amove\u0028\u0029",
+            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapterTrait\u003A\u003Amove\u0028\u0029",
             "name": "move",
             "summary": "",
-            "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_move"
+            "url": "classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_move"
         },                {
-            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter\u003A\u003Acopy\u0028\u0029",
+            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapterTrait\u003A\u003Acopy\u0028\u0029",
             "name": "copy",
             "summary": "",
-            "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_copy"
+            "url": "classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_copy"
         },                {
-            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapter\u003A\u003ApublicUrl\u0028\u0029",
+            "fqsen": "\\Collecthor\\FlySystem\\IndirectAdapterTrait\u003A\u003ApublicUrl\u0028\u0029",
             "name": "publicUrl",
             "summary": "",
-            "url": "classes/Collecthor-FlySystem-IndirectAdapter.html#method_publicUrl"
+            "url": "classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_publicUrl"
         },                {
             "fqsen": "\\Collecthor\\FlySystem\\interfaces\\DirectoryProvider",
             "name": "DirectoryProvider",
@@ -535,6 +860,11 @@ Search.appendIndex(
             "name": "Collecthor",
             "summary": "",
             "url": "namespaces/collecthor.html"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\events",
+            "name": "events",
+            "summary": "",
+            "url": "namespaces/collecthor-flysystem-events.html"
         },                {
             "fqsen": "\\Collecthor\\FlySystem\\interfaces",
             "name": "interfaces",

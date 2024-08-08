@@ -54,7 +54,7 @@
     Menu
 </label>
 <aside class="phpdocumentor-column -three phpdocumentor-sidebar">
-                    <section class="phpdocumentor-sidebar__category">
+                    <section class="phpdocumentor-sidebar__category -namespaces">
             <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
     <a href="namespaces/collecthor.html" class="">Collecthor</a>
@@ -67,7 +67,7 @@
             </ul>
 
                         </section>
-                <section class="phpdocumentor-sidebar__category">
+                <section class="phpdocumentor-sidebar__category -packages">
             <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
     <a href="packages/FlysystemAdapters.html" class="">FlysystemAdapters</a>
@@ -75,14 +75,14 @@
 
                         </section>
             
-    <section class="phpdocumentor-sidebar__category">
+    <section class="phpdocumentor-sidebar__category -reports">
         <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
                 <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/deprecated.html">Deprecated</a></h3>
         <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/errors.html">Errors</a></h3>
         <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/markers.html">Markers</a></h3>
     </section>
 
-    <section class="phpdocumentor-sidebar__category">
+    <section class="phpdocumentor-sidebar__category -indices">
         <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
         <h3 class="phpdocumentor-sidebar__root-package"><a href="indices/files.html">Files</a></h3>
     </section>
@@ -117,6 +117,10 @@
     </h2>
 
 <div class="phpdocumentor-label-line">
+    <div class="phpdocumentor-label phpdocumentor-label--success"><span>Read only</span><span>Yes</span></div>
+
+
+    <div class="phpdocumentor-label phpdocumentor-label--success"><span>Final</span><span>Yes</span></div>
 
 
 </div>
@@ -130,9 +134,12 @@
 
             <p class="phpdocumentor-summary">Implements directory support for any adapter utilizing a placeholder file.</p>
 
+
     <section class="phpdocumentor-description"><p>On iteration of directory contents the placeholder file is skipped, it is assumed any adapter not supporting directories
 will still correctly emit a directory node for any path prefix that contains a file.</p>
 </section>
+
+
 
 
 
@@ -166,13 +173,13 @@ will still correctly emit a directory node for any path prefix that contains a f
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#property_base">$base</a>
+    <a class="" href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#property_base">$base</a>
     <span>
                         &nbsp;: <abbr title="\League\Flysystem\FilesystemAdapter">FilesystemAdapter</abbr>            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#property_placeHolderName">$placeHolderName</a>
+    <a class="" href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#property_placeHolderName">$placeHolderName</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
@@ -186,134 +193,133 @@ will still correctly emit a directory node for any path prefix that contains a f
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method___construct">__construct()</a>
+    <a class="" href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method___construct">__construct()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_copy">copy()</a>
+    <a class="" href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_copy">copy()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_createDirectory">createDirectory()</a>
+    <a class="" href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_createDirectory">createDirectory()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_delete">delete()</a>
+    <a class="" href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_delete">delete()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_deleteDirectory">deleteDirectory()</a>
+    <a class="" href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_deleteDirectory">deleteDirectory()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_directoryExists">directoryExists()</a>
+    <a class="" href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_directoryExists">directoryExists()</a>
     <span>
                                 &nbsp;: bool    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_fileExists">fileExists()</a>
+    <a class="" href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_fileExists">fileExists()</a>
     <span>
                                 &nbsp;: bool    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_fileSize">fileSize()</a>
+    <a class="" href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_fileSize">fileSize()</a>
     <span>
                                 &nbsp;: <abbr title="\League\Flysystem\FileAttributes">FileAttributes</abbr>    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_lastModified">lastModified()</a>
+    <a class="" href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_lastModified">lastModified()</a>
     <span>
                                 &nbsp;: <abbr title="\League\Flysystem\FileAttributes">FileAttributes</abbr>    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_listContents">listContents()</a>
+    <a class="" href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_listContents">listContents()</a>
     <span>
                                 &nbsp;: iterable&lt;string|int, mixed&gt;    </span>
 </dt>
 <dd>Iteration will usually support directories even on adapters that don&#039;t have that concept.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_mimeType">mimeType()</a>
+    <a class="" href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_mimeType">mimeType()</a>
     <span>
                                 &nbsp;: <abbr title="\League\Flysystem\FileAttributes">FileAttributes</abbr>    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_move">move()</a>
+    <a class="" href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_move">move()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_publicUrl">publicUrl()</a>
+    <a class="" href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_publicUrl">publicUrl()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_read">read()</a>
+    <a class="" href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_read">read()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_readStream">readStream()</a>
+    <a class="" href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_readStream">readStream()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_setVisibility">setVisibility()</a>
+    <a class="" href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_setVisibility">setVisibility()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_visibility">visibility()</a>
+    <a class="" href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_visibility">visibility()</a>
     <span>
                                 &nbsp;: <abbr title="\League\Flysystem\FileAttributes">FileAttributes</abbr>    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_write">write()</a>
+    <a class="" href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_write">write()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_writeStream">writeStream()</a>
+    <a class="" href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_writeStream">writeStream()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
-    <a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_getAdapter">getAdapter()</a>
+    <a class="" href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_getAdapter">getAdapter()</a>
     <span>
                                 &nbsp;: <abbr title="\League\Flysystem\FilesystemAdapter">FilesystemAdapter</abbr>    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
-    <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_preparePath">preparePath()</a>
+    <a class="" href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_preparePath">preparePath()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
 
     </dl>
-
 
 
 
@@ -348,6 +354,7 @@ will still correctly emit a directory node for any path prefix that contains a f
     </aside>
 
     
+    
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type"><abbr title="\League\Flysystem\FilesystemAdapter">FilesystemAdapter</abbr></span>
@@ -356,6 +363,8 @@ will still correctly emit a directory node for any path prefix that contains a f
 
     
     
+    
+
     
 
 </article>
@@ -381,6 +390,7 @@ will still correctly emit a directory node for any path prefix that contains a f
     </aside>
 
     
+    
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type">string</span>
@@ -389,6 +399,8 @@ will still correctly emit a directory node for any path prefix that contains a f
 
     
     
+    
+
     
 
 </article>
@@ -426,6 +438,7 @@ will still correctly emit a directory node for any path prefix that contains a f
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -447,6 +460,8 @@ will still correctly emit a directory node for any path prefix that contains a f
     
 
     
+
+    
 </article>
                     <article
         class="phpdocumentor-element
@@ -456,13 +471,13 @@ will still correctly emit a directory node for any path prefix that contains a f
 >
     <h4 class="phpdocumentor-element__name" id="method_copy">
         copy()
-        <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_copy" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_copy" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapter.php"><a href="files/src-indirectadapter.html"><abbr title="src/IndirectAdapter.php">IndirectAdapter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapterTrait.php"><a href="files/src-indirectadaptertrait.html"><abbr title="src/IndirectAdapterTrait.php">IndirectAdapterTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">124</span>
+    <span class="phpdocumentor-element-found-in__line">125</span>
 
     </aside>
 
@@ -473,6 +488,7 @@ will still correctly emit a directory node for any path prefix that contains a f
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -498,6 +514,8 @@ will still correctly emit a directory node for any path prefix that contains a f
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -529,6 +547,7 @@ will still correctly emit a directory node for any path prefix that contains a f
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -550,6 +569,8 @@ will still correctly emit a directory node for any path prefix that contains a f
     
 
     
+
+    
 </article>
                     <article
         class="phpdocumentor-element
@@ -559,13 +580,13 @@ will still correctly emit a directory node for any path prefix that contains a f
 >
     <h4 class="phpdocumentor-element__name" id="method_delete">
         delete()
-        <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_delete" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_delete" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapter.php"><a href="files/src-indirectadapter.html"><abbr title="src/IndirectAdapter.php">IndirectAdapter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapterTrait.php"><a href="files/src-indirectadaptertrait.html"><abbr title="src/IndirectAdapterTrait.php">IndirectAdapterTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">63</span>
+    <span class="phpdocumentor-element-found-in__line">61</span>
 
     </aside>
 
@@ -577,6 +598,7 @@ will still correctly emit a directory node for any path prefix that contains a f
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -587,6 +609,8 @@ will still correctly emit a directory node for any path prefix that contains a f
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -600,13 +624,13 @@ will still correctly emit a directory node for any path prefix that contains a f
 >
     <h4 class="phpdocumentor-element__name" id="method_deleteDirectory">
         deleteDirectory()
-        <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_deleteDirectory" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_deleteDirectory" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapter.php"><a href="files/src-indirectadapter.html"><abbr title="src/IndirectAdapter.php">IndirectAdapter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapterTrait.php"><a href="files/src-indirectadaptertrait.html"><abbr title="src/IndirectAdapterTrait.php">IndirectAdapterTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">69</span>
+    <span class="phpdocumentor-element-found-in__line">67</span>
 
     </aside>
 
@@ -618,6 +642,7 @@ will still correctly emit a directory node for any path prefix that contains a f
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -628,6 +653,8 @@ will still correctly emit a directory node for any path prefix that contains a f
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -659,6 +686,7 @@ will still correctly emit a directory node for any path prefix that contains a f
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -669,6 +697,8 @@ will still correctly emit a directory node for any path prefix that contains a f
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -686,13 +716,13 @@ will still correctly emit a directory node for any path prefix that contains a f
 >
     <h4 class="phpdocumentor-element__name" id="method_fileExists">
         fileExists()
-        <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_fileExists" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_fileExists" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapter.php"><a href="files/src-indirectadapter.html"><abbr title="src/IndirectAdapter.php">IndirectAdapter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapterTrait.php"><a href="files/src-indirectadaptertrait.html"><abbr title="src/IndirectAdapterTrait.php">IndirectAdapterTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">27</span>
+    <span class="phpdocumentor-element-found-in__line">22</span>
 
     </aside>
 
@@ -704,6 +734,7 @@ will still correctly emit a directory node for any path prefix that contains a f
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -714,6 +745,8 @@ will still correctly emit a directory node for any path prefix that contains a f
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -749,6 +782,7 @@ will still correctly emit a directory node for any path prefix that contains a f
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -759,6 +793,8 @@ will still correctly emit a directory node for any path prefix that contains a f
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -794,6 +830,7 @@ will still correctly emit a directory node for any path prefix that contains a f
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -804,6 +841,8 @@ will still correctly emit a directory node for any path prefix that contains a f
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -839,6 +878,7 @@ will still correctly emit a directory node for any path prefix that contains a f
 
     <div class="phpdocumentor-label-line">
         </div>
+    
         <section class="phpdocumentor-description"><p>They'll show a prefix for a filename as a directory automatically.</p>
 </section>
 
@@ -859,6 +899,8 @@ will still correctly emit a directory node for any path prefix that contains a f
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -894,6 +936,7 @@ will still correctly emit a directory node for any path prefix that contains a f
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -904,6 +947,8 @@ will still correctly emit a directory node for any path prefix that contains a f
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -921,13 +966,13 @@ will still correctly emit a directory node for any path prefix that contains a f
 >
     <h4 class="phpdocumentor-element__name" id="method_move">
         move()
-        <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_move" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_move" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapter.php"><a href="files/src-indirectadapter.html"><abbr title="src/IndirectAdapter.php">IndirectAdapter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapterTrait.php"><a href="files/src-indirectadaptertrait.html"><abbr title="src/IndirectAdapterTrait.php">IndirectAdapterTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">117</span>
+    <span class="phpdocumentor-element-found-in__line">118</span>
 
     </aside>
 
@@ -938,6 +983,7 @@ will still correctly emit a directory node for any path prefix that contains a f
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -967,6 +1013,8 @@ will still correctly emit a directory node for any path prefix that contains a f
     
 
     
+
+    
 </article>
                     <article
         class="phpdocumentor-element
@@ -976,13 +1024,13 @@ will still correctly emit a directory node for any path prefix that contains a f
 >
     <h4 class="phpdocumentor-element__name" id="method_publicUrl">
         publicUrl()
-        <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_publicUrl" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_publicUrl" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapter.php"><a href="files/src-indirectadapter.html"><abbr title="src/IndirectAdapter.php">IndirectAdapter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapterTrait.php"><a href="files/src-indirectadaptertrait.html"><abbr title="src/IndirectAdapterTrait.php">IndirectAdapterTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">131</span>
+    <span class="phpdocumentor-element-found-in__line">132</span>
 
     </aside>
 
@@ -993,6 +1041,7 @@ will still correctly emit a directory node for any path prefix that contains a f
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1014,6 +1063,8 @@ will still correctly emit a directory node for any path prefix that contains a f
 
     
 
+    
+
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">string</span>
@@ -1028,13 +1079,13 @@ will still correctly emit a directory node for any path prefix that contains a f
 >
     <h4 class="phpdocumentor-element__name" id="method_read">
         read()
-        <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_read" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_read" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapter.php"><a href="files/src-indirectadapter.html"><abbr title="src/IndirectAdapter.php">IndirectAdapter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapterTrait.php"><a href="files/src-indirectadaptertrait.html"><abbr title="src/IndirectAdapterTrait.php">IndirectAdapterTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">51</span>
+    <span class="phpdocumentor-element-found-in__line">49</span>
 
     </aside>
 
@@ -1046,6 +1097,7 @@ will still correctly emit a directory node for any path prefix that contains a f
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1056,6 +1108,8 @@ will still correctly emit a directory node for any path prefix that contains a f
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -1073,13 +1127,13 @@ will still correctly emit a directory node for any path prefix that contains a f
 >
     <h4 class="phpdocumentor-element__name" id="method_readStream">
         readStream()
-        <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_readStream" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_readStream" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapter.php"><a href="files/src-indirectadapter.html"><abbr title="src/IndirectAdapter.php">IndirectAdapter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapterTrait.php"><a href="files/src-indirectadaptertrait.html"><abbr title="src/IndirectAdapterTrait.php">IndirectAdapterTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">57</span>
+    <span class="phpdocumentor-element-found-in__line">55</span>
 
     </aside>
 
@@ -1090,6 +1144,7 @@ will still correctly emit a directory node for any path prefix that contains a f
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1105,6 +1160,8 @@ will still correctly emit a directory node for any path prefix that contains a f
     
 
     
+
+    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1114,13 +1171,13 @@ will still correctly emit a directory node for any path prefix that contains a f
 >
     <h4 class="phpdocumentor-element__name" id="method_setVisibility">
         setVisibility()
-        <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_setVisibility" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_setVisibility" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapter.php"><a href="files/src-indirectadapter.html"><abbr title="src/IndirectAdapter.php">IndirectAdapter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapterTrait.php"><a href="files/src-indirectadaptertrait.html"><abbr title="src/IndirectAdapterTrait.php">IndirectAdapterTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">81</span>
+    <span class="phpdocumentor-element-found-in__line">79</span>
 
     </aside>
 
@@ -1131,6 +1188,7 @@ will still correctly emit a directory node for any path prefix that contains a f
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1153,6 +1211,8 @@ will still correctly emit a directory node for any path prefix that contains a f
     
 
     
+
+    
 </article>
                     <article
         class="phpdocumentor-element
@@ -1162,13 +1222,13 @@ will still correctly emit a directory node for any path prefix that contains a f
 >
     <h4 class="phpdocumentor-element__name" id="method_visibility">
         visibility()
-        <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_visibility" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_visibility" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapter.php"><a href="files/src-indirectadapter.html"><abbr title="src/IndirectAdapter.php">IndirectAdapter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapterTrait.php"><a href="files/src-indirectadaptertrait.html"><abbr title="src/IndirectAdapterTrait.php">IndirectAdapterTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">87</span>
+    <span class="phpdocumentor-element-found-in__line">85</span>
 
     </aside>
 
@@ -1180,6 +1240,7 @@ will still correctly emit a directory node for any path prefix that contains a f
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1190,6 +1251,8 @@ will still correctly emit a directory node for any path prefix that contains a f
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -1207,13 +1270,13 @@ will still correctly emit a directory node for any path prefix that contains a f
 >
     <h4 class="phpdocumentor-element__name" id="method_write">
         write()
-        <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_write" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_write" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapter.php"><a href="files/src-indirectadapter.html"><abbr title="src/IndirectAdapter.php">IndirectAdapter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapterTrait.php"><a href="files/src-indirectadaptertrait.html"><abbr title="src/IndirectAdapterTrait.php">IndirectAdapterTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">39</span>
+    <span class="phpdocumentor-element-found-in__line">34</span>
 
     </aside>
 
@@ -1224,6 +1287,7 @@ will still correctly emit a directory node for any path prefix that contains a f
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1249,6 +1313,8 @@ will still correctly emit a directory node for any path prefix that contains a f
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -1262,23 +1328,24 @@ will still correctly emit a directory node for any path prefix that contains a f
 >
     <h4 class="phpdocumentor-element__name" id="method_writeStream">
         writeStream()
-        <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_writeStream" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_writeStream" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapter.php"><a href="files/src-indirectadapter.html"><abbr title="src/IndirectAdapter.php">IndirectAdapter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapterTrait.php"><a href="files/src-indirectadaptertrait.html"><abbr title="src/IndirectAdapterTrait.php">IndirectAdapterTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">45</span>
+    <span class="phpdocumentor-element-found-in__line">43</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">writeStream</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$contents</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\League\Flysystem\Config">Config</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$config</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">writeStream</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">resource&nbsp;</span><span class="phpdocumentor-signature__argument__name">$contents</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\League\Flysystem\Config">Config</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$config</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -1291,7 +1358,7 @@ will still correctly emit a directory node for any path prefix that contains a f
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$contents</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">resource</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
@@ -1304,6 +1371,8 @@ will still correctly emit a directory node for any path prefix that contains a f
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -1335,6 +1404,7 @@ will still correctly emit a directory node for any path prefix that contains a f
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1355,6 +1425,8 @@ will still correctly emit a directory node for any path prefix that contains a f
 
     
 
+    
+
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type"><abbr title="\League\Flysystem\FilesystemAdapter">FilesystemAdapter</abbr></span>
@@ -1369,13 +1441,13 @@ will still correctly emit a directory node for any path prefix that contains a f
 >
     <h4 class="phpdocumentor-element__name" id="method_preparePath">
         preparePath()
-        <a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_preparePath" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_preparePath" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapter.php"><a href="files/src-indirectadapter.html"><abbr title="src/IndirectAdapter.php">IndirectAdapter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapterTrait.php"><a href="files/src-indirectadaptertrait.html"><abbr title="src/IndirectAdapterTrait.php">IndirectAdapterTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">19</span>
+    <span class="phpdocumentor-element-found-in__line">16</span>
 
     </aside>
 
@@ -1387,6 +1459,7 @@ will still correctly emit a directory node for any path prefix that contains a f
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1397,6 +1470,8 @@ will still correctly emit a directory node for any path prefix that contains a f
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -1519,35 +1594,35 @@ will still correctly emit a directory node for any path prefix that contains a f
                             <li class="phpdocumentor-on-this-page-section__title">Properties</li>
                 <li>
                     <ul class="phpdocumentor-list -clean">
-                                                    <li><a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#property_base">$base<a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html"></li>
-                                                    <li><a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#property_placeHolderName">$placeHolderName<a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html"></li>
+                                                    <li class=""><a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#property_base">$base</a></li>
+                                                    <li class=""><a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#property_placeHolderName">$placeHolderName</a></li>
                                             </ul>
                 </li>
             
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                            <li><a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method___construct">__construct()</a></li>
-                                            <li><a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_copy">copy()</a></li>
-                                            <li><a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_createDirectory">createDirectory()</a></li>
-                                            <li><a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_delete">delete()</a></li>
-                                            <li><a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_deleteDirectory">deleteDirectory()</a></li>
-                                            <li><a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_directoryExists">directoryExists()</a></li>
-                                            <li><a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_fileExists">fileExists()</a></li>
-                                            <li><a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_fileSize">fileSize()</a></li>
-                                            <li><a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_lastModified">lastModified()</a></li>
-                                            <li><a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_listContents">listContents()</a></li>
-                                            <li><a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_mimeType">mimeType()</a></li>
-                                            <li><a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_move">move()</a></li>
-                                            <li><a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_publicUrl">publicUrl()</a></li>
-                                            <li><a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_read">read()</a></li>
-                                            <li><a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_readStream">readStream()</a></li>
-                                            <li><a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_setVisibility">setVisibility()</a></li>
-                                            <li><a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_visibility">visibility()</a></li>
-                                            <li><a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_write">write()</a></li>
-                                            <li><a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_writeStream">writeStream()</a></li>
-                                            <li><a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_getAdapter">getAdapter()</a></li>
-                                            <li><a href="classes/Collecthor-FlySystem-IndirectAdapter.html#method_preparePath">preparePath()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method___construct">__construct()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_copy">copy()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_createDirectory">createDirectory()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_delete">delete()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_deleteDirectory">deleteDirectory()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_directoryExists">directoryExists()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_fileExists">fileExists()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_fileSize">fileSize()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_lastModified">lastModified()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_listContents">listContents()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_mimeType">mimeType()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_move">move()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_publicUrl">publicUrl()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_read">read()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_readStream">readStream()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_setVisibility">setVisibility()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_visibility">visibility()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_write">write()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_writeStream">writeStream()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html#method_getAdapter">getAdapter()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_preparePath">preparePath()</a></li>
                                     </ul>
             </li>
                     </ul>

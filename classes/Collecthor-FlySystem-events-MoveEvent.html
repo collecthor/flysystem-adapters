@@ -93,11 +93,12 @@
                                         <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/collecthor.html">Collecthor</a></li>
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/collecthor-flysystem.html">FlySystem</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/collecthor-flysystem-events.html">events</a></li>
     </ul>
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    LazyDirectoryProvider
+    MoveEvent
 
     
             <div class="phpdocumentor-element__package">
@@ -107,13 +108,12 @@
                             </ul>
         </div>
     
-            <span class="phpdocumentor-element__implements">
-            implements
-                            <a href="classes/Collecthor-FlySystem-interfaces-DirectoryProvider.html"><abbr title="\Collecthor\FlySystem\interfaces\DirectoryProvider">DirectoryProvider</abbr></a>                    </span>
     
     </h2>
 
 <div class="phpdocumentor-label-line">
+    <div class="phpdocumentor-label phpdocumentor-label--success"><span>Read only</span><span>Yes</span></div>
+
 
     <div class="phpdocumentor-label phpdocumentor-label--success"><span>Final</span><span>Yes</span></div>
 
@@ -121,14 +121,13 @@
 </div>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/LazyDirectoryProvider.php"><a href="files/src-lazydirectoryprovider.html"><abbr title="src/LazyDirectoryProvider.php">LazyDirectoryProvider.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/events/MoveEvent.php"><a href="files/src-events-moveevent.html"><abbr title="src/events/MoveEvent.php">MoveEvent.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">16</span>
+    <span class="phpdocumentor-element-found-in__line">10</span>
 
     </aside>
 
-            <p class="phpdocumentor-summary">Allows you to lazily provide directories for use with VirtualDirectoryListAdapter</p>
-
+        
 
 
 
@@ -139,19 +138,12 @@
 
 <h3 id="toc">
     Table of Contents
-    <a href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Collecthor-FlySystem-events-MoveEvent.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h3>
 
 
 
-    <h4 id="toc-interfaces">
-        Interfaces
-        <a href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#toc-interfaces" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <dl class="phpdocumentor-table-of-contents">
-                    <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/Collecthor-FlySystem-interfaces-DirectoryProvider.html"><abbr title="\Collecthor\FlySystem\interfaces\DirectoryProvider">DirectoryProvider</abbr></a></dt>    </dl>
 
 
 
@@ -160,52 +152,52 @@
 
 <h4 id="toc-properties">
     Properties
-    <a href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Collecthor-FlySystem-events-MoveEvent.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a class="" href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#property_directories">$directories</a>
+            <dt class="phpdocumentor-table-of-contents__entry -property -public">
+    <a class="" href="classes/Collecthor-FlySystem-events-MoveEvent.html#property_adapter">$adapter</a>
     <span>
-                        &nbsp;: <abbr title="\ArrayObject">ArrayObject</abbr>&lt;string, <abbr title="\League\Flysystem\DirectoryAttributes">DirectoryAttributes</abbr>&gt;|null            </span>
+                        &nbsp;: <abbr title="\League\Flysystem\FilesystemAdapter">FilesystemAdapter</abbr>            </span>
 </dt>
 
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a class="" href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#property_loader">$loader</a>
+            <dt class="phpdocumentor-table-of-contents__entry -property -public">
+    <a class="" href="classes/Collecthor-FlySystem-events-MoveEvent.html#property_before">$before</a>
     <span>
-                        &nbsp;: <abbr title="\Closure">Closure</abbr>            </span>
+                        &nbsp;: bool            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -public">
+    <a class="" href="classes/Collecthor-FlySystem-events-MoveEvent.html#property_config">$config</a>
+    <span>
+                        &nbsp;: <abbr title="\League\Flysystem\Config">Config</abbr>            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -public">
+    <a class="" href="classes/Collecthor-FlySystem-events-MoveEvent.html#property_destination">$destination</a>
+    <span>
+                        &nbsp;: string            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -public">
+    <a class="" href="classes/Collecthor-FlySystem-events-MoveEvent.html#property_source">$source</a>
+    <span>
+                        &nbsp;: string            </span>
 </dt>
 
     </dl>
 
 <h4 id="toc-methods">
     Methods
-    <a href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Collecthor-FlySystem-events-MoveEvent.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#method___construct">__construct()</a>
+    <a class="" href="classes/Collecthor-FlySystem-events-MoveEvent.html#method___construct">__construct()</a>
     <span>
                                 &nbsp;: mixed    </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#method_getIterator">getIterator()</a>
-    <span>
-                                &nbsp;: <abbr title="\Traversable">Traversable</abbr>    </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#method_hasTopLevelDirectory">hasTopLevelDirectory()</a>
-    <span>
-                                &nbsp;: bool    </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -private">
-    <a class="" href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#method_getDirectories">getDirectories()</a>
-    <span>
-                                &nbsp;: <abbr title="\ArrayObject">ArrayObject</abbr>&lt;string, <abbr title="\League\Flysystem\DirectoryAttributes">DirectoryAttributes</abbr>&gt;    </span>
 </dt>
 
     </dl>
@@ -218,37 +210,37 @@
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
-            <a href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Collecthor-FlySystem-events-MoveEvent.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
         class="
             phpdocumentor-element
             -property
-            -private
+            -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_directories">
-        $directories
-        <a href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#property_directories" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_adapter">
+        $adapter
+        <a href="classes/Collecthor-FlySystem-events-MoveEvent.html#property_adapter" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/LazyDirectoryProvider.php"><a href="files/src-lazydirectoryprovider.html"><abbr title="src/LazyDirectoryProvider.php">LazyDirectoryProvider.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/events/MoveEvent.php"><a href="files/src-events-moveevent.html"><abbr title="src/events/MoveEvent.php">MoveEvent.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">21</span>
+    <span class="phpdocumentor-element-found-in__line">13</span>
 
     </aside>
 
     
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type"><abbr title="\ArrayObject">ArrayObject</abbr>&lt;string, <abbr title="\League\Flysystem\DirectoryAttributes">DirectoryAttributes</abbr>&gt;|null</span>
-    <span class="phpdocumentor-signature__name">$directories</span>
-     = <span class="phpdocumentor-signature__default-value">null</span></code>
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type"><abbr title="\League\Flysystem\FilesystemAdapter">FilesystemAdapter</abbr></span>
+    <span class="phpdocumentor-signature__name">$adapter</span>
+    </code>
 
     
     
@@ -261,29 +253,137 @@
         class="
             phpdocumentor-element
             -property
-            -private
-                                                -read-only        "
+            -public
+                                                        "
 >
-    <h4 class="phpdocumentor-element__name" id="property_loader">
-        $loader
-        <a href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#property_loader" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_before">
+        $before
+        <a href="classes/Collecthor-FlySystem-events-MoveEvent.html#property_before" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
-                        <small class="phpdocumentor-element__modifier">read-only</small>        </span>
+                                </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/LazyDirectoryProvider.php"><a href="files/src-lazydirectoryprovider.html"><abbr title="src/LazyDirectoryProvider.php">LazyDirectoryProvider.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/events/MoveEvent.php"><a href="files/src-events-moveevent.html"><abbr title="src/events/MoveEvent.php">MoveEvent.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">28</span>
+    <span class="phpdocumentor-element-found-in__line">14</span>
 
     </aside>
 
     
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type"><abbr title="\Closure">Closure</abbr></span>
-    <span class="phpdocumentor-signature__name">$loader</span>
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">bool</span>
+    <span class="phpdocumentor-signature__name">$before</span>
+    </code>
+
+    
+    
+    
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_config">
+        $config
+        <a href="classes/Collecthor-FlySystem-events-MoveEvent.html#property_config" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/events/MoveEvent.php"><a href="files/src-events-moveevent.html"><abbr title="src/events/MoveEvent.php">MoveEvent.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">17</span>
+
+    </aside>
+
+    
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type"><abbr title="\League\Flysystem\Config">Config</abbr></span>
+    <span class="phpdocumentor-signature__name">$config</span>
+    </code>
+
+    
+    
+    
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_destination">
+        $destination
+        <a href="classes/Collecthor-FlySystem-events-MoveEvent.html#property_destination" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/events/MoveEvent.php"><a href="files/src-events-moveevent.html"><abbr title="src/events/MoveEvent.php">MoveEvent.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">16</span>
+
+    </aside>
+
+    
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">$destination</span>
+    </code>
+
+    
+    
+    
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_source">
+        $source
+        <a href="classes/Collecthor-FlySystem-events-MoveEvent.html#property_source" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/events/MoveEvent.php"><a href="files/src-events-moveevent.html"><abbr title="src/events/MoveEvent.php">MoveEvent.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">15</span>
+
+    </aside>
+
+    
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">$source</span>
     </code>
 
     
@@ -298,7 +398,7 @@
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Collecthor-FlySystem-events-MoveEvent.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
@@ -309,20 +409,20 @@
 >
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
-        <a href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Collecthor-FlySystem-events-MoveEvent.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/LazyDirectoryProvider.php"><a href="files/src-lazydirectoryprovider.html"><abbr title="src/LazyDirectoryProvider.php">LazyDirectoryProvider.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/events/MoveEvent.php"><a href="files/src-events-moveevent.html"><abbr title="src/events/MoveEvent.php">MoveEvent.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">27</span>
+    <span class="phpdocumentor-element-found-in__line">12</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">callable(): iterable&lt;string, <abbr title="\League\Flysystem\DirectoryAttributes">DirectoryAttributes</abbr>&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$loader</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$loadImmediately</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\League\Flysystem\FilesystemAdapter">FilesystemAdapter</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$adapter</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$before</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$source</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$destination</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\League\Flysystem\Config">Config</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$config</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -331,152 +431,47 @@
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$loader</span>
-                : <span class="phpdocumentor-signature__argument__return-type">callable(): iterable&lt;string, <abbr title="\League\Flysystem\DirectoryAttributes">DirectoryAttributes</abbr>&gt;</span>
+                <span class="phpdocumentor-signature__argument__name">$adapter</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\League\Flysystem\FilesystemAdapter">FilesystemAdapter</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$loadImmediately</span>
+                <span class="phpdocumentor-signature__argument__name">$before</span>
                 : <span class="phpdocumentor-signature__argument__return-type">bool</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">false</span>            </dt>
+                            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>when provided will immediately attempt to call the loader, this can be used for testing to get cleaner traces.</p>
-</section>
-
+                
             </dd>
-            </dl>
-
-    
-
-    
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_getIterator">
-        getIterator()
-        <a href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#method_getIterator" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/LazyDirectoryProvider.php"><a href="files/src-lazydirectoryprovider.html"><abbr title="src/LazyDirectoryProvider.php">LazyDirectoryProvider.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">53</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getIterator</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Traversable">Traversable</abbr></span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-    
-
-    
-
-            <section>
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><abbr title="\Traversable">Traversable</abbr></span>
-            </section>
-
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_hasTopLevelDirectory">
-        hasTopLevelDirectory()
-        <a href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#method_hasTopLevelDirectory" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/LazyDirectoryProvider.php"><a href="files/src-lazydirectoryprovider.html"><abbr title="src/LazyDirectoryProvider.php">LazyDirectoryProvider.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">58</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">hasTopLevelDirectory</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$name</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$name</span>
+                <span class="phpdocumentor-signature__argument__name">$source</span>
                 : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
             </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$destination</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$config</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\League\Flysystem\Config">Config</abbr></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
             </dl>
 
     
 
     
 
-            <section>
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">bool</span>
-            </section>
-
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_getDirectories">
-        getDirectories()
-        <a href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#method_getDirectories" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/LazyDirectoryProvider.php"><a href="files/src-lazydirectoryprovider.html"><abbr title="src/LazyDirectoryProvider.php">LazyDirectoryProvider.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">39</span>
-
-    </aside>
-
     
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-                    <span class="phpdocumentor-signature__name">getDirectories</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\ArrayObject">ArrayObject</abbr>&lt;string, <abbr title="\League\Flysystem\DirectoryAttributes">DirectoryAttributes</abbr>&gt;</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-    
-
-    
-
-            <section>
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type"><abbr title="\ArrayObject">ArrayObject</abbr>&lt;string, <abbr title="\League\Flysystem\DirectoryAttributes">DirectoryAttributes</abbr>&gt;</span>
-            </section>
-
 </article>
             </section>
 
@@ -484,7 +479,7 @@
     <div class="phpdocumentor-modal-bg" data-exit-button></div>
     <div class="phpdocumentor-modal-container">
         <div class="phpdocumentor-modal-content">
-            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/LazyDirectoryProvider.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/events/MoveEvent.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
         </div>
         <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
     </div>
@@ -583,26 +578,26 @@
             <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                                            <li><a href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#toc-properties">Properties</a></li>
-                                                            <li><a href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#toc-methods">Methods</a></li>
+                                                            <li><a href="classes/Collecthor-FlySystem-events-MoveEvent.html#toc-properties">Properties</a></li>
+                                                            <li><a href="classes/Collecthor-FlySystem-events-MoveEvent.html#toc-methods">Methods</a></li>
                                     </ul>
             </li>
             
                             <li class="phpdocumentor-on-this-page-section__title">Properties</li>
                 <li>
                     <ul class="phpdocumentor-list -clean">
-                                                    <li class=""><a href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#property_directories">$directories</a></li>
-                                                    <li class=""><a href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#property_loader">$loader</a></li>
+                                                    <li class=""><a href="classes/Collecthor-FlySystem-events-MoveEvent.html#property_adapter">$adapter</a></li>
+                                                    <li class=""><a href="classes/Collecthor-FlySystem-events-MoveEvent.html#property_before">$before</a></li>
+                                                    <li class=""><a href="classes/Collecthor-FlySystem-events-MoveEvent.html#property_config">$config</a></li>
+                                                    <li class=""><a href="classes/Collecthor-FlySystem-events-MoveEvent.html#property_destination">$destination</a></li>
+                                                    <li class=""><a href="classes/Collecthor-FlySystem-events-MoveEvent.html#property_source">$source</a></li>
                                             </ul>
                 </li>
             
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                            <li class=""><a href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#method___construct">__construct()</a></li>
-                                            <li class=""><a href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#method_getIterator">getIterator()</a></li>
-                                            <li class=""><a href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#method_hasTopLevelDirectory">hasTopLevelDirectory()</a></li>
-                                            <li class=""><a href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#method_getDirectories">getDirectories()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-events-MoveEvent.html#method___construct">__construct()</a></li>
                                     </ul>
             </li>
                     </ul>
@@ -622,7 +617,7 @@
     </section>
 </section>
         </div>
-        <a href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/Collecthor-FlySystem-events-MoveEvent.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 
