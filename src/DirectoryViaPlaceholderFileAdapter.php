@@ -16,7 +16,7 @@ use League\Flysystem\Visibility;
  * On iteration of directory contents the placeholder file is skipped, it is assumed any adapter not supporting directories
  * will still correctly emit a directory node for any path prefix that contains a file.
  */
-class DirectoryViaPlaceholderFileAdapter extends IndirectAdapter implements FilesystemAdapter
+final readonly class DirectoryViaPlaceholderFileAdapter extends IndirectAdapter implements FilesystemAdapter
 {
     public function __construct(private readonly FilesystemAdapter $base, private readonly string $placeHolderName = '.directory')
     {

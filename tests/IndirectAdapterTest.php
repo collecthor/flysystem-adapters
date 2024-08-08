@@ -16,7 +16,7 @@ class IndirectAdapterTest extends IndirectAdapterTestCase
 {
     protected static function createFilesystemAdapter(): FilesystemAdapter
     {
-        return new class() extends IndirectAdapter {
+        return new readonly class() extends IndirectAdapter {
             private FilesystemAdapter $adapter;
 
             public function __construct()

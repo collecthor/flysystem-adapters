@@ -42,3 +42,8 @@ By using this adapter you can specify a list of directories in a specific path o
 ## OverlayAdapter
 
 Mount one adapter onto another using a path prefix.
+
+## EventedAdapter
+
+This adapter uses a PSR-14 `EventDispatcher` to dispatch events before and after operations that modify storage. 
+Initial use case for them is to notify CDNs to update their cache.

@@ -14,14 +14,14 @@ use League\Flysystem\UnableToMoveFile;
 /**
  * This adapter mounts one adapter as an overlay on top of another based on a prefix
  */
-class OverlayAdapter extends IndirectAdapter
+final readonly class OverlayAdapter extends IndirectAdapter
 {
     private FilesystemAdapter $overlay;
 
     /**
      * @var array<string, bool>
      */
-    private readonly array $virtualDirectories;
+    private array $virtualDirectories;
 
     public function __construct(private FilesystemAdapter $base, FilesystemAdapter $overlay, private string $prefix)
     {

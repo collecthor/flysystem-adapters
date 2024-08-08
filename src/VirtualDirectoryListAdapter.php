@@ -17,21 +17,19 @@ use League\Flysystem\Visibility;
  * Querying the list of remote directories can be significantly slower than the local data store; this adapter allows you
  * to override the directory list without affecting other operations.
  */
-class VirtualDirectoryListAdapter extends IndirectAdapter
+final readonly class VirtualDirectoryListAdapter extends IndirectAdapter
 {
     /**
      * @var array<string, string>
      */
-    private readonly array $directoryNames;
+    private array $directoryNames;
 
-    private readonly string $path;
+    private string $path;
 
     /**
-     * @param FilesystemAdapter $adapter
-     * @param string $path
      * @param list<string> $directories
      */
-    public function __construct(private readonly FilesystemAdapter $adapter, string $path, array $directories)
+    public function __construct(private FilesystemAdapter $adapter, string $path, array $directories)
     {
         if (!str_ends_with($path, '/')) {
             throw new \InvalidArgumentException('Path must end with /');

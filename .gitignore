@@ -3,3 +3,6 @@
 vendor
 composer.lock
 html
+.phpdoc/
+.phpstan-cache/
+docs/

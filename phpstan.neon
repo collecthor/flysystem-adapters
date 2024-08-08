@@ -13,7 +13,6 @@ parameters:
       - src
     excludePaths: []
     checkMaybeUndefinedVariables: true
-    checkGenericClassInNonGenericObjectType: false
     ignoreErrors: []
     stubFiles: []
     banned_code:

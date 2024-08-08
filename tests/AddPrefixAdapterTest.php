@@ -24,4 +24,10 @@ class AddPrefixAdapterTest extends IndirectAdapterTestCase
     {
         return new AddPrefixAdapter(new InMemoryFilesystemAdapter(), 'test123/');
     }
+
+    public function testPrefixWithoutSlash(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        new AddPrefixAdapter(new InMemoryFilesystemAdapter(), 'test');
+    }
 }
