@@ -201,26 +201,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Collecthor-FlySystem-EventedAdapter.html#property_dispatcher"
         },                {
-            "fqsen": "\\Collecthor\\FlySystem\\events\\AdapterEvent",
-            "name": "AdapterEvent",
-            "summary": "",
-            "url": "classes/Collecthor-FlySystem-events-AdapterEvent.html"
-        },                {
-            "fqsen": "\\Collecthor\\FlySystem\\events\\AdapterEvent\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/Collecthor-FlySystem-events-AdapterEvent.html#method___construct"
-        },                {
-            "fqsen": "\\Collecthor\\FlySystem\\events\\AdapterEvent\u003A\u003A\u0024adapter",
-            "name": "adapter",
-            "summary": "",
-            "url": "classes/Collecthor-FlySystem-events-AdapterEvent.html#property_adapter"
-        },                {
-            "fqsen": "\\Collecthor\\FlySystem\\events\\AdapterEvent\u003A\u003A\u0024before",
-            "name": "before",
-            "summary": "",
-            "url": "classes/Collecthor-FlySystem-events-AdapterEvent.html#property_before"
-        },                {
             "fqsen": "\\Collecthor\\FlySystem\\events\\CopyEvent",
             "name": "CopyEvent",
             "summary": "",
