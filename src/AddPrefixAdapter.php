@@ -10,7 +10,7 @@ use League\Flysystem\PathPrefixer;
 /**
  * Adds a prefix to all paths given to the adapter.
  */
-class AddPrefixAdapter extends IndirectAdapter implements FilesystemAdapter
+final readonly class AddPrefixAdapter extends IndirectAdapter implements FilesystemAdapter
 {
     private PathPrefixer $pathPrefixer;
 
