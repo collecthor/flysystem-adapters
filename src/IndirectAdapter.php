@@ -23,7 +23,6 @@ abstract class IndirectAdapter implements FilesystemAdapter, PublicUrlGenerator
 
     abstract protected function getAdapter(string $rawPath, string $preparedPath): FilesystemAdapter;
 
-
     public function fileExists(string $path): bool
     {
         $preparedPath = $this->preparePath($path);
