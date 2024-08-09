@@ -47,3 +47,8 @@ Mount one adapter onto another using a path prefix.
 
 This adapter uses a PSR-14 `EventDispatcher` to dispatch events before and after operations that modify storage. 
 Initial use case for them is to notify CDNs to update their cache.
+
+## MoveOverwriteAdapter
+
+This adapter wraps any other adapter and will try to force an overwrite if moving a file fails. This means upon failure
+it will check if the destination file exists and if so remove it and retry the move command.  
