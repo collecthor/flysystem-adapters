@@ -591,6 +591,31 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Collecthor-FlySystem-MetadataCachingAdapter.html#property_base"
         },                {
+            "fqsen": "\\Collecthor\\FlySystem\\MoveOverwriteAdapter",
+            "name": "MoveOverwriteAdapter",
+            "summary": "This\u0020adapter\u0020wraps\u0020underlying\u0020adapters\u0020which\u0020do\u0020not\u0020properly\u0020implement\u0020the\u0020move\u0020semantics.",
+            "url": "classes/Collecthor-FlySystem-MoveOverwriteAdapter.html"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\MoveOverwriteAdapter\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-MoveOverwriteAdapter.html#method___construct"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\MoveOverwriteAdapter\u003A\u003Amove\u0028\u0029",
+            "name": "move",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-MoveOverwriteAdapter.html#method_move"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\MoveOverwriteAdapter\u003A\u003AgetAdapter\u0028\u0029",
+            "name": "getAdapter",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-MoveOverwriteAdapter.html#method_getAdapter"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\MoveOverwriteAdapter\u003A\u003A\u0024base",
+            "name": "base",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-MoveOverwriteAdapter.html#property_base"
+        },                {
             "fqsen": "\\Collecthor\\FlySystem\\OverlayAdapter",
             "name": "OverlayAdapter",
             "summary": "This\u0020adapter\u0020mounts\u0020one\u0020adapter\u0020as\u0020an\u0020overlay\u0020on\u0020top\u0020of\u0020another\u0020based\u0020on\u0020a\u0020prefix",
