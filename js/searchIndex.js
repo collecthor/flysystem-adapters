@@ -1,6 +1,36 @@
 Search.appendIndex(
     [
                 {
+            "fqsen": "\\Collecthor\\FlySystem\\AdapterStack",
+            "name": "AdapterStack",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-AdapterStack.html"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\AdapterStack\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-AdapterStack.html#method___construct"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\AdapterStack\u003A\u003Aappend\u0028\u0029",
+            "name": "append",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-AdapterStack.html#method_append"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\AdapterStack\u003A\u003Afinalize\u0028\u0029",
+            "name": "finalize",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-AdapterStack.html#method_finalize"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\AdapterStack\u003A\u003A\u0024finalized",
+            "name": "finalized",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-AdapterStack.html#property_finalized"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\AdapterStack\u003A\u003A\u0024adapter",
+            "name": "adapter",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-AdapterStack.html#property_adapter"
+        },                {
             "fqsen": "\\Collecthor\\FlySystem\\AddPrefixAdapter",
             "name": "AddPrefixAdapter",
             "summary": "Adds\u0020a\u0020prefix\u0020to\u0020all\u0020paths\u0020given\u0020to\u0020the\u0020adapter.",
