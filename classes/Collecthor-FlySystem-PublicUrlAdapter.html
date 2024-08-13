@@ -97,11 +97,8 @@
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    StripPrefixAdapter
+    PublicUrlAdapter
 
-        <span class="phpdocumentor-element__extends">
-        extends <a href="classes/Collecthor-FlySystem-IndirectAdapter.html"><abbr title="\Collecthor\FlySystem\IndirectAdapter">IndirectAdapter</abbr></a>
-    </span>
     
             <div class="phpdocumentor-element__package">
             in package
@@ -110,7 +107,13 @@
                             </ul>
         </div>
     
+            <span class="phpdocumentor-element__implements">
+            implements
+                            <abbr title="\League\Flysystem\FilesystemAdapter">FilesystemAdapter</abbr>,                             <abbr title="\League\Flysystem\UrlGeneration\PublicUrlGenerator">PublicUrlGenerator</abbr>                    </span>
     
+            <span class="phpdocumentor-element__extends">
+            uses
+                            <a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html"><abbr title="\Collecthor\FlySystem\IndirectAdapterTrait">IndirectAdapterTrait</abbr></a>                    </span>
     </h2>
 
 <div class="phpdocumentor-label-line">
@@ -123,17 +126,14 @@
 </div>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/StripPrefixAdapter.php"><a href="files/src-stripprefixadapter.html"><abbr title="src/StripPrefixAdapter.php">StripPrefixAdapter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/PublicUrlAdapter.php"><a href="files/src-publicurladapter.html"><abbr title="src/PublicUrlAdapter.php">PublicUrlAdapter.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">11</span>
 
     </aside>
 
-            <p class="phpdocumentor-summary">Strips a prefix from all paths given to the adapter.</p>
+        
 
-
-    <section class="phpdocumentor-description"><p>If the path does not start with the prefix an exception is thrown.</p>
-</section>
 
 
 
@@ -143,12 +143,19 @@
 
 <h3 id="toc">
     Table of Contents
-    <a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h3>
 
 
 
+    <h4 id="toc-interfaces">
+        Interfaces
+        <a href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#toc-interfaces" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <dl class="phpdocumentor-table-of-contents">
+                    <dt class="phpdocumentor-table-of-contents__entry -interface"><abbr title="\League\Flysystem\FilesystemAdapter">FilesystemAdapter</abbr></dt>            <dt class="phpdocumentor-table-of-contents__entry -interface"><abbr title="\League\Flysystem\UrlGeneration\PublicUrlGenerator">PublicUrlGenerator</abbr></dt>    </dl>
 
 
 
@@ -157,38 +164,32 @@
 
 <h4 id="toc-properties">
     Properties
-    <a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a class="" href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#property_base">$base</a>
+    <a class="" href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#property_adapter">$adapter</a>
     <span>
                         &nbsp;: <abbr title="\League\Flysystem\FilesystemAdapter">FilesystemAdapter</abbr>            </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a class="" href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#property_pathPrefixer">$pathPrefixer</a>
+    <a class="" href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#property_urlGenerator">$urlGenerator</a>
     <span>
-                        &nbsp;: <abbr title="\League\Flysystem\PathPrefixer">PathPrefixer</abbr>            </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a class="" href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#property_prefix">$prefix</a>
-    <span>
-                        &nbsp;: string            </span>
+                        &nbsp;: <abbr title="\League\Flysystem\UrlGeneration\PublicUrlGenerator">PublicUrlGenerator</abbr>            </span>
 </dt>
 
     </dl>
 
 <h4 id="toc-methods">
     Methods
-    <a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#method___construct">__construct()</a>
+    <a class="" href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#method___construct">__construct()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
@@ -242,9 +243,9 @@
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#method_listContents">listContents()</a>
+    <a class="" href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_listContents">listContents()</a>
     <span>
-                                &nbsp;: iterable&lt;string|int, mixed&gt;    </span>
+                                &nbsp;: iterable&lt;string|int, <abbr title="\League\Flysystem\StorageAttributes">StorageAttributes</abbr>&gt;    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
@@ -260,7 +261,7 @@
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a class="" href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_publicUrl">publicUrl()</a>
+    <a class="" href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#method_publicUrl">publicUrl()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
@@ -302,13 +303,13 @@
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
-    <a class="" href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#method_getAdapter">getAdapter()</a>
+    <a class="" href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#method_getAdapter">getAdapter()</a>
     <span>
                                 &nbsp;: <abbr title="\League\Flysystem\FilesystemAdapter">FilesystemAdapter</abbr>    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
-    <a class="" href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#method_preparePath">preparePath()</a>
+    <a class="" href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_preparePath">preparePath()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
@@ -323,7 +324,7 @@
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
-            <a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
@@ -333,17 +334,17 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_base">
-        $base
-        <a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#property_base" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_adapter">
+        $adapter
+        <a href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#property_adapter" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/StripPrefixAdapter.php"><a href="files/src-stripprefixadapter.html"><abbr title="src/StripPrefixAdapter.php">StripPrefixAdapter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/PublicUrlAdapter.php"><a href="files/src-publicurladapter.html"><abbr title="src/PublicUrlAdapter.php">PublicUrlAdapter.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
@@ -352,7 +353,7 @@
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type"><abbr title="\League\Flysystem\FilesystemAdapter">FilesystemAdapter</abbr></span>
-    <span class="phpdocumentor-signature__name">$base</span>
+    <span class="phpdocumentor-signature__name">$adapter</span>
     </code>
 
     
@@ -369,17 +370,17 @@
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_pathPrefixer">
-        $pathPrefixer
-        <a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#property_pathPrefixer" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_urlGenerator">
+        $urlGenerator
+        <a href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#property_urlGenerator" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/StripPrefixAdapter.php"><a href="files/src-stripprefixadapter.html"><abbr title="src/StripPrefixAdapter.php">StripPrefixAdapter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/PublicUrlAdapter.php"><a href="files/src-publicurladapter.html"><abbr title="src/PublicUrlAdapter.php">PublicUrlAdapter.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">16</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
@@ -387,44 +388,8 @@
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type"><abbr title="\League\Flysystem\PathPrefixer">PathPrefixer</abbr></span>
-    <span class="phpdocumentor-signature__name">$pathPrefixer</span>
-    </code>
-
-    
-    
-    
-
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -private
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_prefix">
-        $prefix
-        <a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#property_prefix" class="headerlink"><i class="fas fa-link"></i></a>
-
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/StripPrefixAdapter.php"><a href="files/src-stripprefixadapter.html"><abbr title="src/StripPrefixAdapter.php">StripPrefixAdapter.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">18</span>
-
-    </aside>
-
-    
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">private</span>
-        <span class="phpdocumentor-signature__type">string</span>
-    <span class="phpdocumentor-signature__name">$prefix</span>
+        <span class="phpdocumentor-signature__type"><abbr title="\League\Flysystem\UrlGeneration\PublicUrlGenerator">PublicUrlGenerator</abbr></span>
+    <span class="phpdocumentor-signature__name">$urlGenerator</span>
     </code>
 
     
@@ -439,7 +404,7 @@
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
@@ -450,20 +415,20 @@
 >
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
-        <a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/StripPrefixAdapter.php"><a href="files/src-stripprefixadapter.html"><abbr title="src/StripPrefixAdapter.php">StripPrefixAdapter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/PublicUrlAdapter.php"><a href="files/src-publicurladapter.html"><abbr title="src/PublicUrlAdapter.php">PublicUrlAdapter.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\League\Flysystem\FilesystemAdapter">FilesystemAdapter</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$base</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$prefix</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\League\Flysystem\FilesystemAdapter">FilesystemAdapter</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$adapter</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type"><abbr title="\League\Flysystem\UrlGeneration\PublicUrlGenerator">PublicUrlGenerator</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$urlGenerator</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -472,15 +437,15 @@
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$base</span>
+                <span class="phpdocumentor-signature__argument__name">$adapter</span>
                 : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\League\Flysystem\FilesystemAdapter">FilesystemAdapter</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$prefix</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                <span class="phpdocumentor-signature__argument__name">$urlGenerator</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\League\Flysystem\UrlGeneration\PublicUrlGenerator">PublicUrlGenerator</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
@@ -890,20 +855,20 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_listContents">
         listContents()
-        <a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#method_listContents" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_listContents" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/StripPrefixAdapter.php"><a href="files/src-stripprefixadapter.html"><abbr title="src/StripPrefixAdapter.php">StripPrefixAdapter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapterTrait.php"><a href="files/src-indirectadaptertrait.html"><abbr title="src/IndirectAdapterTrait.php">IndirectAdapterTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">39</span>
+    <span class="phpdocumentor-element-found-in__line">115</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">listContents</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$deep</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">iterable&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">listContents</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$path</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$deep</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">iterable&lt;string|int, <abbr title="\League\Flysystem\StorageAttributes">StorageAttributes</abbr>&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -933,7 +898,7 @@
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">iterable&lt;string|int, mixed&gt;</span>
+        <span class="phpdocumentor-signature__response_type">iterable&lt;string|int, <abbr title="\League\Flysystem\StorageAttributes">StorageAttributes</abbr>&gt;</span>
             </section>
 
 </article>
@@ -1051,13 +1016,13 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_publicUrl">
         publicUrl()
-        <a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_publicUrl" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#method_publicUrl" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapterTrait.php"><a href="files/src-indirectadaptertrait.html"><abbr title="src/IndirectAdapterTrait.php">IndirectAdapterTrait.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/PublicUrlAdapter.php"><a href="files/src-publicurladapter.html"><abbr title="src/PublicUrlAdapter.php">PublicUrlAdapter.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">135</span>
+    <span class="phpdocumentor-element-found-in__line">25</span>
 
     </aside>
 
@@ -1417,13 +1382,13 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_getAdapter">
         getAdapter()
-        <a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#method_getAdapter" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#method_getAdapter" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/StripPrefixAdapter.php"><a href="files/src-stripprefixadapter.html"><abbr title="src/StripPrefixAdapter.php">StripPrefixAdapter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/PublicUrlAdapter.php"><a href="files/src-publicurladapter.html"><abbr title="src/PublicUrlAdapter.php">PublicUrlAdapter.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">46</span>
+    <span class="phpdocumentor-element-found-in__line">20</span>
 
     </aside>
 
@@ -1472,13 +1437,13 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_preparePath">
         preparePath()
-        <a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#method_preparePath" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_preparePath" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/StripPrefixAdapter.php"><a href="files/src-stripprefixadapter.html"><abbr title="src/StripPrefixAdapter.php">StripPrefixAdapter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/IndirectAdapterTrait.php"><a href="files/src-indirectadaptertrait.html"><abbr title="src/IndirectAdapterTrait.php">IndirectAdapterTrait.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">27</span>
+    <span class="phpdocumentor-element-found-in__line">16</span>
 
     </aside>
 
@@ -1518,7 +1483,7 @@
     <div class="phpdocumentor-modal-bg" data-exit-button></div>
     <div class="phpdocumentor-modal-container">
         <div class="phpdocumentor-modal-content">
-            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/StripPrefixAdapter.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/PublicUrlAdapter.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
         </div>
         <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
     </div>
@@ -1617,24 +1582,23 @@
             <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                                            <li><a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#toc-properties">Properties</a></li>
-                                                            <li><a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#toc-methods">Methods</a></li>
+                                                            <li><a href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#toc-properties">Properties</a></li>
+                                                            <li><a href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#toc-methods">Methods</a></li>
                                     </ul>
             </li>
             
                             <li class="phpdocumentor-on-this-page-section__title">Properties</li>
                 <li>
                     <ul class="phpdocumentor-list -clean">
-                                                    <li class=""><a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#property_base">$base</a></li>
-                                                    <li class=""><a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#property_pathPrefixer">$pathPrefixer</a></li>
-                                                    <li class=""><a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#property_prefix">$prefix</a></li>
+                                                    <li class=""><a href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#property_adapter">$adapter</a></li>
+                                                    <li class=""><a href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#property_urlGenerator">$urlGenerator</a></li>
                                             </ul>
                 </li>
             
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                            <li class=""><a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#method___construct">__construct()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#method___construct">__construct()</a></li>
                                             <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_copy">copy()</a></li>
                                             <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_createDirectory">createDirectory()</a></li>
                                             <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_delete">delete()</a></li>
@@ -1643,18 +1607,18 @@
                                             <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_fileExists">fileExists()</a></li>
                                             <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_fileSize">fileSize()</a></li>
                                             <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_lastModified">lastModified()</a></li>
-                                            <li class=""><a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#method_listContents">listContents()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_listContents">listContents()</a></li>
                                             <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_mimeType">mimeType()</a></li>
                                             <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_move">move()</a></li>
-                                            <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_publicUrl">publicUrl()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#method_publicUrl">publicUrl()</a></li>
                                             <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_read">read()</a></li>
                                             <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_readStream">readStream()</a></li>
                                             <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_setVisibility">setVisibility()</a></li>
                                             <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_visibility">visibility()</a></li>
                                             <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_write">write()</a></li>
                                             <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_writeStream">writeStream()</a></li>
-                                            <li class=""><a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#method_getAdapter">getAdapter()</a></li>
-                                            <li class=""><a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#method_preparePath">preparePath()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#method_getAdapter">getAdapter()</a></li>
+                                            <li class=""><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html#method_preparePath">preparePath()</a></li>
                                     </ul>
             </li>
                     </ul>
@@ -1674,7 +1638,7 @@
     </section>
 </section>
         </div>
-        <a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/Collecthor-FlySystem-PublicUrlAdapter.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

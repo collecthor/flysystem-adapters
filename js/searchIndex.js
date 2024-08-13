@@ -721,6 +721,36 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Collecthor-FlySystem-OverlayAdapter.html#property_prefix"
         },                {
+            "fqsen": "\\Collecthor\\FlySystem\\PublicUrlAdapter",
+            "name": "PublicUrlAdapter",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-PublicUrlAdapter.html"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\PublicUrlAdapter\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-PublicUrlAdapter.html#method___construct"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\PublicUrlAdapter\u003A\u003AgetAdapter\u0028\u0029",
+            "name": "getAdapter",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-PublicUrlAdapter.html#method_getAdapter"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\PublicUrlAdapter\u003A\u003ApublicUrl\u0028\u0029",
+            "name": "publicUrl",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-PublicUrlAdapter.html#method_publicUrl"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\PublicUrlAdapter\u003A\u003A\u0024adapter",
+            "name": "adapter",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-PublicUrlAdapter.html#property_adapter"
+        },                {
+            "fqsen": "\\Collecthor\\FlySystem\\PublicUrlAdapter\u003A\u003A\u0024urlGenerator",
+            "name": "urlGenerator",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-PublicUrlAdapter.html#property_urlGenerator"
+        },                {
             "fqsen": "\\Collecthor\\FlySystem\\StripPrefixAdapter",
             "name": "StripPrefixAdapter",
             "summary": "Strips\u0020a\u0020prefix\u0020from\u0020all\u0020paths\u0020given\u0020to\u0020the\u0020adapter.",
