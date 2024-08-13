@@ -3,18 +3,16 @@
 declare(strict_types=1);
 
 
-use Collecthor\FlySystem\MoveOverwriteAdapter;
 use Collecthor\FlySystem\PublicUrlAdapter;
 use Collecthor\FlySystem\Tests\IndirectAdapterTestCase;
 use League\Flysystem\Config;
 use League\Flysystem\FilesystemAdapter;
 use League\Flysystem\InMemory\InMemoryFilesystemAdapter;
-use League\Flysystem\UnableToMoveFile;
 use League\Flysystem\UrlGeneration\PrefixPublicUrlGenerator;
 use League\Flysystem\UrlGeneration\PublicUrlGenerator;
 use PHPUnit\Framework\Attributes\CoversClass;
 
-#[CoversClass(MoveOverwriteAdapter::class)]
+#[CoversClass(PublicUrlAdapter::class)]
 final class PublicUrlAdapterTest extends IndirectAdapterTestCase
 {
     public function testPublicUrl(): void
