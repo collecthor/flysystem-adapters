@@ -52,6 +52,9 @@ trait IndirectAdapterTrait
         return $this->getAdapter($path, $preparedPath)->read($preparedPath);
     }
 
+    /**
+     * @return resource
+     */
     public function readStream(string $path)
     {
         $preparedPath = $this->preparePath($path);
