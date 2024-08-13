@@ -26,7 +26,6 @@ final class MoveOverwriteAdapterTest extends IndirectAdapterTestCase
 {
     public function testMoveToExistingFileWithoutAdapter(): void
     {
-        $adapter = $this->adapter();
         $adapter = new InMemoryFilesystemAdapter();
         $config = new Config();
         $adapter->write('a', 'test1', $config);

@@ -6,11 +6,12 @@ namespace Collecthor\FlySystem;
 
 use League\Flysystem\FilesystemAdapter;
 use League\Flysystem\PathPrefixer;
+use League\Flysystem\UrlGeneration\PublicUrlGenerator;
 
 /**
  * Adds a prefix to all paths given to the adapter.
  */
-final readonly class AddPrefixAdapter extends IndirectAdapter implements FilesystemAdapter
+final readonly class AddPrefixAdapter extends IndirectAdapter implements FilesystemAdapter, PublicUrlGenerator
 {
     private PathPrefixer $pathPrefixer;
 
