@@ -11,7 +11,7 @@ use League\Flysystem\PathPrefixer;
  * Strips a prefix from all paths given to the adapter.
  * If the path does not start with the prefix an exception is thrown.
  */
-final readonly class StripPrefixAdapter extends IndirectAdapter implements FilesystemAdapter
+final readonly class StripPrefixAdapter extends IndirectAdapter
 {
     private PathPrefixer $pathPrefixer;
 
