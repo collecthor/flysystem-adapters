@@ -52,7 +52,7 @@ jobs:
     - name: 🔗 Install Dependencies
       shell: bash
       run: |
-        npm ci --no-fund --no-audit --ignore-scripts
+        npm install --no-fund --no-audit --ignore-scripts
     - name: 🔬 Check semantic versioning
       id: semantic-release
       run: |
