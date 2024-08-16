@@ -17,10 +17,9 @@ final readonly class MoveOverwriteAdapter implements FilesystemAdapter, PublicUr
 {
     use IndirectAdapterTrait;
 
-    public function __construct(private FilesystemAdapter $base)
-    {
-    }
-
+    public function __construct(
+        private FilesystemAdapter $base,
+    ) {}
 
     public function move(string $source, string $destination, Config $config): void
     {

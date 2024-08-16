@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 use Collecthor\FlySystem\LazyDirectoryProvider;
 use Collecthor\FlySystem\Tests\IndirectAdapterTestCase;
 use Collecthor\FlySystem\VirtualDirectoryProviderAdapter;
@@ -23,7 +22,6 @@ final class VirtualDirectoryProviderAdapterTest extends IndirectAdapterTestCase
         IndirectAdapterTestCase::clearFilesystemAdapterCache();
     }
 
-
     protected static function createFilesystemAdapter(): VirtualDirectoryProviderAdapter
     {
         $memoryAdapter = new InMemoryFilesystemAdapter();
@@ -33,10 +31,9 @@ final class VirtualDirectoryProviderAdapterTest extends IndirectAdapterTestCase
             'def' => new DirectoryAttributes('test123/def'),
 
         ];
-        $provider = new LazyDirectoryProvider(static fn () => $directories, true);
+        $provider = new LazyDirectoryProvider(static fn() => $directories, true);
         return new VirtualDirectoryProviderAdapter($memoryAdapter, 'test123/', $provider);
     }
-
 
     public function testListVirtualDirectoriesWhenPrimaryIsEmpty(): void
     {
@@ -45,7 +42,7 @@ final class VirtualDirectoryProviderAdapterTest extends IndirectAdapterTestCase
         $this->assertListingsAreTheSame([
             new DirectoryAttributes('test123'),
             new DirectoryAttributes('test123/abc'),
-            new DirectoryAttributes('test123/def')
+            new DirectoryAttributes('test123/def'),
         ], $adapter->listContents('test123', false));
     }
 
@@ -62,7 +59,7 @@ final class VirtualDirectoryProviderAdapterTest extends IndirectAdapterTestCase
         $this->assertListingsAreTheSame([
             new DirectoryAttributes('test123'),
             new DirectoryAttributes('test123/abc'),
-            new DirectoryAttributes('test123/def')
+            new DirectoryAttributes('test123/def'),
         ], $adapter->listContents('test123', false));
 
         $this->assertListingsAreTheSame([
@@ -79,11 +76,10 @@ final class VirtualDirectoryProviderAdapterTest extends IndirectAdapterTestCase
         $adapter = $this->adapter();
         $this->assertListingLength(3, $adapter, '', true);
 
-
         $this->assertListingsAreTheSame([
             new DirectoryAttributes('test123'),
             new DirectoryAttributes('test123/abc'),
-            new DirectoryAttributes('test123/def')
+            new DirectoryAttributes('test123/def'),
         ], $adapter->listContents('test123', true));
     }
 }

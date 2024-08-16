@@ -26,9 +26,12 @@ final readonly class VirtualDirectoryListWithMetaDataAdapter extends IndirectAda
     /**
      * @param array<array-key, array<mixed>> $directories
      */
-    public function __construct(private FilesystemAdapter $adapter, string $path, array $directories)
-    {
-        if (!str_ends_with($path, '/')) {
+    public function __construct(
+        private FilesystemAdapter $adapter,
+        string $path,
+        array $directories,
+    ) {
+        if (! str_ends_with($path, '/')) {
             throw new \InvalidArgumentException('Path must end with /');
         }
         $this->path = rtrim($path, '/');
@@ -41,6 +44,7 @@ final readonly class VirtualDirectoryListWithMetaDataAdapter extends IndirectAda
         }
         $this->directories = $paths;
     }
+
     protected function getAdapter(string $rawPath, string $preparedPath): FilesystemAdapter
     {
         return $this->adapter;

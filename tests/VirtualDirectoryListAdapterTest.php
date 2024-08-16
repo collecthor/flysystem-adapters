@@ -22,14 +22,12 @@ class VirtualDirectoryListAdapterTest extends IndirectAdapterTestCase
         parent::clearFilesystemAdapterCache();
     }
 
-
     protected static function createFilesystemAdapter(): VirtualDirectoryListAdapter
     {
         $memoryAdapter = new InMemoryFilesystemAdapter();
         $memoryAdapter->createDirectory('test123', new Config());
         return new VirtualDirectoryListAdapter($memoryAdapter, 'test123/', ['abc', 'def']);
     }
-
 
     public function testListVirtualDirectoriesWhenPrimaryIsEmpty(): void
     {
@@ -38,7 +36,7 @@ class VirtualDirectoryListAdapterTest extends IndirectAdapterTestCase
         $this->assertListingsAreTheSame([
             new DirectoryAttributes('test123'),
             new DirectoryAttributes('test123/abc'),
-            new DirectoryAttributes('test123/def')
+            new DirectoryAttributes('test123/def'),
         ], $adapter->listContents('test123', false));
     }
 
@@ -55,7 +53,7 @@ class VirtualDirectoryListAdapterTest extends IndirectAdapterTestCase
         $this->assertListingsAreTheSame([
             new DirectoryAttributes('test123'),
             new DirectoryAttributes('test123/abc'),
-            new DirectoryAttributes('test123/def')
+            new DirectoryAttributes('test123/def'),
         ], $adapter->listContents('test123', false));
 
         $this->assertListingsAreTheSame([
@@ -72,11 +70,10 @@ class VirtualDirectoryListAdapterTest extends IndirectAdapterTestCase
         $adapter = $this->adapter();
         $this->assertListingLength(3, $adapter, '', true);
 
-
         $this->assertListingsAreTheSame([
             new DirectoryAttributes('test123'),
             new DirectoryAttributes('test123/abc'),
-            new DirectoryAttributes('test123/def')
+            new DirectoryAttributes('test123/def'),
         ], $adapter->listContents('test123', true));
     }
 }

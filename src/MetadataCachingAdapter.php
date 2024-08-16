@@ -15,13 +15,15 @@ use League\Flysystem\UrlGeneration\PublicUrlGenerator;
 final class MetadataCachingAdapter implements FilesystemAdapter, PublicUrlGenerator
 {
     use IndirectAdapterTrait;
+
     /**
      * @var array<string, FileAttributes>
      */
     private array $fileAttributeCache = [];
-    public function __construct(private readonly FilesystemAdapter $base)
-    {
-    }
+
+    public function __construct(
+        private readonly FilesystemAdapter $base,
+    ) {}
 
     protected function getAdapter(string $rawPath, string $preparedPath): FilesystemAdapter
     {
@@ -31,7 +33,7 @@ final class MetadataCachingAdapter implements FilesystemAdapter, PublicUrlGenera
     public function lastModified(string $path): FileAttributes
     {
         //test
-        if (!isset($this->fileAttributeCache[$path])) {
+        if (! isset($this->fileAttributeCache[$path])) {
             $this->fileAttributeCache[$path] = $this->getAdapter($path, $this->preparePath($path))->lastModified($path);
         }
 
@@ -40,7 +42,7 @@ final class MetadataCachingAdapter implements FilesystemAdapter, PublicUrlGenera
 
     public function visibility(string $path): FileAttributes
     {
-        if (!isset($this->fileAttributeCache[$path])) {
+        if (! isset($this->fileAttributeCache[$path])) {
             $this->fileAttributeCache[$path] = $this->getAdapter($path, $this->preparePath($path))->visibility($path);
         }
 
@@ -49,7 +51,7 @@ final class MetadataCachingAdapter implements FilesystemAdapter, PublicUrlGenera
 
     public function mimeType(string $path): FileAttributes
     {
-        if (!isset($this->fileAttributeCache[$path])) {
+        if (! isset($this->fileAttributeCache[$path])) {
             $this->fileAttributeCache[$path] = $this->getAdapter($path, $this->preparePath($path))->mimeType($path);
         }
 
@@ -58,7 +60,7 @@ final class MetadataCachingAdapter implements FilesystemAdapter, PublicUrlGenera
 
     public function fileSize(string $path): FileAttributes
     {
-        if (!isset($this->fileAttributeCache[$path])) {
+        if (! isset($this->fileAttributeCache[$path])) {
             $this->fileAttributeCache[$path] = $this->getAdapter($path, $this->preparePath($path))->fileSize($path);
         }
 

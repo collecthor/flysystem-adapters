@@ -23,10 +23,13 @@ final readonly class OverlayAdapter extends IndirectAdapter
      */
     private array $virtualDirectories;
 
-    public function __construct(private FilesystemAdapter $base, FilesystemAdapter $overlay, private string $prefix)
-    {
+    public function __construct(
+        private FilesystemAdapter $base,
+        FilesystemAdapter $overlay,
+        private string $prefix,
+    ) {
         // This is required because if we don't enforce it directory listings won't work as expected.
-        if (!str_ends_with($this->prefix, '/')) {
+        if (! str_ends_with($this->prefix, '/')) {
             throw new \InvalidArgumentException('Prefix must end with /');
         }
 
@@ -42,7 +45,6 @@ final readonly class OverlayAdapter extends IndirectAdapter
         $this->virtualDirectories = $virtualDirectories;
     }
 
-
     protected function getAdapter(string $rawPath, string $preparedPath): FilesystemAdapter
     {
         if (str_starts_with($rawPath, rtrim($this->prefix, '/'))) {
@@ -52,6 +54,7 @@ final readonly class OverlayAdapter extends IndirectAdapter
         }
         return $result;
     }
+
     public function listContents(string $path, bool $deep): iterable
     {
         /**
@@ -98,7 +101,7 @@ final readonly class OverlayAdapter extends IndirectAdapter
     private function pathIsAncestorOf(string $possibleAncestor, string $path): bool
     {
         // Root
-        if (in_array($possibleAncestor, ["/", ""])) {
+        if (in_array($possibleAncestor, ["/", ""], true)) {
             return true;
         }
         return str_starts_with($path, $possibleAncestor);
@@ -106,7 +109,7 @@ final readonly class OverlayAdapter extends IndirectAdapter
 
     private function pathIsParentOf(string $possibleParent, string $path): bool
     {
-        if (in_array($possibleParent, ["/", ""]) && !str_contains($path, '/')) {
+        if (in_array($possibleParent, ["/", ""], true) && ! str_contains($path, '/')) {
             return true;
         }
         if (dirname($path) === $possibleParent) {
@@ -115,10 +118,6 @@ final readonly class OverlayAdapter extends IndirectAdapter
 
         return false;
     }
-
-
-
-
 
     private function checkSourceAdapterMatchesDestination(string $source, string $destination): FilesystemAdapter
     {
@@ -149,7 +148,6 @@ final readonly class OverlayAdapter extends IndirectAdapter
     {
         return isset($this->virtualDirectories[rtrim($path, '/')]) || parent::directoryExists($path);
     }
-
 
     public function copy(string $source, string $destination, Config $config): void
     {

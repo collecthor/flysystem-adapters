@@ -21,7 +21,7 @@ final class MetadataCachingAdapterTest extends TestCase
             ['lastModified'],
             ['fileSize'],
             ['visibility'],
-            ['mimeType']
+            ['mimeType'],
 
         ];
     }

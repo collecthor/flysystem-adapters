@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-
 use Collecthor\FlySystem\PublicUrlAdapter;
 use Collecthor\FlySystem\Tests\IndirectAdapterTestCase;
 use League\Flysystem\Config;
@@ -20,7 +19,6 @@ final class PublicUrlAdapterTest extends IndirectAdapterTestCase
         $adapter = $this->adapter();
         $config = new Config();
         $adapter->write('a', 'test1', $config);
-
 
         $this->assertInstanceOf(PublicUrlGenerator::class, $adapter);
         $this->assertSame('http://test/a', $adapter->publicUrl('a', new Config()));

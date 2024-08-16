@@ -18,9 +18,10 @@ use League\Flysystem\Visibility;
  */
 final readonly class DirectoryViaPlaceholderFileAdapter extends IndirectAdapter implements FilesystemAdapter
 {
-    public function __construct(private readonly FilesystemAdapter $base, private readonly string $placeHolderName = '.directory')
-    {
-    }
+    public function __construct(
+        private readonly FilesystemAdapter $base,
+        private readonly string $placeHolderName = '.directory',
+    ) {}
 
     protected function getAdapter(string $rawPath, string $preparedPath): FilesystemAdapter
     {
@@ -57,7 +58,6 @@ final readonly class DirectoryViaPlaceholderFileAdapter extends IndirectAdapter 
             return parent::fileSize($path);
         }
     }
-
 
     public function directoryExists(string $path): bool
     {

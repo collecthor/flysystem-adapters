@@ -35,12 +35,11 @@ final class EventedAdapterTest extends IndirectAdapterTestCase
     {
         $events = new ArrayObject();
 
+        $dispatcher = new readonly class ($events) implements EventDispatcherInterface {
+            public function __construct(
+                private ArrayObject $events,
+            ) {}
 
-
-        $dispatcher = new readonly class($events) implements EventDispatcherInterface {
-            public function __construct(private ArrayObject $events)
-            {
-            }
             public function dispatch(object $event): void
             {
                 $this->events->append($event);
@@ -75,13 +74,10 @@ final class EventedAdapterTest extends IndirectAdapterTestCase
         self::assertFalse($after->before);
     }
 
-
     protected static function createFilesystemAdapter(): FilesystemAdapter
     {
-        $dispatcher = new readonly class() implements EventDispatcherInterface {
-            public function dispatch(object $event): void
-            {
-            }
+        $dispatcher = new readonly class implements EventDispatcherInterface {
+            public function dispatch(object $event): void {}
         };
         return new EventedAdapter(new InMemoryFilesystemAdapter(), $dispatcher);
     }

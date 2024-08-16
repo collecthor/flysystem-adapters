@@ -29,9 +29,12 @@ final readonly class VirtualDirectoryListAdapter extends IndirectAdapter
     /**
      * @param list<string> $directories
      */
-    public function __construct(private FilesystemAdapter $adapter, string $path, array $directories)
-    {
-        if (!str_ends_with($path, '/')) {
+    public function __construct(
+        private FilesystemAdapter $adapter,
+        string $path,
+        array $directories,
+    ) {
+        if (! str_ends_with($path, '/')) {
             throw new \InvalidArgumentException('Path must end with /');
         }
         $this->path = rtrim($path, '/');

@@ -18,7 +18,6 @@ final readonly class CopyEvent
         public bool $before,
         public string $source,
         public string $destination,
-        public Config $config
-    ) {
-    }
+        public Config $config,
+    ) {}
 }

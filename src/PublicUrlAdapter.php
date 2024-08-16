@@ -12,10 +12,10 @@ final readonly class PublicUrlAdapter implements FilesystemAdapter, PublicUrlGen
 {
     use IndirectAdapterTrait;
 
-    public function __construct(private FilesystemAdapter $adapter, private PublicUrlGenerator $urlGenerator)
-    {
-    }
-
+    public function __construct(
+        private FilesystemAdapter $adapter,
+        private PublicUrlGenerator $urlGenerator,
+    ) {}
 
     protected function getAdapter(string $rawPath, string $preparedPath): FilesystemAdapter
     {

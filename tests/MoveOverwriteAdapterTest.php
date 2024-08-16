@@ -44,9 +44,9 @@ final class MoveOverwriteAdapterTest extends IndirectAdapterTestCase
 
         $adapter->move('a', 'b', $config);
 
-
         self::assertSame('test1', $adapter->read('b'));
     }
+
     protected static function createFilesystemAdapter(): FilesystemAdapter
     {
         return new MoveOverwriteAdapter(new InMemoryFilesystemAdapter());

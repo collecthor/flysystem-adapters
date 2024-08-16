@@ -17,7 +17,6 @@ final readonly class WriteEvent
         public bool $before,
         public string $path,
         public string $contents,
-        public Config $config
-    ) {
-    }
+        public Config $config,
+    ) {}
 }

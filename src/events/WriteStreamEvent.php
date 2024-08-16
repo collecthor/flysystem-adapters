@@ -24,7 +24,6 @@ final readonly class WriteStreamEvent
         public bool $before,
         public string $path,
         public mixed $contents,
-        public Config $config
-    ) {
-    }
+        public Config $config,
+    ) {}
 }

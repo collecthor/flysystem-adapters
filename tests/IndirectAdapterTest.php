@@ -16,13 +16,14 @@ class IndirectAdapterTest extends IndirectAdapterTestCase
 {
     protected static function createFilesystemAdapter(): FilesystemAdapter
     {
-        return new readonly class() extends IndirectAdapter {
+        return new readonly class extends IndirectAdapter {
             private FilesystemAdapter $adapter;
 
             public function __construct()
             {
                 $this->adapter = new InMemoryFilesystemAdapter();
             }
+
             protected function getAdapter(string $rawPath, string $preparedPath): FilesystemAdapter
             {
                 return $this->adapter;

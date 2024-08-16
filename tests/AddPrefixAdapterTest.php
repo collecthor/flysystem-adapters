@@ -19,7 +19,6 @@ class AddPrefixAdapterTest extends IndirectAdapterTestCase
         parent::clearFilesystemAdapterCache();
     }
 
-
     protected static function createFilesystemAdapter(): FilesystemAdapter
     {
         return new AddPrefixAdapter(new InMemoryFilesystemAdapter(), 'test123/');

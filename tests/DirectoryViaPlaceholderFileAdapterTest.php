@@ -23,10 +23,9 @@ class DirectoryViaPlaceholderFileAdapterTest extends IndirectAdapterTestCase
         parent::clearFilesystemAdapterCache();
     }
 
-
     protected static function createFilesystemAdapter(): FilesystemAdapter
     {
-        $adapterWithoutCreateDirectory = new class() extends InMemoryFilesystemAdapter {
+        $adapterWithoutCreateDirectory = new class extends InMemoryFilesystemAdapter {
             public function createDirectory(string $path, Config $config): never
             {
                 throw new \Exception('This should not be called');
@@ -65,14 +64,14 @@ class DirectoryViaPlaceholderFileAdapterTest extends IndirectAdapterTestCase
         $baseAdapter->expects($this->never())->method('createDirectory');
 
         $list = [
-            new FileAttributes('test/.directory')
+            new FileAttributes('test/.directory'),
         ];
         $baseAdapter->expects($this->once())->method('listContents')->willReturn($list);
 
         $subject = new DirectoryViaPlaceholderFileAdapter($baseAdapter);
 
         $this->assertListingsAreTheSame([
-            new DirectoryAttributes('test')
+            new DirectoryAttributes('test'),
         ], $subject->listContents('', false));
     }
 }

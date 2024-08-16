@@ -24,7 +24,6 @@ class OverlayAdapterTest extends IndirectAdapterTestCase
         return new OverlayAdapter(new InMemoryFilesystemAdapter(), new InMemoryFilesystemAdapter(), 'overlay/');
     }
 
-
     public function testFileIsPutInOverlay(): void
     {
         $base = new InMemoryFilesystemAdapter();
@@ -170,7 +169,6 @@ class OverlayAdapterTest extends IndirectAdapterTestCase
     {
         $base = new InMemoryFilesystemAdapter();
 
-
         $overlay = $this->getMockBuilder(FilesystemAdapter::class)->getMock();
         $overlay->expects($this->once())->method('listContents')->with('')->willReturn([]);
 
@@ -214,6 +212,7 @@ class OverlayAdapterTest extends IndirectAdapterTestCase
 
         new OverlayAdapter($base, $overlay, 'test');
     }
+
     public function testListingEmptyPath(): void
     {
         $base = new InMemoryFilesystemAdapter();
@@ -224,6 +223,7 @@ class OverlayAdapterTest extends IndirectAdapterTestCase
         $this->assertListingLength(1, $combined, '/');
         $this->assertListingLength(1, $combined, '');
     }
+
     public static function filenameProvider(): Generator
     {
         yield from parent::filenameProvider();

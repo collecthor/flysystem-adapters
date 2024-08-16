@@ -25,9 +25,8 @@ final readonly class EventedAdapter implements FilesystemAdapter, PublicUrlGener
 {
     public function __construct(
         private FilesystemAdapter $adapter,
-        private EventDispatcherInterface $dispatcher
-    ) {
-    }
+        private EventDispatcherInterface $dispatcher,
+    ) {}
 
     public function fileExists(string $path): bool
     {

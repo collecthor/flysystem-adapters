@@ -17,6 +17,7 @@ trait IndirectAdapterTrait
     {
         return $path;
     }
+
     abstract protected function getAdapter(string $rawPath, string $preparedPath): FilesystemAdapter;
 
     public function fileExists(string $path): bool

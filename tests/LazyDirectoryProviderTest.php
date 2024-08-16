@@ -20,7 +20,7 @@ class LazyDirectoryProviderTest extends TestCase
                 $loaded = true;
                 return [];
             },
-            loadImmediately: true
+            loadImmediately: true,
         );
         $this->assertTrue($loaded);
     }
@@ -41,7 +41,7 @@ class LazyDirectoryProviderTest extends TestCase
             return $values;
         };
         $provider = new LazyDirectoryProvider(
-            loader: $loader
+            loader: $loader,
         );
 
         self::assertSame($values, iterator_to_array($provider->getIterator()));
@@ -63,7 +63,7 @@ class LazyDirectoryProviderTest extends TestCase
             return $values;
         };
         $provider = new LazyDirectoryProvider(
-            loader: $loader
+            loader: $loader,
         );
 
         self::assertTrue($provider->hasTopLevelDirectory('a'));

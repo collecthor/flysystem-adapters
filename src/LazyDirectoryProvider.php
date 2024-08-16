@@ -26,7 +26,7 @@ final class LazyDirectoryProvider implements DirectoryProvider
      */
     public function __construct(
         private readonly Closure $loader,
-        bool $loadImmediately = false
+        bool $loadImmediately = false,
     ) {
         if ($loadImmediately) {
             $this->getDirectories();
@@ -38,7 +38,7 @@ final class LazyDirectoryProvider implements DirectoryProvider
      */
     private function getDirectories(): ArrayObject
     {
-        if (!isset($this->directories)) {
+        if (! isset($this->directories)) {
             /** @var ArrayObject<string, DirectoryAttributes> $directories */
             $directories = new ArrayObject();
             foreach (($this->loader)() as $name => $item) {
@@ -48,7 +48,6 @@ final class LazyDirectoryProvider implements DirectoryProvider
         }
         return $this->directories;
     }
-
 
     public function getIterator(): Traversable
     {

@@ -15,10 +15,12 @@ final readonly class StripPrefixAdapter extends IndirectAdapter
 {
     private PathPrefixer $pathPrefixer;
 
-    public function __construct(private FilesystemAdapter $base, private string $prefix)
-    {
+    public function __construct(
+        private FilesystemAdapter $base,
+        private string $prefix,
+    ) {
         // This is required because if we don't enforce it directory listings won't work as expected.
-        if (!str_ends_with($prefix, '/')) {
+        if (! str_ends_with($prefix, '/')) {
             throw new \InvalidArgumentException('Prefix must end with /');
         }
         $this->pathPrefixer = new PathPrefixer($prefix);
@@ -29,12 +31,11 @@ final readonly class StripPrefixAdapter extends IndirectAdapter
         if ("$path/" === $this->prefix) {
             return '';
         }
-        if (!str_starts_with($path, $this->prefix)) {
+        if (! str_starts_with($path, $this->prefix)) {
             throw new \Exception("Invalid path; {$path} MUST start with {$this->prefix}");
         }
         return $this->pathPrefixer->stripPrefix($path);
     }
-
 
     public function listContents(string $path, bool $deep): iterable
     {

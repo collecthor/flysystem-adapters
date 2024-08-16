@@ -9,9 +9,10 @@ use League\Flysystem\FilesystemAdapter;
 final class AdapterStack
 {
     private bool $finalized = false;
-    public function __construct(private FilesystemAdapter $adapter)
-    {
-    }
+
+    public function __construct(
+        private FilesystemAdapter $adapter,
+    ) {}
 
     /**
      * @param \Closure(FileSystemAdapter):FilesystemAdapter $closure
@@ -22,7 +23,7 @@ final class AdapterStack
         if ($this->finalized) {
             throw new \RuntimeException('This stack is finalized');
         }
-        $this->adapter = $closure($this->adapter);
+        $this->adapter =   $closure($this->adapter);
         return $this;
     }
 

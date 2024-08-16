@@ -15,7 +15,6 @@ final readonly class DeleteEvent
     public function __construct(
         public FilesystemAdapter $adapter,
         public bool $before,
-        public string $path
-    ) {
-    }
+        public string $path,
+    ) {}
 }
