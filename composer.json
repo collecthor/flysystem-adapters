@@ -9,7 +9,7 @@
     },
     "require-dev": {
         "league/flysystem-adapter-test-utilities": "^3.0",
-        "phpunit/phpunit": "^10",
+        "phpunit/phpunit": "^11",
         "league/flysystem-memory": "^3.0",
         "symplify/easy-coding-standard": "^12",
         "captainhook/plugin-composer": "^5.3",
