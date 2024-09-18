@@ -1,9 +1,6 @@
 name: Continous integration
 on:
   pull_request:
-  push:
-    branches:
-      - master
 jobs:
   code_checks:
     name: Check code
@@ -115,26 +112,3 @@ jobs:
               repo: context.repo.repo,
               body
           });
-  release:
-    permissions:
-      issues: write
-      packages: write
-      contents: write
-    name: Automated release
-    if: github.event_name != 'pull_request'
-    needs: [code_checks]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: latest
-      - run: >
-          npx
-          -p "@semantic-release/commit-analyzer"
-          -p "@semantic-release/release-notes-generator"
-          -p conventional-changelog-conventionalcommits@6
-          -p semantic-release
-          -- semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
