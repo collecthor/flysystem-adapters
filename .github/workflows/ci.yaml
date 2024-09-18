@@ -20,11 +20,6 @@ jobs:
         run: vendor/bin/phpunit --coverage-clover coverage.xml
       - name: Generate docs
         run: docker run --rm -v ${PWD}:/data phpdoc/phpdoc:3
-      - name: Deploy docs to pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
       - uses: codecov/codecov-action@v4
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
