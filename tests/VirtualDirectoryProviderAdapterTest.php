@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use Collecthor\FlySystem\LazyDirectoryProvider;
 use Collecthor\FlySystem\Tests\IndirectAdapterTestCase;
+use Collecthor\FlySystem\VirtualDirectoryListAdapter;
 use Collecthor\FlySystem\VirtualDirectoryProviderAdapter;
 use League\Flysystem\Config;
 use League\Flysystem\DirectoryAttributes;
@@ -81,5 +82,25 @@ final class VirtualDirectoryProviderAdapterTest extends IndirectAdapterTestCase
             new DirectoryAttributes('test123/abc'),
             new DirectoryAttributes('test123/def'),
         ], $adapter->listContents('test123', true));
+    }
+
+    public function testRootDirectoryMetaData(): void
+    {
+        $meta = [
+            'obj' => new \stdClass(),
+        ];
+        $directoryProvider = new LazyDirectoryProvider(static fn() => []);
+        $adapter = new VirtualDirectoryProviderAdapter(new InMemoryFilesystemAdapter(), path: 'test/', directories: $directoryProvider, rootMetadata: $meta);
+        $contents = iterator_to_array($adapter->listContents('test', false));
+        $this->assertCount(1, $contents);
+        $directoryAttributes = $contents[0];
+        $this->assertInstanceOf(DirectoryAttributes::class, $directoryAttributes);
+        $this->assertSame($meta, $directoryAttributes->extraMetadata());
+    }
+
+    public function testPathWithoutTrailingSlash(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        new VirtualDirectoryProviderAdapter(new InMemoryFilesystemAdapter(), path: 'test', directories: new LazyDirectoryProvider(static fn() => []));
     }
 }

@@ -19,10 +19,14 @@ final readonly class VirtualDirectoryProviderAdapter extends IndirectAdapter
 {
     private string $path;
 
+    /**
+     * @param array<string, mixed> $rootMetadata
+     */
     public function __construct(
         private FilesystemAdapter $adapter,
         string $path,
         private DirectoryProvider $directories,
+        private array $rootMetadata = [],
     ) {
         if (! str_ends_with($path, '/')) {
             throw new \InvalidArgumentException('Path must end with /');
@@ -47,7 +51,7 @@ final readonly class VirtualDirectoryProviderAdapter extends IndirectAdapter
             || $deep && $path === ''
             || $deep && str_starts_with($this->path, rtrim($path, '/') . '/')
         ) {
-            yield new DirectoryAttributes($this->path, Visibility::PUBLIC);
+            yield new DirectoryAttributes($this->path, Visibility::PUBLIC, extraMetadata: $this->rootMetadata);
             $yieldedPaths[$this->path] = true;
             foreach ($this->directories as $directory) {
                 $directoryPath = $directory->path();

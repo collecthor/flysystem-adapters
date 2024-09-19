@@ -4,17 +4,18 @@ declare(strict_types=1);
 
 namespace Collecthor\FlySystem\Tests;
 
+use Collecthor\FlySystem\IndirectAdapter;
 use Collecthor\FlySystem\VirtualDirectoryListWithMetaDataAdapter;
 use League\Flysystem\Config;
 use League\Flysystem\DirectoryAttributes;
 use League\Flysystem\FileAttributes;
 use League\Flysystem\InMemory\InMemoryFilesystemAdapter;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 
-/**
- * @covers \Collecthor\FlySystem\VirtualDirectoryListWithMetaDataAdapter
- * @uses \Collecthor\FlySystem\IndirectAdapter
- */
-class VirtualDirectoryListWithMetaDataAdapterTest extends IndirectAdapterTestCase
+#[CoversClass(VirtualDirectoryListWithMetaDataAdapter::class)]
+#[UsesClass(IndirectAdapter::class)]
+final class VirtualDirectoryListWithMetaDataAdapterTest extends IndirectAdapterTestCase
 {
     public static function clearFilesystemAdapterCache(): void
     {
@@ -77,5 +78,20 @@ class VirtualDirectoryListWithMetaDataAdapterTest extends IndirectAdapterTestCas
             new DirectoryAttributes('test123/abc'),
             new DirectoryAttributes('test123/def'),
         ], $adapter->listContents('test123', true));
+    }
+
+    public function testPathWithoutTrailingSlash(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        new VirtualDirectoryListWithMetaDataAdapter(new InMemoryFilesystemAdapter(), path: 'test', directories: []);
+
+    }
+
+    public function testDirectoryWithSlash(): void
+    {
+        new VirtualDirectoryListWithMetaDataAdapter(new InMemoryFilesystemAdapter(), path: 'test/', directories: []);
+        $this->expectException(\InvalidArgumentException::class);
+        new VirtualDirectoryListWithMetaDataAdapter(new InMemoryFilesystemAdapter(), path: 'test/', directories: ['abc/def' => []]);
+
     }
 }
