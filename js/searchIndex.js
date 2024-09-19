@@ -916,6 +916,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Collecthor-FlySystem-VirtualDirectoryProviderAdapter.html#property_directories"
         },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryProviderAdapter\u003A\u003A\u0024rootMetadata",
+            "name": "rootMetadata",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryProviderAdapter.html#property_rootMetadata"
+        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
