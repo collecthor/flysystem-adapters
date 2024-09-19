@@ -831,6 +831,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Collecthor-FlySystem-VirtualDirectoryListAdapter.html#property_adapter"
         },                {
+            "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryListAdapter\u003A\u003A\u0024rootMetadata",
+            "name": "rootMetadata",
+            "summary": "",
+            "url": "classes/Collecthor-FlySystem-VirtualDirectoryListAdapter.html#property_rootMetadata"
+        },                {
             "fqsen": "\\Collecthor\\FlySystem\\VirtualDirectoryListWithMetaDataAdapter",
             "name": "VirtualDirectoryListWithMetaDataAdapter",
             "summary": "This\u0020adapter\u0020allows\u0020you\u0020to\u0020add\u0020virtual\u0020directories\u0020to\u0020a\u0020specific\u0020path\u0020on\u0020an\u0020underlying\u0020adapter.",
