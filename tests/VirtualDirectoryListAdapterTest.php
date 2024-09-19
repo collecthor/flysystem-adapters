@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace Collecthor\FlySystem\Tests;
 
+use Collecthor\FlySystem\IndirectAdapter;
 use Collecthor\FlySystem\VirtualDirectoryListAdapter;
 use League\Flysystem\Config;
 use League\Flysystem\DirectoryAttributes;
 use League\Flysystem\FileAttributes;
 use League\Flysystem\InMemory\InMemoryFilesystemAdapter;
-use League\Flysystem\StorageAttributes;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 
-/**
- * @covers \Collecthor\FlySystem\VirtualDirectoryListAdapter
- * @uses \Collecthor\FlySystem\IndirectAdapter
- */
+#[CoversClass(VirtualDirectoryListAdapter::class)]
+#[UsesClass(IndirectAdapter::class)]
 class VirtualDirectoryListAdapterTest extends IndirectAdapterTestCase
 {
     public static function clearFilesystemAdapterCache(): void
@@ -75,5 +75,33 @@ class VirtualDirectoryListAdapterTest extends IndirectAdapterTestCase
             new DirectoryAttributes('test123/abc'),
             new DirectoryAttributes('test123/def'),
         ], $adapter->listContents('test123', true));
+    }
+
+    public function testPathWithoutTrailingSlash(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        new VirtualDirectoryListAdapter(new InMemoryFilesystemAdapter(), path: 'test', directories: []);
+
+    }
+
+    public function testDirectoryWithSlash(): void
+    {
+        new VirtualDirectoryListAdapter(new InMemoryFilesystemAdapter(), path: 'test/', directories: []);
+        $this->expectException(\InvalidArgumentException::class);
+        new VirtualDirectoryListAdapter(new InMemoryFilesystemAdapter(), path: 'test/', directories: ['abc/def']);
+
+    }
+
+    public function testRootDirectoryMetaData(): void
+    {
+        $meta = [
+            'obj' => new \stdClass(),
+        ];
+        $adapter = new VirtualDirectoryListAdapter(new InMemoryFilesystemAdapter(), path: 'test/', directories: [], rootMetadata: $meta);
+        $contents = iterator_to_array($adapter->listContents('test', false));
+        $this->assertCount(1, $contents);
+        $directoryAttributes = $contents[0];
+        $this->assertInstanceOf(DirectoryAttributes::class, $directoryAttributes);
+        $this->assertSame($meta, $directoryAttributes->extraMetadata());
     }
 }
