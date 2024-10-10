@@ -10,12 +10,13 @@ use League\Flysystem\Config;
 use League\Flysystem\DirectoryAttributes;
 use League\Flysystem\FileAttributes;
 use League\Flysystem\InMemory\InMemoryFilesystemAdapter;
+use PHPUnit\Framework\Attributes\CoversClass;
 
 /**
- * @covers \Collecthor\FlySystem\VirtualDirectoryProviderAdapter
  * @uses \Collecthor\FlySystem\IndirectAdapter
  * @uses \Collecthor\FlySystem\LazyDirectoryProvider
  */
+#[CoversClass(VirtualDirectoryProviderAdapter::class)]
 final class VirtualDirectoryProviderAdapterTest extends IndirectAdapterTestCase
 {
     public static function clearFilesystemAdapterCache(): void
@@ -32,7 +33,7 @@ final class VirtualDirectoryProviderAdapterTest extends IndirectAdapterTestCase
             'def' => new DirectoryAttributes('test123/def'),
 
         ];
-        $provider = new LazyDirectoryProvider(static fn() => $directories, true);
+        $provider = new LazyDirectoryProvider(static fn() => $directories, false);
         return new VirtualDirectoryProviderAdapter($memoryAdapter, 'test123/', $provider);
     }
 
@@ -102,5 +103,18 @@ final class VirtualDirectoryProviderAdapterTest extends IndirectAdapterTestCase
     {
         $this->expectException(\InvalidArgumentException::class);
         new VirtualDirectoryProviderAdapter(new InMemoryFilesystemAdapter(), path: 'test', directories: new LazyDirectoryProvider(static fn() => []));
+    }
+
+    public function testLazyLoading(): void
+    {
+        $memoryAdapter = new InMemoryFilesystemAdapter();
+        $memoryAdapter->createDirectory('test123', new Config());
+        $memoryAdapter->createDirectory('test1234', new Config());
+        $provider = new LazyDirectoryProvider(static fn() => throw new \RuntimeException('Not implemented'), false);
+        $virtualDirectoryAdapter = new VirtualDirectoryProviderAdapter($memoryAdapter, 'test123/', $provider);
+
+        $this->assertFalse($virtualDirectoryAdapter->directoryExists('test'));
+        $this->assertTrue($virtualDirectoryAdapter->directoryExists('test1234'));
+        $this->assertTrue($virtualDirectoryAdapter->directoryExists('test123'));
     }
 }

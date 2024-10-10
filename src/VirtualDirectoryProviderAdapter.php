@@ -41,7 +41,7 @@ final readonly class VirtualDirectoryProviderAdapter extends IndirectAdapter
 
     public function directoryExists(string $path): bool
     {
-        return $this->directories->hasTopLevelDirectory($path) || parent::directoryExists($path);
+        return (str_starts_with($path, "{$this->path}/", ) && $this->directories->hasTopLevelDirectory($path)) || parent::directoryExists($path);
     }
 
     public function listContents(string $path, bool $deep): iterable
