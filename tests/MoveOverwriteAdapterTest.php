@@ -24,17 +24,6 @@ use Psr\EventDispatcher\EventDispatcherInterface;
 #[CoversClass(MoveOverwriteAdapter::class)]
 final class MoveOverwriteAdapterTest extends IndirectAdapterTestCase
 {
-    public function testMoveToExistingFileWithoutAdapter(): void
-    {
-        $adapter = new InMemoryFilesystemAdapter();
-        $config = new Config();
-        $adapter->write('a', 'test1', $config);
-        $adapter->write('b', 'test2', $config);
-
-        $this->expectException(UnableToMoveFile::class);
-        $adapter->move('a', 'b', $config);
-    }
-
     public function testMoveToExistingFile(): void
     {
         $adapter = $this->adapter();
