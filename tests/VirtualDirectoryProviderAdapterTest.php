@@ -2,21 +2,20 @@
 
 declare(strict_types=1);
 
+use Collecthor\FlySystem\IndirectAdapter;
 use Collecthor\FlySystem\LazyDirectoryProvider;
 use Collecthor\FlySystem\Tests\IndirectAdapterTestCase;
-use Collecthor\FlySystem\VirtualDirectoryListAdapter;
 use Collecthor\FlySystem\VirtualDirectoryProviderAdapter;
 use League\Flysystem\Config;
 use League\Flysystem\DirectoryAttributes;
 use League\Flysystem\FileAttributes;
 use League\Flysystem\InMemory\InMemoryFilesystemAdapter;
 use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 
-/**
- * @uses \Collecthor\FlySystem\IndirectAdapter
- * @uses \Collecthor\FlySystem\LazyDirectoryProvider
- */
 #[CoversClass(VirtualDirectoryProviderAdapter::class)]
+#[UsesClass(IndirectAdapter::class)]
+#[UsesClass(LazyDirectoryProvider::class)]
 final class VirtualDirectoryProviderAdapterTest extends IndirectAdapterTestCase
 {
     public static function clearFilesystemAdapterCache(): void
