@@ -9,10 +9,21 @@ use League\Flysystem\Config;
 use League\Flysystem\FilesystemAdapter;
 use League\Flysystem\StorageAttributes;
 use League\Flysystem\UnableToGeneratePublicUrl;
+use PHPUnit\Framework\Attributes\After;
 use PHPUnit\Framework\Attributes\Test;
 
 abstract class IndirectAdapterTestCase extends FilesystemAdapterTestCase
 {
+    /**
+     * The parent method is annotated with "@after", which PHPUnit 12 no longer reads, so without
+     * this attribute storage would leak between tests within the same class.
+     */
+    #[After]
+    public function cleanupAdapter(): void
+    {
+        parent::cleanupAdapter();
+    }
+
     final protected function assertListingLength(int $expected, FilesystemAdapter $adapter, string $path, bool $deep = false): void
     {
         $listing = [];
