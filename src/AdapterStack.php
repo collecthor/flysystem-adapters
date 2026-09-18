@@ -23,7 +23,7 @@ final class AdapterStack
         if ($this->finalized) {
             throw new \RuntimeException('This stack is finalized');
         }
-        $this->adapter =   $closure($this->adapter);
+        $this->adapter = $closure($this->adapter);
         return $this;
     }
 
