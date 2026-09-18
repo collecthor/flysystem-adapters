@@ -52,3 +52,12 @@ Initial use case for them is to notify CDNs to update their cache.
 
 This adapter wraps any other adapter and will try to force an overwrite if moving a file fails. This means upon failure
 it will check if the destination file exists and if so remove it and retry the move command.  
+
+## EncryptionAdapter
+
+This adapter wraps any other adapter and transparently encrypts file contents using XChaCha20-Poly1305 from the
+`sodium` extension with a single 32-byte key. Files are stored as `[version:1][nonce:24][ciphertext+tag]` and the
+additional authenticated data is independent of the path, so files remain decryptable when they are moved or copied.
+Only `write`, `writeStream`, `read` and `readStream` are intercepted, every other operation is passed through.
+`fileSize()` reports the size of the original contents, and `publicUrl()` throws since exposing the stored bytes
+would serve ciphertext.
