@@ -9,6 +9,7 @@ use League\Flysystem\Config;
 use League\Flysystem\FilesystemAdapter;
 use League\Flysystem\StorageAttributes;
 use League\Flysystem\UnableToGeneratePublicUrl;
+use PHPUnit\Framework\Attributes\Test;
 
 abstract class IndirectAdapterTestCase extends FilesystemAdapterTestCase
 {
@@ -43,8 +44,8 @@ abstract class IndirectAdapterTestCase extends FilesystemAdapterTestCase
 
     /**
      * Patched parent tests to deal with different number of initial entries
-     * @test
      */
+    #[Test]
     final public function listing_a_toplevel_directory(): void
     {
         $initialCount = iterator_count($this->adapter()->listContents('', true));
@@ -60,8 +61,8 @@ abstract class IndirectAdapterTestCase extends FilesystemAdapterTestCase
 
     /**
      * Patched parent tests to deal with different number of initial entries
-     * @test
      */
+    #[Test]
     final public function listing_contents_recursive(): void
     {
         $this->runScenario(function () {
@@ -78,9 +79,7 @@ abstract class IndirectAdapterTestCase extends FilesystemAdapterTestCase
         });
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function checking_if_a_directory_exists_after_creating_it(): void
     {
         $this->runScenario(function () {

@@ -5,17 +5,18 @@ declare(strict_types=1);
 namespace Collecthor\FlySystem\Tests;
 
 use Collecthor\FlySystem\DirectoryViaPlaceholderFileAdapter;
+use Collecthor\FlySystem\IndirectAdapter;
 use League\Flysystem\Config;
 use League\Flysystem\DirectoryAttributes;
 use League\Flysystem\FileAttributes;
 use League\Flysystem\FilesystemAdapter;
 use League\Flysystem\InMemory\InMemoryFilesystemAdapter;
 use League\Flysystem\UnableToRetrieveMetadata;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 
-/**
- * @covers \Collecthor\FlySystem\DirectoryViaPlaceholderFileAdapter
- * @uses \Collecthor\FlySystem\IndirectAdapter
- */
+#[CoversClass(DirectoryViaPlaceholderFileAdapter::class)]
+#[UsesClass(IndirectAdapter::class)]
 class DirectoryViaPlaceholderFileAdapterTest extends IndirectAdapterTestCase
 {
     public static function clearFilesystemAdapterCache(): void
