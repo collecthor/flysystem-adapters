@@ -4,6 +4,7 @@
     "license": "MIT",
     "require": {
         "php": ">=8.5",
+        "ext-sodium": "*",
         "league/flysystem": "^3.0",
         "psr/event-dispatcher": "^1.0"
     },
