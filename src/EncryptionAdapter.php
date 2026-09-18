@@ -46,6 +46,7 @@ final readonly class EncryptionAdapter extends IndirectAdapter implements Filesy
 
     public function __construct(
         private FilesystemAdapter $base,
+        #[\SensitiveParameter]
         private string $key,
     ) {
         if (strlen($this->key) !== SODIUM_CRYPTO_AEAD_XCHACHA20POLY1305_IETF_KEYBYTES) {
