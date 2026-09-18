@@ -5,13 +5,12 @@ declare(strict_types=1);
 namespace Collecthor\FlySystem\Tests;
 
 use Collecthor\FlySystem\IndirectAdapter;
+use League\Flysystem\Config;
 use League\Flysystem\FilesystemAdapter;
 use League\Flysystem\InMemory\InMemoryFilesystemAdapter;
+use PHPUnit\Framework\Attributes\CoversClass;
 
-/**
- * @covers \Collecthor\FlySystem\IndirectAdapter
- * @uses \League\Flysystem\InMemory\InMemoryFilesystemAdapter
- */
+#[CoversClass(IndirectAdapter::class)]
 class IndirectAdapterTest extends IndirectAdapterTestCase
 {
     protected static function createFilesystemAdapter(): FilesystemAdapter
@@ -29,5 +28,14 @@ class IndirectAdapterTest extends IndirectAdapterTestCase
                 return $this->adapter;
             }
         };
+    }
+
+    public function testForwardsToTheUnderlyingAdapter(): void
+    {
+        $adapter = $this->adapter();
+        $adapter->write('path.txt', 'contents', new Config());
+
+        self::assertTrue($adapter->fileExists('path.txt'));
+        self::assertSame('contents', $adapter->read('path.txt'));
     }
 }

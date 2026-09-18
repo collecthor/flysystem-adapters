@@ -4,19 +4,22 @@ declare(strict_types=1);
 
 namespace Collecthor\FlySystem\Tests;
 
+use Collecthor\FlySystem\IndirectAdapter;
 use Collecthor\FlySystem\OverlayAdapter;
+use Collecthor\FlySystem\StripPrefixAdapter;
 use Generator;
 use League\Flysystem\Config;
 use League\Flysystem\DirectoryAttributes;
 use League\Flysystem\FilesystemAdapter;
 use League\Flysystem\InMemory\InMemoryFilesystemAdapter;
 use League\Flysystem\StorageAttributes;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\UsesClass;
 
-/**
- * @covers \Collecthor\FlySystem\OverlayAdapter
- * @uses \Collecthor\FlySystem\IndirectAdapter
- * @uses \Collecthor\FlySystem\StripPrefixAdapter
- */
+#[CoversClass(OverlayAdapter::class)]
+#[UsesClass(IndirectAdapter::class)]
+#[UsesClass(StripPrefixAdapter::class)]
 class OverlayAdapterTest extends IndirectAdapterTestCase
 {
     protected static function createFilesystemAdapter(): FilesystemAdapter
@@ -87,9 +90,7 @@ class OverlayAdapterTest extends IndirectAdapterTestCase
         $this->markTestIncomplete('TODO');
     }
 
-    /**
-     * @dataProvider prefixProvider
-     */
+    #[DataProvider('prefixProvider')]
     public function testOverlayDirectoryExists(string $path): void
     {
         $base = new InMemoryFilesystemAdapter();
@@ -103,9 +104,7 @@ class OverlayAdapterTest extends IndirectAdapterTestCase
         }
     }
 
-    /**
-     * @dataProvider prefixProvider
-     */
+    #[DataProvider('prefixProvider')]
     public function testOverlayDirectoriesShowInListing(string $path): void
     {
         $base = new InMemoryFilesystemAdapter();
@@ -126,9 +125,7 @@ class OverlayAdapterTest extends IndirectAdapterTestCase
         $this->assertListingsAreTheSame($expected, $combined->listContents('', true));
     }
 
-    /**
-     * @dataProvider prefixProvider
-     */
+    #[DataProvider('prefixProvider')]
     public function testDeepListingIncludesBoth(string $path): void
     {
         $base = new InMemoryFilesystemAdapter();
@@ -148,9 +145,7 @@ class OverlayAdapterTest extends IndirectAdapterTestCase
         $this->assertListingLength(1, $combined, $path, true);
     }
 
-    /**
-     * @dataProvider prefixProvider
-     */
+    #[DataProvider('prefixProvider')]
     public function testDeepListingIncludesBothStub(string $path): void
     {
         $base = new InMemoryFilesystemAdapter();
@@ -162,9 +157,7 @@ class OverlayAdapterTest extends IndirectAdapterTestCase
         $this->assertSameSize(explode('/', $path), iterator_to_array($combined->listContents('', true)));
     }
 
-    /**
-      * @dataProvider prefixProvider
-      */
+    #[DataProvider('prefixProvider')]
     public function testDeepListingIncludesBothStub2(string $path): void
     {
         $base = new InMemoryFilesystemAdapter();
@@ -183,9 +176,7 @@ class OverlayAdapterTest extends IndirectAdapterTestCase
         yield "top level directory" => ["overlay"];
     }
 
-    /**
-     * @dataProvider prefixProvider
-     */
+    #[DataProvider('prefixProvider')]
     public function testListingIncludesBoth(string $path): void
     {
         $base = new InMemoryFilesystemAdapter();

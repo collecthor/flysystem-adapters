@@ -7,12 +7,11 @@ namespace Collecthor\FlySystem\Tests;
 use Collecthor\FlySystem\MetadataCachingAdapter;
 use League\Flysystem\FileAttributes;
 use League\Flysystem\FilesystemAdapter;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
-/**
- * @covers \Collecthor\FlySystem\MetadataCachingAdapter
- * @uses \Collecthor\FlySystem\IndirectAdapter
- */
+#[CoversClass(MetadataCachingAdapter::class)]
 final class MetadataCachingAdapterTest extends TestCase
 {
     public static function metadataTypes(): array
@@ -37,9 +36,7 @@ final class MetadataCachingAdapterTest extends TestCase
         }
     }
 
-    /**
-     * @dataProvider metadataTypes
-     */
+    #[DataProvider('metadataTypes')]
     public function testMetadataCaching(string $type): void
     {
         $base = $this->getMockBuilder(FilesystemAdapter::class)->getMock();
@@ -52,9 +49,7 @@ final class MetadataCachingAdapterTest extends TestCase
         $this->assertSame($result, $subject->$type('/'));
     }
 
-    /**
-     * @dataProvider multipleMetadataTypes
-     */
+    #[DataProvider('multipleMetadataTypes')]
     public function testMetadataIsCachedForTheDifferentTypes(string $type1, string $type2): void
     {
         $base = $this->getMockBuilder(FilesystemAdapter::class)->getMock();
