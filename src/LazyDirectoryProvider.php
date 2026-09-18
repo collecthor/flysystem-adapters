@@ -18,7 +18,7 @@ final class LazyDirectoryProvider implements DirectoryProvider
     /**
      * @var ArrayObject<string, DirectoryAttributes>|null
      */
-    private ArrayObject|null $directories = null;
+    private ?ArrayObject $directories = null;
 
     /**
      * @param Closure(): iterable<string, DirectoryAttributes> $loader
