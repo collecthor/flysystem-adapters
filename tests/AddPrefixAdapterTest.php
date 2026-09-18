@@ -5,13 +5,14 @@ declare(strict_types=1);
 namespace Collecthor\FlySystem\Tests;
 
 use Collecthor\FlySystem\AddPrefixAdapter;
+use Collecthor\FlySystem\IndirectAdapter;
 use League\Flysystem\FilesystemAdapter;
 use League\Flysystem\InMemory\InMemoryFilesystemAdapter;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 
-/**
- * @covers \Collecthor\FlySystem\AddPrefixAdapter
- * @uses \Collecthor\FlySystem\IndirectAdapter
- */
+#[CoversClass(AddPrefixAdapter::class)]
+#[UsesClass(IndirectAdapter::class)]
 class AddPrefixAdapterTest extends IndirectAdapterTestCase
 {
     public static function clearFilesystemAdapterCache(): void

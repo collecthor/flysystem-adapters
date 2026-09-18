@@ -5,16 +5,17 @@ declare(strict_types=1);
 namespace Collecthor\FlySystem\Tests;
 
 use Collecthor\FlySystem\AddPrefixAdapter;
+use Collecthor\FlySystem\IndirectAdapter;
 use Collecthor\FlySystem\StripPrefixAdapter;
 use League\Flysystem\Config;
 use League\Flysystem\FilesystemAdapter;
 use League\Flysystem\InMemory\InMemoryFilesystemAdapter;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 
-/**
- * @covers \Collecthor\FlySystem\StripPrefixAdapter
- * @uses \Collecthor\FlySystem\AddPrefixAdapter
- * @uses \Collecthor\FlySystem\IndirectAdapter
- */
+#[CoversClass(StripPrefixAdapter::class)]
+#[UsesClass(AddPrefixAdapter::class)]
+#[UsesClass(IndirectAdapter::class)]
 class StripPrefixAdapterTest extends IndirectAdapterTestCase
 {
     protected static function createFilesystemAdapter(): FilesystemAdapter
