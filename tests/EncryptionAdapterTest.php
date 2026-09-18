@@ -12,6 +12,7 @@ use League\Flysystem\InMemory\InMemoryFilesystemAdapter;
 use League\Flysystem\UnableToGeneratePublicUrl;
 use League\Flysystem\UnableToReadFile;
 use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\UsesClass;
 
 #[CoversClass(EncryptionAdapter::class)]
@@ -112,6 +113,24 @@ final class EncryptionAdapterTest extends IndirectAdapterTestCase
         $this->expectException(UnableToReadFile::class);
 
         $reader->read('path.txt');
+    }
+
+    /**
+     * @return iterable<string, array{string}>
+     */
+    public static function invalidKeyProvider(): iterable
+    {
+        yield 'too short' => ['too-short'];
+        yield 'too long' => [str_repeat('x', 33)];
+        yield 'empty' => [''];
+    }
+
+    #[DataProvider('invalidKeyProvider')]
+    public function testAKeyOfTheWrongLengthIsRejected(string $key): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+
+        new EncryptionAdapter(new InMemoryFilesystemAdapter(), $key);
     }
 
     public function testMoveAndCopyStayDecryptable(): void
