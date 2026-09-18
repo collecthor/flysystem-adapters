@@ -25,24 +25,24 @@ use League\Flysystem\UrlGeneration\PublicUrlGenerator;
  */
 final readonly class EncryptionAdapter extends IndirectAdapter implements FilesystemAdapter, PublicUrlGenerator
 {
-    public const VERSION = 1;
+    public const int VERSION = 1;
 
     /**
      * One byte for the version and 24 bytes for the nonce, preceding the ciphertext.
      */
-    private const PREFIX_SIZE = 1 + SODIUM_CRYPTO_AEAD_XCHACHA20POLY1305_IETF_NPUBBYTES;
+    private const int PREFIX_SIZE = 1 + SODIUM_CRYPTO_AEAD_XCHACHA20POLY1305_IETF_NPUBBYTES;
 
     /**
      * Total number of bytes a stored file is larger than its plaintext: the version, the nonce and
      * the Poly1305 tag that is appended to the ciphertext.
      */
-    public const HEADER_SIZE = self::PREFIX_SIZE + SODIUM_CRYPTO_AEAD_XCHACHA20POLY1305_IETF_ABYTES;
+    public const int HEADER_SIZE = self::PREFIX_SIZE + SODIUM_CRYPTO_AEAD_XCHACHA20POLY1305_IETF_ABYTES;
 
     /**
      * Fixed additional authenticated data. It is intentionally not derived from the path so that
      * moving or copying an encrypted file does not invalidate it.
      */
-    private const ADDITIONAL_DATA = 'collecthor/flysystem-adapters/encryption';
+    private const string ADDITIONAL_DATA = 'collecthor/flysystem-adapters/encryption';
 
     public function __construct(
         private FilesystemAdapter $base,
