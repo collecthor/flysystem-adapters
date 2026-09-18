@@ -64,7 +64,7 @@
 </h4>
     <ul class="phpdocumentor-list">
                     <li>
-                <a href="namespaces/collecthor-flysystem.html" class="-active">FlySystem</a>
+                <a href="namespaces/collecthor-flysystem.html" class="">FlySystem</a>
                 
             </li>
             </ul>
@@ -94,49 +94,37 @@
             <div class="phpdocumentor-column -nine phpdocumentor-content">
                                 <section>
                                         <ul class="phpdocumentor-breadcrumbs">
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/collecthor.html">Collecthor</a></li>
     </ul>
 
-    <article class="phpdocumentor-element -namespace">
-        <h2 class="phpdocumentor-content__title">FlySystem</h2>
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">EncryptionAdapter.php</h2>
+
+        
+        
+        
+        
+
 
         
 <h3 id="toc">
     Table of Contents
-    <a href="namespaces/collecthor-flysystem.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="files/src-encryptionadapter.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h3>
 
 
-<h4 id="namespaces">
-    Namespaces
-    <a href="namespaces/collecthor-flysystem.html#namespaces" class="headerlink"><i class="fas fa-link"></i></a>
-
-</h4>
-<dl class="phpdocumentor-table-of-contents">
-            <dt class="phpdocumentor-table-of-contents__entry -namespace"><a href="namespaces/collecthor-flysystem-events.html"><abbr title="\Collecthor\FlySystem\events">events</abbr></a></dt>
-            <dt class="phpdocumentor-table-of-contents__entry -namespace"><a href="namespaces/collecthor-flysystem-interfaces.html"><abbr title="\Collecthor\FlySystem\interfaces">interfaces</abbr></a></dt>
-    </dl>
 
 
     <h4 id="toc-classes">
         Classes
-        <a href="namespaces/collecthor-flysystem.html#toc-classes" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="files/src-encryptionadapter.html#toc-classes" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <dl class="phpdocumentor-table-of-contents">
-                    <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Collecthor-FlySystem-AdapterStack.html"><abbr title="\Collecthor\FlySystem\AdapterStack">AdapterStack</abbr></a></dt>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Collecthor-FlySystem-AddPrefixAdapter.html"><abbr title="\Collecthor\FlySystem\AddPrefixAdapter">AddPrefixAdapter</abbr></a></dt><dd>Adds a prefix to all paths given to the adapter.</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Collecthor-FlySystem-DirectoryViaPlaceholderFileAdapter.html"><abbr title="\Collecthor\FlySystem\DirectoryViaPlaceholderFileAdapter">DirectoryViaPlaceholderFileAdapter</abbr></a></dt><dd>Implements directory support for any adapter utilizing a placeholder file.</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Collecthor-FlySystem-EncryptionAdapter.html"><abbr title="\Collecthor\FlySystem\EncryptionAdapter">EncryptionAdapter</abbr></a></dt><dd>Encrypts every file with XChaCha20-Poly1305 before it is handed to the underlying adapter and
-decrypts it again when it is read back.</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Collecthor-FlySystem-EventedAdapter.html"><abbr title="\Collecthor\FlySystem\EventedAdapter">EventedAdapter</abbr></a></dt><dd>Indirect adapter implements a simple pattern that allows extending classes to provide a concrete adapter for any call
-as well as rewrite the path passed to such calls.</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Collecthor-FlySystem-IndirectAdapter.html"><abbr title="\Collecthor\FlySystem\IndirectAdapter">IndirectAdapter</abbr></a></dt><dd>Indirect adapter implements a simple pattern that allows extending classes to provide a concrete adapter for any call
-as well as rewrite the path passed to such calls.</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Collecthor-FlySystem-LazyDirectoryProvider.html"><abbr title="\Collecthor\FlySystem\LazyDirectoryProvider">LazyDirectoryProvider</abbr></a></dt><dd>Allows you to lazily provide directories for use with VirtualDirectoryListAdapter</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Collecthor-FlySystem-MetadataCachingAdapter.html"><abbr title="\Collecthor\FlySystem\MetadataCachingAdapter">MetadataCachingAdapter</abbr></a></dt><dd>This adapter will cache the results of any of the metadata retrievers and reuse them.</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Collecthor-FlySystem-MoveOverwriteAdapter.html"><abbr title="\Collecthor\FlySystem\MoveOverwriteAdapter">MoveOverwriteAdapter</abbr></a></dt><dd>This adapter wraps underlying adapters which do not properly implement the move semantics.</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Collecthor-FlySystem-OverlayAdapter.html"><abbr title="\Collecthor\FlySystem\OverlayAdapter">OverlayAdapter</abbr></a></dt><dd>This adapter mounts one adapter as an overlay on top of another based on a prefix</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Collecthor-FlySystem-PublicUrlAdapter.html"><abbr title="\Collecthor\FlySystem\PublicUrlAdapter">PublicUrlAdapter</abbr></a></dt>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Collecthor-FlySystem-StripPrefixAdapter.html"><abbr title="\Collecthor\FlySystem\StripPrefixAdapter">StripPrefixAdapter</abbr></a></dt><dd>Strips a prefix from all paths given to the adapter.</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Collecthor-FlySystem-VirtualDirectoryListAdapter.html"><abbr title="\Collecthor\FlySystem\VirtualDirectoryListAdapter">VirtualDirectoryListAdapter</abbr></a></dt><dd>This adapter allows you to add virtual directories to a specific path on an underlying adapter.</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Collecthor-FlySystem-VirtualDirectoryListWithMetaDataAdapter.html"><abbr title="\Collecthor\FlySystem\VirtualDirectoryListWithMetaDataAdapter">VirtualDirectoryListWithMetaDataAdapter</abbr></a></dt><dd>This adapter allows you to add virtual directories to a specific path on an underlying adapter.</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Collecthor-FlySystem-VirtualDirectoryProviderAdapter.html"><abbr title="\Collecthor\FlySystem\VirtualDirectoryProviderAdapter">VirtualDirectoryProviderAdapter</abbr></a></dt><dd>This adapter allows you to add virtual directories to a specific path on an underlying adapter.</dd>    </dl>
+                    <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Collecthor-FlySystem-EncryptionAdapter.html"><abbr title="\Collecthor\FlySystem\EncryptionAdapter">EncryptionAdapter</abbr></a></dt><dd>Encrypts every file with XChaCha20-Poly1305 before it is handed to the underlying adapter and
+decrypts it again when it is read back.</dd>    </dl>
 
-    <h4 id="toc-traits">
-        Traits
-        <a href="namespaces/collecthor-flysystem.html#toc-traits" class="headerlink"><i class="fas fa-link"></i></a>
 
-    </h4>
-    <dl class="phpdocumentor-table-of-contents">
-            <dt class="phpdocumentor-table-of-contents__entry -trait"><a href="classes/Collecthor-FlySystem-IndirectAdapterTrait.html"><abbr title="\Collecthor\FlySystem\IndirectAdapterTrait">IndirectAdapterTrait</abbr></a></dt>    </dl>
 
 
 
@@ -159,9 +147,8 @@ as well as rewrite the path passed to such calls.</dd>            <dt class="php
             <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                                                                                    <li><a href="namespaces/collecthor-flysystem.html#toc-classes">Classes</a></li>
-                                                            <li><a href="namespaces/collecthor-flysystem.html#toc-traits">Traits</a></li>
-                                                                                                </ul>
+                                                                                                        <li><a href="files/src-encryptionadapter.html#toc-classes">Classes</a></li>
+                                                                                                                    </ul>
             </li>
 
             
@@ -182,7 +169,7 @@ as well as rewrite the path passed to such calls.</dd>            <dt class="php
     </section>
 </section>
         </div>
-        <a href="namespaces/collecthor-flysystem.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="files/src-encryptionadapter.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 
