@@ -13,6 +13,12 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.5'
+      # Run before "composer install": the phpdoc/phpdoc image ships PHP 8.4, and its extension
+      # finder loads the project's vendor/autoload.php. The installed platform check requires PHP
+      # 8.5, which crashes that subprocess on the image's PHP. Without a vendor dir the finder is
+      # skipped, which is fine because this project ships no phpDocumentor extensions.
+      - name: Generate docs
+        run: docker run --rm -v ${PWD}:/data phpdoc/phpdoc:3
       - uses: ramsey/composer-install@v3
       - name: Test code style
         run: vendor/bin/ecs
@@ -20,8 +26,6 @@ jobs:
         run: vendor/bin/phpstan
       - name: Tests
         run: vendor/bin/phpunit --coverage-clover coverage.xml
-      - name: Generate docs
-        run: docker run --rm -v ${PWD}:/data phpdoc/phpdoc:3
       - name: Deploy docs to pages
         uses: peaceiris/actions-gh-pages@v4
         with:
