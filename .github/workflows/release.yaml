@@ -19,7 +19,7 @@ jobs:
       # skipped, which is fine because this project ships no phpDocumentor extensions.
       - name: Generate docs
         run: docker run --rm -v ${PWD}:/data phpdoc/phpdoc:3
-      - uses: ramsey/composer-install@v3
+      - uses: ramsey/composer-install@v4
       - name: Test code style
         run: vendor/bin/ecs
       - name: Static analysis
